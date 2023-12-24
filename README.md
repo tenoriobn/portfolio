@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Imagem/ilustração do projeto para desktop](public/Design/Desktop-dark.png)
 
-Currently, two official plugins are available:
+## Bem-vindo! 👋
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Bem-vindo ao meu Portfólio! Este projeto, desenvolvido com React.js, TypeScript, Styled Components e Recoil, apresenta diferentes seções que destacam minhas habilidades, projetos, formações e informações de contato.
 
-## Expanding the ESLint configuration
+## Seções do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O projeto possui várias seções, incluindo:
 
-- Configure the top-level `parserOptions` property like this:
+- **Sobre Mim**: Uma breve descrição sobre mim e meus objetivos profissionais.
+- **Habilidades**: Destaca minhas habilidades em diversas linguagens e ferramentas.
+- **Projetos**: Exibe detalhes sobre alguns dos projetos que desenvolvi.
+- **Formação**: Detalhes sobre minha formação.
+- **Contato**: Opções para entrar em contato comigo, seja por formulário ou redes sociais.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Visualização do Projeto
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Para visualizar o projeto em sua totalidade, incluindo detalhes de todas as seções, você pode acessar a página hospedada no Vercel. Basta clicar no link disponível no canto direito, abaixo de "About" nesse repositório.
+
+Sinta-se à vontade para explorar mais sobre meu Portfólio!
