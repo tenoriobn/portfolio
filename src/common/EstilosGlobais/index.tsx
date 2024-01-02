@@ -14,6 +14,13 @@ const EstilosGlobais = createGlobalStyle`
     min-height: 100vh;
     padding: 0 1rem;
 
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (min-width: 375px) {
+      padding: 0 1.5rem;
+    }
+
     @media (min-width: 768px) {
       padding: 0 3rem;
     }
