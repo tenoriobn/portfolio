@@ -6,7 +6,33 @@ import MenuItens from "./MenuItens";
 import { estadoMenuAtivo } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
 
-const ContainerMenu = styled.header`
+const Header = styled.header`
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0 1rem;
+
+  @media (min-width: 375px) {
+    padding: 0 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+
+  @media (min-width: 990px) {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+  }
+`;
+
+const ContainerMenu = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -96,19 +122,19 @@ export default function Cabecalho() {
   const [menuAtivo, setMenuAtivo] = useRecoilState(estadoMenuAtivo);
 
   return (
+    <Header>
+      <ContainerMenu>
+        <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
+          <h1>BT</h1>
+        </BotaoMenu>
 
-    <ContainerMenu>
-      <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
-        <h1>BT</h1>
-      </BotaoMenu>
+        <MenuItens />
 
-      <MenuItens />
-
-      <ContainerIcones>
-        <Icone as={Global} />
-        <Icone as={Lua} />
-      </ContainerIcones>
-    </ContainerMenu>
-
+        <ContainerIcones>
+          <Icone as={Global} />
+          <Icone as={Lua} />
+        </ContainerIcones>
+      </ContainerMenu>
+    </Header>
   );
 }

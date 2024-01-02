@@ -2,26 +2,26 @@
   {
     "id": 1,
     "nome": "Sobre mim",
-    "href": "#"
+    "href": "/"
   },
   {
     "id": 2,
     "nome": "Habilidades",
-    "href": "#"
+    "href": "/habilidades"
   },
   {
     "id": 3,
     "nome": "Projetos",
-    "href": "#"
+    "href": "/projetos"
   },
   {
     "id": 4,
     "nome": "Formações",
-    "href": "#"
+    "href": "/formacoes"
   },
   {
     "id": 5,
     "nome": "Contatos",
-    "href": "#"
+    "href": "/contatos"
   }
 ]

@@ -1,23 +1,22 @@
-import { ThemeProvider } from "styled-components";
-import Theme from "./theme";
-import EstilosGlobais from "./common/EstilosGlobais";
-import Cabecalho from "./components/Cabecalho";
+
 import { RecoilRoot } from "recoil";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import SobreMim from "./components/SobreMim";
+import PaginaPadrao from "./page/PaginaPadrao";
+import Habilidades from "./components/Habilidades";
 
 function App() {
   return (
-    <ThemeProvider theme={Theme}>
-      <RecoilRoot>
-        <Router>
-          <EstilosGlobais />
-          <Cabecalho />
-
-          <SobreMim />
-        </Router>
-      </RecoilRoot>
-    </ThemeProvider>
+    <RecoilRoot>
+      <Router>
+        <Routes>
+          <Route path='/' element={<PaginaPadrao />}>
+            <Route index element={<SobreMim />} />
+            <Route path='/habilidades' element={<Habilidades />} />
+          </Route>
+        </Routes>
+      </Router>
+    </RecoilRoot>
   );
 }
 
