@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Rastreador de endereço.svg",
+    "nome": "Rastreador de endereço IP",
+    "ferramentas": "ReactJS / Styled Components / TypeScript / API",
+    "descricao": "Esta aplicação permite visualizar informações geográficas de endereços IP, implementando funcionalidades de pesquisa e apresentação de dados geoespaciais.",
+    "linkRepositorio": "https://github.com/tenoriobn/ipaddresstracker",
+    "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
+  },
+  {
+    "id": 2,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Comércio Eletrônico.svg",
+    "nome": "Comércio eletrônico",
+    "ferramentas": "ReactJS /  Styled Componets",
+    "descricao": "Essa aplicação de comércio eletrônico, enfatizando a fidelidade ao design proposto. Implementação de responsividade, interatividade e funcionalidades essenciais.",
+    "linkRepositorio": "https://github.com/tenoriobn/sneakers",
+    "linkHospedagem": "https://sneakers-sepia.vercel.app/"
+  },
+  {
+    "id": 3,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Formulario de várias etapas.svg",
+    "nome": "Formulário de várias etapas",
+    "ferramentas": "ReactJS / SCSS",
+    "descricao": "Essa aplicação busca reproduzir fielmente o design proposto, garantindo a conclusão progressiva de cada etapa, proporcionando elementos interativos.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-20",
+    "linkHospedagem": "https://projeto-20.vercel.app/"
+  },
+  {
+    "id": 4,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Calculadora de gorjetas.svg",
+    "nome": "Calculadora de gorjetas",
+    "ferramentas": "HTML / CSS / Tailwind / JavaScript",
+    "descricao": "Essa aplicação visa oferece funcionalidades para calcular a gorjeta adequada e o custo total da conta por pessoa, proporcionando uma experiência funcional e intuitiva para o usuário.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-19",
+    "linkHospedagem": "https://projeto-19.vercel.app/"
+  },
+  {
+    "id": 5,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.svg",
+    "nome": "precoInterativo",
+    "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
+    "descricao": "Essa aplicação tem funcionalidades de controle deslizante para visualizar e alternar entre diferentes pacotes de visualizações de página e seus respectivos preços mensais.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-18",
+    "linkHospedagem": "https://projeto-18.vercel.app/"
+  },
+  {
+    "id": 6,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  }
+]

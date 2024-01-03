@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import fotoPerfil from "./Perfil.svg";
-import Github from "./github.svg?react";
-import Linkedin from "./linkedin.svg?react";
+import Github from "src/assets/icons/github.svg?react";
+import Linkedin from "src/assets/icons/linkedin.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { Link } from "react-router-dom";
 

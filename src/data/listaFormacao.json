@@ -1,0 +1,26 @@
+[
+  {
+    "logo": "fatec",
+    "graduacao": "Tecnólogo – FATEC",
+    "curso": "Gestão Comercial",
+    "localidade": "Itaquaquecetuba – SP",
+    "data": "08/2019 – 07/2022",
+    "siteInstituicao": "http://www.fatecsp.br/paginas/historia_fatecsp.php#div_menu"
+  },
+  {
+    "logo": "alura",
+    "graduacao": "Plataforma de aprendizado – ALURA",
+    "curso": "Full Stack Javascript",
+    "localidade": "Virtual",
+    "data": "08/2021 – Presente",
+    "siteInstituicao": "https://www.alura.com.br/sobre"
+  },
+  {
+    "logo": "univesp",
+    "graduacao": "Bacharelado – UNIVESP",
+    "curso": "Tecnologia da Informação",
+    "localidade": "Itaquaquecetuba – SP",
+    "data": "08/2022 – Presente",
+    "siteInstituicao": "https://univesp.br/institucional/historia"
+  }
+]

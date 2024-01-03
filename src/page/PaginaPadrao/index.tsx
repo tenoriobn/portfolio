@@ -1,7 +1,6 @@
-// import { Outlet } from "react-router-dom";
 import EstilosGlobais from "src/common/EstilosGlobais";
 import Cabecalho from "src/components/Cabecalho";
-import Habilidades from "src/components/Habilidades";
+import Projetos from "src/components/Projetos";
 import SobreMim from "src/components/SobreMim";
 import Theme from "src/theme";
 import styled, { ThemeProvider } from "styled-components";
@@ -44,7 +43,7 @@ export default function PaginaPadrao() {
         <Cabecalho />
         <Conteudo>
           <SobreMim />
-          <Habilidades />
+          <Projetos />
         </Conteudo>
       </ContainerGlobal>
     </ThemeProvider>
