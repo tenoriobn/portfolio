@@ -3,7 +3,7 @@ import listaFormacao from "src/data/listaFormacao.json";
 import { Link } from "react-router-dom";
 import { cor } from "src/common/EstilosGlobais/cores";
 
-const ContainerCards = styled.div`
+const ContainerCardsFormacao = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,12 +21,16 @@ const ContainerCards = styled.div`
     margin-top: 2.5rem;
   }
 
+  @media (min-width: 992px) {
+    margin-top: 5rem;
+  }
+
   @media (min-width: 1200px) {
     flex-wrap: nowrap;
   }
 `;
 
-const Card = styled.div`
+const CardFormacao = styled.div`
   flex-basis: calc(50% - 0.75rem);
   display: flex;
   flex-direction: column;
@@ -90,11 +94,11 @@ const Botao = styled(Link)`
   text-decoration: none;
 `;
 
-export default function CardFormacao() {
+export default function CardsFormacao() {
   return (
-    <ContainerCards>
+    <ContainerCardsFormacao>
       {listaFormacao.map(formacao => (
-        <Card key={formacao.id}>
+        <CardFormacao key={formacao.id}>
           <Logo src={formacao.logo} alt="" />
           <Paragrafo>{formacao.graduacao}</Paragrafo>
           <NomeCurso>{formacao.curso}</NomeCurso>
@@ -107,8 +111,8 @@ export default function CardFormacao() {
           >
             Acessar
           </Botao>
-        </Card>
+        </CardFormacao>
       ))}
-    </ContainerCards>
+    </ContainerCardsFormacao>
   );
 }

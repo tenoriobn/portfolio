@@ -1,6 +1,7 @@
 import EstilosGlobais from "src/common/EstilosGlobais";
 import Cabecalho from "src/components/Cabecalho";
 import Formacao from "src/components/Formacao";
+import Habilidades from "src/components/Habilidades";
 import Projetos from "src/components/Projetos";
 import SobreMim from "src/components/SobreMim";
 import Theme from "src/theme";
@@ -14,6 +15,7 @@ const ContainerGlobal = styled.div`
   min-height: 100vh;
   padding: 0 1rem;
 
+  margin: 0 auto;
   width: 100%;
 
   @media (min-width: 375px) {
@@ -27,7 +29,7 @@ const ContainerGlobal = styled.div`
   @media (min-width: 990px) {
     width: 80%;
     max-width: 1440px;
-    margin: 0 auto;
+    
     padding: 0;
   }
 `;
@@ -46,6 +48,7 @@ export default function PaginaPadrao() {
           <SobreMim />
           <Projetos />
           <Formacao />
+          <Habilidades />
         </Conteudo>
       </ContainerGlobal>
     </ThemeProvider>

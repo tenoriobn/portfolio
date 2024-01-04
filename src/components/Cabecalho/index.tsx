@@ -11,6 +11,7 @@ const Header = styled.header`
   left: 0;
   right: 0;
   top: 0;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 
@@ -27,7 +28,7 @@ const Header = styled.header`
   @media (min-width: 990px) {
     width: 80%;
     max-width: 1440px;
-    margin: 0 auto;
+
     padding: 0;
   }
 `;
@@ -92,6 +93,10 @@ const ContainerIcones = styled.div`
 
   @media (min-width: 768px) {
     gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    gap: 2rem;
   }
 `;
 

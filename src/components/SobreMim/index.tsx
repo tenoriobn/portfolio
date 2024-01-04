@@ -10,17 +10,18 @@ const ContainerSobreMim = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   min-height: 100vh;
   box-sizing: border-box;
   padding: 10.25rem 0;
 
   @media (min-width: 768px) {
-    gap: 2.5rem;
+    gap: 2rem;
     padding-top: 14.75rem;
   }
 
   @media (min-width: 992px) {
+    gap: 2.5rem;
     padding-top: 17.5rem;
   }
 `;
@@ -35,6 +36,11 @@ const ImgPerfil = styled.img`
   height: 140px;
 
   @media (min-width: 768px) {
+    width: 160px;
+    height: 160px;
+  }
+
+  @media (min-width: 992px) {
     width: 180px;
     height: 180px;
   }
@@ -44,7 +50,7 @@ const Apresentacao = styled.p`
   font-size: .875rem;
   letter-spacing: .0175rem;
   text-align: center;
-  max-width: 954px;
+  max-width: 764px;
 
   .nome__destaque {
     color: ${cor.azul};
@@ -53,11 +59,19 @@ const Apresentacao = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 1rem;
 
     .nome__destaque {
-      font-size: 1.5rem;
+      font-size: 1.125rem;
     }
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1158px;
   }
 `;
 
@@ -66,6 +80,10 @@ const ContainerIcones = styled.div`
   gap: 1rem;
 
   @media (min-width: 768px) {
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 992px) {
     gap: 2rem;
   }
 `;

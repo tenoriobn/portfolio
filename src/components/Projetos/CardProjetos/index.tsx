@@ -21,6 +21,10 @@ const ContainerCards = styled.div`
     margin-top: 2.5rem;
   }
 
+  @media (min-width: 992px) {
+    margin-top: 5rem;
+  }
+
   @media (min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -86,10 +90,10 @@ const ContainerIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
 
   @media (min-width: 768px) {
-    
+    gap: 1rem;
   }
 `;
 

@@ -31,9 +31,14 @@ const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
 const Itens = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+  }
 
   @media (min-width: 1200px) {
+    gap: 2rem;
     flex-direction: row;
   }
 `;
