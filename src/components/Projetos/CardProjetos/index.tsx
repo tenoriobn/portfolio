@@ -8,9 +8,13 @@ import { cor } from "src/common/EstilosGlobais/cores";
 const ContainerCards = styled.div`
   box-sizing: border-box;
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 
   margin-top: 1.5rem;
+
+  @media (min-width: 375px) {
+    gap: 1.5rem;
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
@@ -31,24 +35,38 @@ const Card = styled.div`
   box-shadow: 0px 0px 1rem .0625rem ${cor.azul};
   box-sizing: border-box;
 
-  padding: 1.5rem;
+  padding: 1rem;
 
-  max-width: 362px;
+  max-width: 370px;
   width: 100%;
+
+  @media (min-width: 375px) {
+    padding: 1.5rem;
+  }
 `;
 
 const Imagem = styled.img`
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   width: 100%;
+
+  @media (min-width: 375px) {
+    margin-bottom: 1.5rem;
+  }
 `;
 
 const ContainerConteudo = styled.div`
   display: grid;
-  grid-template-rows: auto 2.375rem 1fr auto;
-  row-gap: .75rem;
+  
+  row-gap: 1rem;
+  
+  @media (min-width: 768px) {
+    grid-template-rows: auto 2.375rem 1fr auto;
+    gap: .5rem;
+  }
 
   @media (min-width: 1400px) {
     grid-template-rows: auto auto 1fr auto;
+    gap: 1.5rem;
   }
 `;
 

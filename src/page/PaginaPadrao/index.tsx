@@ -1,5 +1,6 @@
 import EstilosGlobais from "src/common/EstilosGlobais";
 import Cabecalho from "src/components/Cabecalho";
+import Formacao from "src/components/Formacao";
 import Projetos from "src/components/Projetos";
 import SobreMim from "src/components/SobreMim";
 import Theme from "src/theme";
@@ -44,6 +45,7 @@ export default function PaginaPadrao() {
         <Conteudo>
           <SobreMim />
           <Projetos />
+          <Formacao />
         </Conteudo>
       </ContainerGlobal>
     </ThemeProvider>

@@ -38,7 +38,7 @@
   {
     "id": 5,
     "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.svg",
-    "nome": "precoInterativo",
+    "nome": "Componente de preços interativo",
     "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
     "descricao": "Essa aplicação tem funcionalidades de controle deslizante para visualizar e alternar entre diferentes pacotes de visualizações de página e seus respectivos preços mensais.",
     "linkRepositorio": "https://github.com/tenoriobn/projeto-18",

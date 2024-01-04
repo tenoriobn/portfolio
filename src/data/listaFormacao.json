@@ -1,6 +1,7 @@
 [
   {
-    "logo": "fatec",
+    "id": 1,
+    "logo": "/src/components/Formacao/CardFormacao/img/Fatec.png",
     "graduacao": "Tecnólogo – FATEC",
     "curso": "Gestão Comercial",
     "localidade": "Itaquaquecetuba – SP",
@@ -8,7 +9,8 @@
     "siteInstituicao": "http://www.fatecsp.br/paginas/historia_fatecsp.php#div_menu"
   },
   {
-    "logo": "alura",
+    "id": 2,
+    "logo": "/src/components/Formacao/CardFormacao/img/Alura.png",
     "graduacao": "Plataforma de aprendizado – ALURA",
     "curso": "Full Stack Javascript",
     "localidade": "Virtual",
@@ -16,7 +18,8 @@
     "siteInstituicao": "https://www.alura.com.br/sobre"
   },
   {
-    "logo": "univesp",
+    "id": 3,
+    "logo": "/src/components/Formacao/CardFormacao/img/Univesp.png",
     "graduacao": "Bacharelado – UNIVESP",
     "curso": "Tecnologia da Informação",
     "localidade": "Itaquaquecetuba – SP",

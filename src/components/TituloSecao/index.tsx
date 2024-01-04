@@ -11,8 +11,12 @@ const Titulo = styled.h2`
   text-align: center;
 
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: .06rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 3rem;
   }
 `;
 
