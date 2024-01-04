@@ -3,6 +3,7 @@ import Cabecalho from "src/components/Cabecalho";
 import Formacao from "src/components/Formacao";
 import Habilidades from "src/components/Habilidades";
 import Projetos from "src/components/Projetos";
+import Rodape from "src/components/Rodape";
 import SobreMim from "src/components/SobreMim";
 import Theme from "src/theme";
 import styled, { ThemeProvider } from "styled-components";
@@ -49,6 +50,7 @@ export default function PaginaPadrao() {
           <Projetos />
           <Formacao />
           <Habilidades />
+          <Rodape />
         </Conteudo>
       </ContainerGlobal>
     </ThemeProvider>
