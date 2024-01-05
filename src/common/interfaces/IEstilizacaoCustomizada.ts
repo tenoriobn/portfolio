@@ -1,3 +1,3 @@
-export interface IEstilizacaoCustomizada {
+export interface IEstilizacaoMenuAtivo {
   $menuAtivo: boolean;
 }

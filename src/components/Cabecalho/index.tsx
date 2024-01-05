@@ -6,66 +6,44 @@ import MenuItens from "./MenuItens";
 import { estadoMenuAtivo } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
 
-const Header = styled.header`
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-
-  padding: 0 1rem;
-
-  @media (min-width: 375px) {
-    padding: 0 1.5rem;
-  }
-
-  @media (min-width: 768px) {
-    padding: 0 3rem;
-  }
-
-  @media (min-width: 990px) {
-    width: 80%;
-    max-width: 1440px;
-
-    padding: 0;
-  }
-`;
-
-const ContainerMenu = styled.div`
+const ContainerMenu = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  position:sticky;
+  left: 0;
+  right: 0;
+  top: 0;
   padding: 2rem 0;
 `;
 
-const BotaoMenu = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 48px;
-  height: 48px;
+const BotaoMenu = styled.button`
   border: .125rem solid ${cor.azul};
   border-radius: 31.25rem;
-  box-shadow: 0rem 0rem 1rem .375rem ${cor.azulColbato};
+  box-shadow: 0rem 0rem 1rem .0625rem ${cor.azulColbato};
   box-sizing: border-box;
   cursor: pointer;
-  z-index: 5;
+  width: 48px;
+  height: 48px;
   transition: border-color 0.3s ease-out 0s;
-
-  &:hover {
-    border-color: ${cor.branco};
-  }
+  z-index: 2;
 
   h1 {
+    color: ${cor.azul};
     font-size: .875rem;
     font-weight: 700;
     line-height: normal;
-    text-shadow: 0rem 0rem 2.75rem #ffffff7f;
+    text-shadow: 0rem 0rem 1rem ${cor.azulColbato};
+    transition: color 0.3s ease-out 0s;
     margin: 0;
+  }
+
+  &:hover {
+    border-color: ${cor.branco};
+
+    h1 {
+      color: ${cor.branco};
+    }
   }
 
   @media (min-width: 768px) {
@@ -101,8 +79,8 @@ const ContainerIcones = styled.div`
 `;
 
 const Icone = styled.svg`
+  filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
   cursor: pointer;
-  filter: drop-shadow(0rem 0rem 1rem #ffffff38);
   width: 24px;
   height: 24px;
 
@@ -127,19 +105,17 @@ export default function Cabecalho() {
   const [menuAtivo, setMenuAtivo] = useRecoilState(estadoMenuAtivo);
 
   return (
-    <Header>
-      <ContainerMenu>
-        <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
-          <h1>BT</h1>
-        </BotaoMenu>
+    <ContainerMenu>
+      <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
+        <h1>BT</h1>
+      </BotaoMenu>
 
-        <MenuItens />
+      <MenuItens />
 
-        <ContainerIcones>
-          <Icone as={Global} />
-          <Icone as={Lua} />
-        </ContainerIcones>
-      </ContainerMenu>
-    </Header>
+      <ContainerIcones>
+        <Icone as={Global} />
+        <Icone as={Lua} />
+      </ContainerIcones>
+    </ContainerMenu>
   );
 }

@@ -1,34 +1,32 @@
 import { cor } from "src/common/EstilosGlobais/cores";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
 import listaItensMenu from "src/data/listaItensMenu.json";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { estadoLinkAtivo, estadoMenuAtivo } from "src/common/state/atom/atom";
 import { Link } from "react-router-dom";
+import backgroundMenu from "./backgroundmenu.svg";
 
-const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
+const ContainerMenuItens = styled.nav<IEstilizacaoMenuAtivo>`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 0;
-  left: ${(props) => (props.$menuAtivo ? '0' : '-100%')};
-  width: 100%;
-  height: 100vh;
-  background-color: ${cor.azulEscuro};
   box-sizing: border-box;
   transition: left 0.3s ease-out 0s;
 
-  @media (min-width: 1200px) {
-    background-color: inherit;
-    position: relative;
-    left: inherit;
-    width: inherit;
-    height: inherit;
+  @media (max-width: 1199px) {
+    background: url(${backgroundMenu});
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: ${(props) => (props.$menuAtivo ? '0' : '-100%')};
+    width: 100%;
+    height: 100vh;
   }
 `;
 
-const Itens = styled.ul`
+const ListaItens = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -44,27 +42,26 @@ const Itens = styled.ul`
 `;
 
 const Item = styled.li`
-  font-size: 1rem;
-  font-weight: 700;
   text-align: center;
 
   a {
     color: ${cor.cinzaClaro};
-    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
     transition: color .3s ease-in-out 0s;
 
     &:hover {
       color: ${cor.branco};
     }
-  }
 
-  a.active {
-    color: ${cor.azul};
-    text-shadow: 0px 0px 1rem ${cor.azulColbato};
-  }
+    &.active {
+      color: ${cor.azul};
+      text-shadow: 0rem 0rem 1rem ${cor.azulColbato};
+    }
 
-  @media (min-width: 768px) {
-    font-size: 1.25rem;
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+    }
   }
 `;
 
@@ -74,7 +71,7 @@ export default function MenuItens() {
 
   return (
     <ContainerMenuItens $menuAtivo={menuAtivo}>
-      <Itens>
+      <ListaItens>
         {listaItensMenu.map(item => (
           <Item key={item.id}>
             <Link
@@ -86,7 +83,7 @@ export default function MenuItens() {
             </Link>
           </Item>
         ))}
-      </Itens>
+      </ListaItens>
     </ContainerMenuItens>
   );
 }

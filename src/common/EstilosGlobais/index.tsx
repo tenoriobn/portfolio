@@ -14,6 +14,15 @@ const EstilosGlobais = createGlobalStyle`
     font-weight: 400;
     line-height: normal;
     letter-spacing: .0175rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      background-color: transparent;
+      outline: none;
+    }
   }
 `;
 

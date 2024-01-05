@@ -71,7 +71,7 @@ const Apresentacao = styled.p`
   }
 
   @media (min-width: 1200px) {
-    max-width: 1158px;
+    max-width: 992px;
   }
 `;
 
