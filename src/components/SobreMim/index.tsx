@@ -4,34 +4,35 @@ import Github from "src/assets/icons/github.svg?react";
 import Linkedin from "src/assets/icons/linkedin.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { Link } from "react-router-dom";
+import apresentacao from "src/data/informacoesSobreMim.json";
 
 const ContainerSobreMim = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
   align-items: center;
   gap: 1.5rem;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 10.25rem 0;
+  min-height: calc(100vh - 112px);
+  padding: 3.25rem 0;
 
   @media (min-width: 768px) {
     gap: 2rem;
-    padding-top: 14.75rem;
+    min-height: calc(100vh - 120px);
   }
 
   @media (min-width: 992px) {
+    min-height: calc(100vh - 124px);
     gap: 2.5rem;
-    padding-top: 17.5rem;
+    padding: 6.25rem 0;
   }
 `;
 
-const ImgPerfil = styled.img`
+const FotoPerfil = styled.img`
   cursor: pointer;
   border-radius: 50000%;
   border: .125rem solid ${cor.azul};
   box-shadow: 0rem 0rem 1rem 1px ${cor.azul};
-
   width: 140px;
   height: 140px;
 
@@ -46,7 +47,7 @@ const ImgPerfil = styled.img`
   }
 `;
 
-const Apresentacao = styled.p`
+const ParagrafoApresentacao = styled.p`
   font-size: .875rem;
   letter-spacing: .0175rem;
   text-align: center;
@@ -71,7 +72,7 @@ const Apresentacao = styled.p`
   }
 
   @media (min-width: 1200px) {
-    max-width: 992px;
+    max-width: 100%;
   }
 `;
 
@@ -92,7 +93,7 @@ const Icone = styled.svg`
   cursor: pointer;
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0px 0px 16px rgba(4, 148, 252, 0.3));
+  filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
 
   @media (min-width: 768px) {
     width: 54px;
@@ -103,10 +104,12 @@ const Icone = styled.svg`
 export default function SobreMim() {
   return (
     <ContainerSobreMim>
-      <ImgPerfil src={fotoPerfil} alt="Foto de Perfil" />
-      <Apresentacao>
-        Olá, sou <span className="nome__destaque">Bruno Tenório</span>, natural de Itaquaquecetuba, zona leste de São Paulo. Em 2010, aos 13 anos, embarquei na programação ao criar meu primeiro servidor para o jogo Fatality Gunz, mesmo sem conhecimento prévio em c++, bancos de dados, php ou protocolos, eu estava convicto de que era possível aprender e dominar o que eu tanto gostava. Em 2020, iniciei os cursos da Alura, focando no front-end. Atualmente, estou lapidando minhas skills em front e back-end, visando atuar em uma empresa de tecnologia de ponta, onde poderei crescer profissionalmente e continuar aprendendo.
-      </Apresentacao>
+      <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" />
+      <ParagrafoApresentacao>
+        {apresentacao.saudacao}
+        <span className="nome__destaque">{apresentacao.nome}</span>
+        {apresentacao.mensagem}
+      </ParagrafoApresentacao>
 
       <ContainerIcones>
         <Link 

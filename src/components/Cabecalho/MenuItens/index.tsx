@@ -22,7 +22,15 @@ const ContainerMenuItens = styled.nav<IEstilizacaoMenuAtivo>`
     top: 0;
     left: ${(props) => (props.$menuAtivo ? '0' : '-100%')};
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 9rem 0;
+    box-sizing: border-box;
+
+    @media (min-width: 768px) {
+      left: ${(props) => (props.$menuAtivo ? '0' : '-50%')};
+      width: 50%;
+      padding: 9.75rem 0;
+    }
   }
 `;
 

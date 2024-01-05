@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import listaFormacao from "src/data/listaFormacao.json";
+import listaFormacoes from "src/data/listaFormacoes.json";
 import { Link } from "react-router-dom";
 import { cor } from "src/common/EstilosGlobais/cores";
 
-const ContainerCardsFormacao = styled.div`
+const ContainerCardsFormacoes = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,10 +94,10 @@ const Botao = styled(Link)`
   text-decoration: none;
 `;
 
-export default function CardsFormacao() {
+export default function CardsFormacoes() {
   return (
-    <ContainerCardsFormacao>
-      {listaFormacao.map(formacao => (
+    <ContainerCardsFormacoes>
+      {listaFormacoes.map(formacao => (
         <CardFormacao key={formacao.id}>
           <Logo src={formacao.logo} alt="" />
           <Paragrafo>{formacao.graduacao}</Paragrafo>
@@ -113,6 +113,6 @@ export default function CardsFormacao() {
           </Botao>
         </CardFormacao>
       ))}
-    </ContainerCardsFormacao>
+    </ContainerCardsFormacoes>
   );
 }

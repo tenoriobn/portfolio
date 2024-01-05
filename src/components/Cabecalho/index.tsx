@@ -15,6 +15,7 @@ const ContainerMenu = styled.header`
   right: 0;
   top: 0;
   padding: 2rem 0;
+  z-index: 2;
 `;
 
 const BotaoMenu = styled.button`
@@ -29,7 +30,7 @@ const BotaoMenu = styled.button`
   z-index: 2;
 
   h1 {
-    color: ${cor.azul};
+    color: ${cor.branco};
     font-size: .875rem;
     font-weight: 700;
     line-height: normal;
@@ -109,9 +110,7 @@ export default function Cabecalho() {
       <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
         <h1>BT</h1>
       </BotaoMenu>
-
       <MenuItens />
-
       <ContainerIcones>
         <Icone as={Global} />
         <Icone as={Lua} />

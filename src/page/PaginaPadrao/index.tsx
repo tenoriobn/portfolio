@@ -3,18 +3,18 @@ import EstilosGlobais from "src/common/EstilosGlobais";
 import { IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estadoMenuAtivo } from "src/common/state/atom/atom";
 import Cabecalho from "src/components/Cabecalho";
+import SobreMim from "src/components/SobreMim";
 import Contatos from "src/components/Contatos";
-import Formacao from "src/components/Formacao";
+import Formacoes from "src/components/Formacoes";
 import Habilidades from "src/components/Habilidades";
 import Projetos from "src/components/Projetos";
 import Rodape from "src/components/Rodape";
-import SobreMim from "src/components/SobreMim";
 import Theme from "src/theme";
 import styled, { ThemeProvider } from "styled-components";
 
 const ContainerGlobal = styled.div<IEstilizacaoMenuAtivo>`
   position: relative;
-  display: grid;
+
 
   box-sizing: border-box;
   min-height: 100vh;
@@ -62,11 +62,11 @@ export default function PaginaPadrao() {
         <Conteudo $menuAtivo={menuAtivo}>
           <SobreMim />
           <Projetos />
-          <Formacao />
+          <Formacoes />
           <Habilidades />
           <Contatos />
-          <Rodape />
         </Conteudo>
+        <Rodape />
       </ContainerGlobal>
     </ThemeProvider>
   );
