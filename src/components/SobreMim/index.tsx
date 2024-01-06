@@ -61,6 +61,7 @@ const ParagrafoApresentacao = styled.p`
 
   @media (min-width: 768px) {
     font-size: 1rem;
+    max-width: 954px;
 
     .nome__destaque {
       font-size: 1.125rem;
@@ -72,7 +73,7 @@ const ParagrafoApresentacao = styled.p`
   }
 
   @media (min-width: 1200px) {
-    max-width: 100%;
+    max-width: 954px;
   }
 `;
 

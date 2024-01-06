@@ -2,6 +2,9 @@ import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
 import CardProjetos from "./CardProjetos";
 import { cor } from "src/common/EstilosGlobais/cores";
+import { useRecoilValue } from "recoil";
+import useAlternarQtdCardsVisiveis from "src/common/state/hooks/useAlternarQtdCardsVisiveis";
+import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -31,11 +34,14 @@ const Botao = styled.button`
 `;
 
 export default function Projetos() {
+  const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
+  const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis();
+
   return (
     <ContainerProjetos>
       <TituloSecao titulo="Projetos" />
       <CardProjetos />
-      <Botao>Ver mais</Botao>
+      <Botao onClick={alterarQtdCardsVisiveis}>{limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}</Botao>
     </ContainerProjetos>
   );
 }

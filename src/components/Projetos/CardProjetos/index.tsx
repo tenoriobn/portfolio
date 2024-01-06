@@ -4,6 +4,9 @@ import Vercel from "src/assets/icons/vercel.svg?react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
+import { useRecoilValue } from "recoil";
+import { estadoQtdCardsVisiveis } from "src/common/state/atom/atom";
+import { IQtdCardsVisiveis } from "src/common/interfaces/IQtdCardsVisiveis";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -30,7 +33,7 @@ const ContainerCards = styled.div`
   }
 `;
 
-const Card = styled.div`
+const Card = styled.div<IQtdCardsVisiveis>`
   display: grid;
   grid-template-rows: auto 1fr;
 
@@ -43,6 +46,10 @@ const Card = styled.div`
 
   max-width: 370px;
   width: 100%;
+
+  &:nth-child(n + ${(props) => props.$QtdCardsVisiveis}){
+    display: none;
+  }
 
   @media (min-width: 375px) {
     padding: 1.5rem;
@@ -112,10 +119,12 @@ const Icone = styled.svg`
 `;
 
 export default function CardProjetos() {
+  const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
+
   return (
     <ContainerCards>
       {listaProjetos.map(projeto => (
-        <Card key={projeto.id}>
+        <Card key={projeto.id} $QtdCardsVisiveis={qtdCardsVisiveis}>
           <Imagem src={projeto.imagem} />
           
           <ContainerConteudo>

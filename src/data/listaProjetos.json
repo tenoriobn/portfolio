@@ -52,5 +52,96 @@
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
     "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
     "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+
+  {
+    "id": 7,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 8,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 9,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 10,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 11,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 12,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 13,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 14,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 15,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
+  },
+  {
+    "id": 16,
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "nome": "Página de notificações",
+    "ferramentas": "HTML / SCSS / JavaScript",
+    "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+    "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+    "linkHospedagem": "https://projeto-17.vercel.app/"
   }
 ]
