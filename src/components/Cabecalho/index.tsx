@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Global from "./global.svg?react";
 import Lua from "./lua.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import MenuItens from "./MenuItens";
 import { estadoMenuAtivo } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
+import Idiomas from "./Idiomas";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -112,7 +112,7 @@ export default function Cabecalho() {
       </BotaoMenu>
       <MenuItens />
       <ContainerIcones>
-        <Icone as={Global} />
+        <Idiomas />
         <Icone as={Lua} />
       </ContainerIcones>
     </ContainerMenu>

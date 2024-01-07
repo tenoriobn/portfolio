@@ -10,12 +10,22 @@ export const estadoLinkAtivo = atom({
   default: 1,
 });
 
+export const estadoListaIdiomasAtivo = atom({
+  key: 'listaIdiomasAtivo',
+  default: false
+});
+
+export const estadoIdiomaAtivo = atom({
+  key: 'idiomaAtivo',
+  default: 1
+});
+
 export const estadoQtdCardsVisiveis = atom({
   key: 'quantidadeCardsVisiveis',
   default: 5
 });
 
 export const estadoLimiteCardsVisiveis = atom({
-  key: 'CardsVisiveis',
+  key: 'cardsVisiveis',
   default: false
 });
