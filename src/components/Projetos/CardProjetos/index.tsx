@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
 import { estadoQtdCardsVisiveis } from "src/common/state/atom/atom";
-import { IQtdCardsVisiveis } from "src/common/interfaces/IQtdCardsVisiveis";
+import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -33,7 +33,7 @@ const ContainerCards = styled.div`
   }
 `;
 
-const Card = styled.div<IQtdCardsVisiveis>`
+const Card = styled.div<IEstilizacaoCardsVisiveis>`
   display: grid;
   grid-template-rows: auto 1fr;
 
@@ -47,7 +47,7 @@ const Card = styled.div<IQtdCardsVisiveis>`
   max-width: 370px;
   width: 100%;
 
-  &:nth-child(n + ${(props) => props.$QtdCardsVisiveis}){
+  &:nth-child(n + ${(props) => props.$estilizacaoCardsVisiveis}){
     display: none;
   }
 
@@ -124,7 +124,7 @@ export default function CardProjetos() {
   return (
     <ContainerCards>
       {listaProjetos.map(projeto => (
-        <Card key={projeto.id} $QtdCardsVisiveis={qtdCardsVisiveis}>
+        <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis}>
           <Imagem src={projeto.imagem} />
           
           <ContainerConteudo>
@@ -133,18 +133,11 @@ export default function CardProjetos() {
             <Paragrafo>{projeto.descricao}</Paragrafo>
 
             <ContainerIcon>
-              <Link 
-                to={projeto.linkRepositorio}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <Link  to={projeto.linkRepositorio} target="_blank" rel="noopener noreferrer">
                 <Icone as={Github} />
               </Link>
-              <Link 
-                to={projeto.linkHospedagem}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              
+              <Link  to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
                 <Icone as={Vercel} />
               </Link>
             </ContainerIcon>

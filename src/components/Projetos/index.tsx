@@ -3,7 +3,7 @@ import TituloSecao from "../TituloSecao";
 import CardProjetos from "./CardProjetos";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
-import useAlternarQtdCardsVisiveis from "src/common/state/hooks/useAlternarQtdCardsVisiveis";
+import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 
 const ContainerProjetos = styled.section`
