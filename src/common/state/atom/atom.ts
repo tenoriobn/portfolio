@@ -29,3 +29,13 @@ export const estadoLimiteCardsVisiveis = atom({
   key: 'cardsVisiveis',
   default: false
 });
+
+export const estadoImagemSelecionada = atom({
+  key: 'imagemSelecionada',
+  default: ''
+});
+
+export const estadoDesativaRolagem = atom({
+  key: 'desativaRolagem',
+  default: false
+});

@@ -1,5 +1,5 @@
-export interface IEstilizacaoMenuAtivo {
-  $menuAtivo: boolean;
+export interface IEstilizacaoDesativaRolagem {
+  $desativaRolagem: boolean;
 }
 
 export interface IEstilizacaolistaIdiomasAtivo {

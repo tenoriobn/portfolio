@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Rastreador de endereço.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Rastreador de endereço.jpg",
     "nome": "Rastreador de endereço IP",
     "ferramentas": "ReactJS / Styled Components / TypeScript / API",
     "descricao": "Esta aplicação permite visualizar informações geográficas de endereços IP, implementando funcionalidades de pesquisa e apresentação de dados geoespaciais.",
@@ -10,7 +10,7 @@
   },
   {
     "id": 2,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Comércio Eletrônico.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Comércio Eletrônico.jpg",
     "nome": "Comércio eletrônico",
     "ferramentas": "ReactJS /  Styled Componets",
     "descricao": "Essa aplicação de comércio eletrônico, enfatizando a fidelidade ao design proposto. Implementação de responsividade, interatividade e funcionalidades essenciais.",
@@ -19,7 +19,7 @@
   },
   {
     "id": 3,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Formulario de várias etapas.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Formulario de várias etapas.jpg",
     "nome": "Formulário de várias etapas",
     "ferramentas": "ReactJS / SCSS",
     "descricao": "Essa aplicação busca reproduzir fielmente o design proposto, garantindo a conclusão progressiva de cada etapa, proporcionando elementos interativos.",
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Calculadora de gorjetas.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Calculadora de gorjetas.jpg",
     "nome": "Calculadora de gorjetas",
     "ferramentas": "HTML / CSS / Tailwind / JavaScript",
     "descricao": "Essa aplicação visa oferece funcionalidades para calcular a gorjeta adequada e o custo total da conta por pessoa, proporcionando uma experiência funcional e intuitiva para o usuário.",
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.jpg",
     "nome": "Componente de preços interativo",
     "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
     "descricao": "Essa aplicação tem funcionalidades de controle deslizante para visualizar e alternar entre diferentes pacotes de visualizações de página e seus respectivos preços mensais.",
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -56,7 +56,7 @@
 
   {
     "id": 7,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -65,7 +65,7 @@
   },
   {
     "id": 8,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -74,7 +74,7 @@
   },
   {
     "id": 9,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -83,7 +83,7 @@
   },
   {
     "id": 10,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -92,7 +92,7 @@
   },
   {
     "id": 11,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -101,7 +101,7 @@
   },
   {
     "id": 12,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -110,7 +110,7 @@
   },
   {
     "id": 13,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -119,7 +119,7 @@
   },
   {
     "id": 14,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -128,7 +128,7 @@
   },
   {
     "id": 15,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -137,7 +137,7 @@
   },
   {
     "id": 16,
-    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+    "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
     "nome": "Página de notificações",
     "ferramentas": "HTML / SCSS / JavaScript",
     "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",

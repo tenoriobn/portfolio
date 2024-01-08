@@ -5,6 +5,7 @@ import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
 import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
+import ImagemAmpliada from "./ImagemAmpliada";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -41,6 +42,7 @@ export default function Projetos() {
     <ContainerProjetos>
       <TituloSecao titulo="Projetos" />
       <CardProjetos />
+      <ImagemAmpliada /> 
       <Botao onClick={alterarQtdCardsVisiveis}>{limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}</Botao>
     </ContainerProjetos>
   );

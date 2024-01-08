@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Lua from "./lua.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import MenuItens from "./MenuItens";
-import { estadoMenuAtivo } from "src/common/state/atom/atom";
+import { estadoDesativaRolagem, estadoMenuAtivo } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
 import Idiomas from "./Idiomas";
 
@@ -104,10 +104,17 @@ const Icone = styled.svg`
 
 export default function Cabecalho() {
   const [menuAtivo, setMenuAtivo] = useRecoilState(estadoMenuAtivo);
+  const [desativaRolagem, setDesativaRolagem] = useRecoilState(estadoDesativaRolagem);
 
+  const ativarMenu = () => {
+    setMenuAtivo(!menuAtivo);
+
+    window.innerWidth <= 1199 ? setDesativaRolagem(!desativaRolagem) : '';
+  };
+  
   return (
     <ContainerMenu>
-      <BotaoMenu onClick={() => setMenuAtivo(!menuAtivo)}>
+      <BotaoMenu onClick={ativarMenu}>
         <h1>BT</h1>
       </BotaoMenu>
       <MenuItens />

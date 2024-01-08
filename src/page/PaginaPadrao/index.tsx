@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import EstilosGlobais from "src/common/EstilosGlobais";
-import { IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estadoMenuAtivo } from "src/common/state/atom/atom";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estadoDesativaRolagem } from "src/common/state/atom/atom";
 import Cabecalho from "src/components/Cabecalho";
 import SobreMim from "src/components/SobreMim";
 import Contatos from "src/components/Contatos";
@@ -12,12 +12,13 @@ import Rodape from "src/components/Rodape";
 import Theme from "src/theme";
 import styled, { ThemeProvider } from "styled-components";
 
-const ContainerGlobal = styled.div<IEstilizacaoMenuAtivo>`
+const ContainerGlobal = styled.div<IEstilizacaoDesativaRolagem>`
   position: relative;
-
 
   box-sizing: border-box;
   min-height: 100vh;
+  max-height: ${(props) => (props.$desativaRolagem ? '100vh' : 'inherit')};
+  overflow: ${(props) => (props.$desativaRolagem ? 'hidden' : 'inherit')};
   padding: 0 1rem;
 
   margin: 0 auto;
@@ -38,28 +39,27 @@ const ContainerGlobal = styled.div<IEstilizacaoMenuAtivo>`
   }
 
   @media (max-width: 1199px) {
-    max-height: ${(props) => (props.$menuAtivo ? '100vh' : 'inherit')};
-    overflow: ${(props) => (props.$menuAtivo ? 'hidden' : 'inherit')};
+
   }
 `;
 
-const Conteudo = styled.main<IEstilizacaoMenuAtivo>`
+const Conteudo = styled.main<IEstilizacaoDesativaRolagem>`
   align-self: center;
 
   @media (max-width: 1199px) {
-    z-index: ${(props) => (props.$menuAtivo ? '-1' : 'inherit')};
+    z-index: ${(props) => (props.$desativaRolagem ? '-1' : 'inherit')};
   }
 `;
 
 export default function PaginaPadrao() {
-  const menuAtivo = useRecoilValue(estadoMenuAtivo);
+  const desativaRolagem = useRecoilValue(estadoDesativaRolagem);
 
   return (
     <ThemeProvider theme={Theme}>
       <EstilosGlobais />
-      <ContainerGlobal $menuAtivo={menuAtivo}>
+      <ContainerGlobal $desativaRolagem={desativaRolagem}>
         <Cabecalho />
-        <Conteudo $menuAtivo={menuAtivo}>
+        <Conteudo $desativaRolagem={desativaRolagem}>
           <SobreMim />
           <Projetos />
           <Formacoes />
