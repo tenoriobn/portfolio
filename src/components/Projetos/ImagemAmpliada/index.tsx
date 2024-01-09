@@ -6,7 +6,7 @@ import { useRecoilState } from "recoil";
 
 const CaixaDialogoImagemAmpliada = styled.dialog` 
   max-height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
   background-color: #000000b7;
   border: none;
   box-sizing: border-box;
@@ -16,7 +16,7 @@ const CaixaDialogoImagemAmpliada = styled.dialog`
   bottom: 0;
   width: auto;
   height: 100%;
-  z-index: 5;
+  z-index: 7;
 
   @media (max-width: 767px) {
     display: none;

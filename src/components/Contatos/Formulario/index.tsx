@@ -5,6 +5,8 @@ import Github from "src/assets/icons/github.svg?react";
 import Gmail from "src/assets/icons/gmail.svg?react";
 import Whatsapp from "src/assets/icons/whatsapp.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const ContainerFormulario = styled.div`
   margin-top: 1.5rem;
@@ -67,7 +69,7 @@ const Icone = styled.svg`
   }
 `;
 
-const ContainerCamposFormulario = styled.div`
+const ContainerCamposFormulario = styled.form`
   order: 2;
   flex: 1;
   display: flex;
@@ -133,21 +135,87 @@ const Botao = styled.button`
   }
 `;
 
-
 export default function Formulario() {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefone, setTelefone] = useState('');
+  const [tema, setTema] = useState('');
+  const [mensagem, setMensagem] = useState('');
+
+  const enviarEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const templateParms = {
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      tema: tema,
+      mensagem: mensagem
+    };
+
+    const serviceID = import.meta.env.VITE_REACT_EMAILJS_SERVICE_ID;
+    const templateID = import.meta.env.VITE_REACT_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_REACT_EMAILJS_USER_ID;
+
+    emailjs.send(serviceID, templateID, templateParms, publicKey)
+      .then((res) => {
+        console.log("Email Enviado", res.status, res.text);
+        alert("Email Enviado");
+        setNome('');
+        setEmail('');
+        setTelefone('');
+        setTema('');
+        setMensagem('');
+      }, (erro) => {
+        console.log("Erro: ", erro);
+        alert(erro);
+      });
+  };
+
   return (
     <ContainerFormulario>
-      <ContainerCamposFormulario>
+      <ContainerCamposFormulario onSubmit={enviarEmail}>
         <ContainerCampoInformacao>
-          <CampoInformacao type="text" placeholder="Nome" />
-          <CampoInformacao type="text" placeholder="Email" />
+          <CampoInformacao
+            type="text"
+            placeholder="Nome"
+            onChange={(e) => setNome(e.target.value)}
+            value={nome}
+            required
+          />
+          <CampoInformacao
+            type="text"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required
+          />
         </ContainerCampoInformacao>
         <ContainerCampoInformacao>
-          <CampoInformacao type="text" placeholder="Telefone" />
-          <CampoInformacao type="text" placeholder="Tema" />
+          <CampoInformacao
+            type="text"
+            placeholder="Telefone"
+            onChange={(e) => setTelefone(e.target.value)}
+            value={telefone}
+            required
+          />
+          <CampoInformacao
+            type="text"
+            placeholder="Tema"
+            onChange={(e) => setTema(e.target.value)}
+            value={tema}
+            required
+          />
         </ContainerCampoInformacao>
-        <CampoTexto name="" id="" placeholder="Mensagem" />
-        <Botao>Enviar</Botao>
+        <CampoTexto
+          name=""
+          id=""
+          placeholder="Mensagem"
+          onChange={(e) => setMensagem(e.target.value)}
+          value={mensagem}
+          required
+        />
+        <Botao type="submit">Enviar</Botao>
       </ContainerCamposFormulario>
 
       <ContainerInformacoesFormulario>
