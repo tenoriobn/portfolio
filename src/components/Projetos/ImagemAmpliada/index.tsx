@@ -14,6 +14,7 @@ const CaixaDialogoImagemAmpliada = styled.dialog`
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 0;
   width: auto;
   height: 100%;
   z-index: 7;
@@ -31,6 +32,7 @@ const ContainerImagemAmpliada = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
   max-width: 1024px;
   width: 100%;
   box-sizing: border-box;

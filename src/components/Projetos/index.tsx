@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
+// import ImagemAmpliada from "./ImagemAmpliada";
 
 const ContainerProjetos = styled.section`
   display: flex;

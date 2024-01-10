@@ -2,9 +2,8 @@ import styled from "styled-components";
 import Lua from "./lua.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import MenuItens from "./MenuItens";
-import { estadoDesativaRolagem, estadoMenuAtivo } from "src/common/state/atom/atom";
-import { useRecoilState } from "recoil";
 import Idiomas from "./Idiomas";
+import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -103,14 +102,7 @@ const Icone = styled.svg`
 `;
 
 export default function Cabecalho() {
-  const [menuAtivo, setMenuAtivo] = useRecoilState(estadoMenuAtivo);
-  const [desativaRolagem, setDesativaRolagem] = useRecoilState(estadoDesativaRolagem);
-
-  const ativarMenu = () => {
-    setMenuAtivo(!menuAtivo);
-
-    window.innerWidth <= 1199 ? setDesativaRolagem(!desativaRolagem) : '';
-  };
+  const ativarMenu = useAtivarMenu();
   
   return (
     <ContainerMenu>

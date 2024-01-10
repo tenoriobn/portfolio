@@ -4,9 +4,11 @@ import Vercel from "src/assets/icons/vercel.svg?react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
-import { estadoDesativaRolagem, estadoImagemSelecionada, estadoQtdCardsVisiveis } from "src/common/state/atom/atom";
+import { useRecoilValue } from "recoil";
+import { estadoQtdCardsVisiveis } from "src/common/state/atom/atom";
 import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
+// import { useEffect } from "react";
+import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -123,41 +125,32 @@ const Icone = styled.svg`
 
 export default function CardProjetos() {
   const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
-  const setImagemSelecionada = useSetRecoilState(estadoImagemSelecionada);
-  const [desativaRolagem, setDesativaRolagem] = useRecoilState(estadoDesativaRolagem);
-
-  const ampliarImagem = (imagem:string) => {
-    setImagemSelecionada(imagem);
-
-    setDesativaRolagem(!desativaRolagem);
-  };
+  const ampliarImagem = useAmpliarImagem();
 
   return (
-    <>
-      <ContainerCards>
-        {listaProjetos.map(projeto => (
-          <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis}>
-            <Imagem src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
+    <ContainerCards>
+      {listaProjetos.map(projeto => (
+        <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis}>
+          <Imagem src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
 
-            <ContainerConteudo>
-              <NomeProjeto>{projeto.nome}</NomeProjeto>
-              <Paragrafo>{projeto.ferramentas}</Paragrafo>
-              <Paragrafo>{projeto.descricao}</Paragrafo>
+          <ContainerConteudo>
+            <NomeProjeto>{projeto.nome}</NomeProjeto>
+            <Paragrafo>{projeto.ferramentas}</Paragrafo>
+            <Paragrafo>{projeto.descricao}</Paragrafo>
 
-              <ContainerIcon>
-                <Link  to={projeto.linkRepositorio} target="_blank" rel="noopener noreferrer">
-                  <Icone as={Github} />
-                </Link>
-                
-                <Link  to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
-                  <Icone as={Vercel} />
-                </Link>
-              </ContainerIcon>
-            </ContainerConteudo>
-          </Card>
-        ))}
-      </ContainerCards>
-    </>
+            <ContainerIcon>
+              <Link to={projeto.linkRepositorio} target="_blank" rel="noopener noreferrer">
+                <Icone as={Github} />
+              </Link>
+
+              <Link to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
+                <Icone as={Vercel} />
+              </Link>
+            </ContainerIcon>
+          </ContainerConteudo>
+        </Card>
+      ))}
+    </ContainerCards>
   );
 }
 
