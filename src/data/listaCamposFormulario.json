@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "placeholder": "Nome",
+    "value": "nome",
+    "required": true
+  },
+  {
+    "id": 2,
+    "placeholder": "Email",
+    "value": "email",
+    "required": true
+  },
+  {
+    "id": 3,
+    "placeholder": "Telefone",
+    "value": "telefone",
+    "required": true
+  },
+  {
+    "id": 4,
+    "placeholder": "Tema",
+    "value": "tema",
+    "required": true
+  }
+]

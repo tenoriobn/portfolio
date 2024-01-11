@@ -1,4 +1,5 @@
 import { atom } from "recoil";
+import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
 
 export const estadoMenuAtivo = atom({
   key: 'menuAtivo',
@@ -38,4 +39,15 @@ export const estadoImagemSelecionada = atom({
 export const estadoDesativaRolagem = atom({
   key: 'desativaRolagem',
   default: false
+});
+
+export const estadoDadosFormulario = atom<IDadosFormulario>({
+  key: 'dadosFormulario',
+  default: {
+    nome: "",
+    email: "",
+    telefone: "",
+    tema: "",
+    mensagem: ""
+  }
 });
