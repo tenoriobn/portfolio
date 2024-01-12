@@ -1,12 +1,9 @@
 import styled, { css } from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
-import { useRecoilValue } from "recoil";
-import { estadoDadosFormulario } from "src/common/state/atom/atom";
 import listaCamposFormulario from "src/data/listaCamposFormulario.json";
-import useEnviarEmail from "src/common/state/hooks/hooksFormulario/useEnviarEmail";
-import useGuardarDadosFormulario from "src/common/state/hooks/hooksFormulario/useGuardarDadosFormulario";
+import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
 
-const ContainerCamposFormulario = styled.form`
+const ContainerFormulario = styled.form`
   order: 2;
   flex: 1;
   display: flex;
@@ -23,7 +20,7 @@ const ContainerCamposFormulario = styled.form`
   }
 `;
 
-const ContainerCampoInformacao = styled.div`
+const ContainerCamposFormulario = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -34,6 +31,12 @@ const ContainerCampoInformacao = styled.div`
   }
 `;
 
+const ContainerCampoFormulario = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+`;
+
 const estiloDosCampos = css`
   outline: none;
   background-color: transparent;
@@ -42,14 +45,17 @@ const estiloDosCampos = css`
   padding: 24px;
   color: ${cor.branco};
 
+  &.erro {
+    border-color: ${cor.vermelho};
+  }
+
   &::placeholder {
     color: ${cor.cinzaClaro};
   }
 `;
 
-const CampoInformacao = styled.input`
+const CampoFormulario = styled.input`
   ${estiloDosCampos}
-  flex: 1;
 `;
 
 const CampoTexto = styled.textarea`
@@ -57,6 +63,12 @@ const CampoTexto = styled.textarea`
 
   min-height: 210px;
   height: 100%;
+`;
+
+const MensagemErro = styled.div`
+  color: ${cor.vermelho};
+
+  margin: .25rem 0 0 1.5rem;
 `;
 
 const Botao = styled.button`
@@ -75,31 +87,45 @@ const Botao = styled.button`
 `;
 
 export default function Formulario() {
-  const dadosFormulario = useRecoilValue(estadoDadosFormulario);
-  const enviarEmail = useEnviarEmail();
-  const guardarDadosFormulario = useGuardarDadosFormulario();
+  const { useFormHook } = useValidarCamposFormulario();
+  const { register, handleSubmit, errors, onSubmit } = useFormHook();
 
   return (
-    <ContainerCamposFormulario onSubmit={enviarEmail}>
-      <ContainerCampoInformacao>
+    <ContainerFormulario onSubmit={handleSubmit(onSubmit)}>
+      <ContainerCamposFormulario>
         {listaCamposFormulario.map((campo) => (
-          <CampoInformacao
-            key={campo.id}
-            type="text"
-            placeholder={campo.placeholder}
-            onChange={(e) => guardarDadosFormulario(campo.value, e.target.value)}
-            value={dadosFormulario[campo.value]}
-            required
-          />
+          <ContainerCampoFormulario key={campo.id}>
+            {campo.campoNome !== 'mensagem' ? (
+              <CampoFormulario
+                type="text"
+                placeholder={campo.placeholder}
+                className={`${errors[campo.campoNome] ? 'erro' : ''}`}
+                {...register(`[${campo.campoNome}]`)}
+              />
+            ) : (
+              <CampoTexto
+                placeholder={campo.placeholder}
+                className={`${errors[campo.campoNome] ? 'erro' : ''}`}
+                {...register(`[${campo.campoNome}]`)}
+              />
+            )}
+            <MensagemErro >
+              {(errors[campo.campoNome]?.message)}
+            </MensagemErro>
+          </ContainerCampoFormulario>
         ))}
-      </ContainerCampoInformacao>
-      <CampoTexto
+      </ContainerCamposFormulario>
+
+      {/* <CampoTexto
         placeholder="Mensagem"
-        onChange={(e) => guardarDadosFormulario('mensagem', e.target.value)}
-        value={dadosFormulario.mensagem}
-        required
+        className={errors.mensagem ? "erro" : ""}
+        {...register("mensagem")}
       />
+      <MensagemErro >
+        {(errors.mensagem?.message)}
+      </MensagemErro> */}
+
       <Botao type="submit">Enviar</Botao>
-    </ContainerCamposFormulario>
+    </ContainerFormulario>
   );
 }

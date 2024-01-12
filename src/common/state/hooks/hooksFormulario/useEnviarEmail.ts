@@ -1,41 +1,24 @@
-import { useRecoilState } from "recoil";
 import emailjs from "@emailjs/browser";
-import { estadoDadosFormulario } from "../../atom/atom";
+import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
+
+type ResetFunction = () => void;
 
 const useEnviarEmail = () => {
-  const [dadosFormulario, setDadosFormulario] = useRecoilState(estadoDadosFormulario);
-
-  const limparDadosFormulario = () => {
-    setDadosFormulario({
-      nome: '',
-      email: '',
-      telefone: '',
-      tema: '',
-      mensagem: '',
-    });
+  const limparDadosFormulario = (reset: ResetFunction) => {
+    reset();
   };
 
-  const enviarEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const templateParms = {
-      nome: dadosFormulario.nome,
-      email: dadosFormulario.email,
-      telefone: dadosFormulario.telefone,
-      tema: dadosFormulario.tema,
-      mensagem: dadosFormulario.mensagem
-    };
-
+  const enviarEmail = (data: IDadosFormulario, reset: ResetFunction) => {
     const serviceID = import.meta.env.VITE_REACT_EMAILJS_SERVICE_ID;
     const templateID = import.meta.env.VITE_REACT_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_REACT_EMAILJS_USER_ID;
 
-    emailjs.send(serviceID, templateID, templateParms, publicKey)
+    emailjs.send(serviceID, templateID, data, publicKey)
       .then((res) => {
         console.log("Email Enviado", res.status, res.text);
         alert("Email Enviado");
 
-        limparDadosFormulario();
+        limparDadosFormulario(reset);
         
       }, (erro) => {
         console.log("Erro: ", erro);

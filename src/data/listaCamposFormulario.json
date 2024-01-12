@@ -1,26 +1,32 @@
 [
   {
     "id": 1,
+    "campoNome": "nome",
     "placeholder": "Nome",
-    "value": "nome",
-    "required": true
+    "value": "nome"
   },
   {
     "id": 2,
+    "campoNome": "email",
     "placeholder": "Email",
-    "value": "email",
-    "required": true
+    "value": "email"
   },
   {
     "id": 3,
+    "campoNome": "telefone",
     "placeholder": "Telefone",
-    "value": "telefone",
-    "required": true
+    "value": "telefone"
   },
   {
     "id": 4,
+    "campoNome": "tema",
     "placeholder": "Tema",
-    "value": "tema",
-    "required": true
+    "value": "tema"
+  },
+  {
+    "id": 5,
+    "campoNome": "mensagem",
+    "placeholder": "Mensagem",
+    "value": "mensagem"
   }
 ]
