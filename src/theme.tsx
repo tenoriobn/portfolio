@@ -5,7 +5,8 @@ const Theme = {
     azulEscuro: '#181A22',
     branco: '#FFFFFF',
     cinzaClaro: '#ffffff7f',
-    vermelho: '#ff0000'
+    verde: '#04aa1f',
+    vermelho: '#dd0707'
   },
   font: {
     nunito: 'Nunito, sans-serif',

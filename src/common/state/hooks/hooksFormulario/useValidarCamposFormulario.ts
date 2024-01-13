@@ -28,7 +28,7 @@ export const useValidarCamposFormulario = () => {
         .max(50, "Máximo 50 caracteres"),
       mensagem: yup.string()
         .required(campoObrigatorio)
-        .max(500, "Máximo 500 caracteres"),
+        .max(750, "Máximo 750 caracteres"),
     })
     .required();
 

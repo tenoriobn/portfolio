@@ -1,14 +1,12 @@
 import emailjs from "@emailjs/browser";
+import { useSetRecoilState } from "recoil";
 import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
-
-type ResetFunction = () => void;
+import { estadoDadosFormularioEnviado } from "../../atom/atom";
 
 const useEnviarEmail = () => {
-  const limparDadosFormulario = (reset: ResetFunction) => {
-    reset();
-  };
+  const setDadosFormularioEnviado = useSetRecoilState(estadoDadosFormularioEnviado);
 
-  const enviarEmail = (data: IDadosFormulario, reset: ResetFunction) => {
+  const enviarEmail = (data: IDadosFormulario, reset: () => void) => {
     const serviceID = import.meta.env.VITE_REACT_EMAILJS_SERVICE_ID;
     const templateID = import.meta.env.VITE_REACT_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_REACT_EMAILJS_USER_ID;
@@ -16,13 +14,15 @@ const useEnviarEmail = () => {
     emailjs.send(serviceID, templateID, data, publicKey)
       .then((res) => {
         console.log("Email Enviado", res.status, res.text);
-        alert("Email Enviado");
 
-        limparDadosFormulario(reset);
-        
+        setDadosFormularioEnviado(true);
+        setTimeout(() => {
+          setDadosFormularioEnviado(false);
+        }, 3000);
+
+        reset();
       }, (erro) => {
-        console.log("Erro: ", erro);
-        alert(erro);
+        console.log(erro);
       });
   };
 

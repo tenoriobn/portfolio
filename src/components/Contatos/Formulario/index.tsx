@@ -2,6 +2,8 @@ import styled, { css } from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
 import listaCamposFormulario from "src/data/listaCamposFormulario.json";
 import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
+import { useRecoilValue } from "recoil";
+import { estadoDadosFormularioEnviado } from "src/common/state/atom/atom";
 
 const ContainerFormulario = styled.form`
   order: 2;
@@ -71,6 +73,10 @@ const MensagemErro = styled.div`
   margin: .25rem 0 0 1.5rem;
 `;
 
+const MensagemFormularioEnviado = styled.p`
+  color: ${cor.verde};
+`;
+
 const Botao = styled.button`
   background-color: transparent;
   border-radius: 32px;
@@ -89,6 +95,7 @@ const Botao = styled.button`
 export default function Formulario() {
   const { useFormHook } = useValidarCamposFormulario();
   const { register, handleSubmit, errors, onSubmit } = useFormHook();
+  const DadosFormularioEnviado = useRecoilValue(estadoDadosFormularioEnviado);
 
   return (
     <ContainerFormulario onSubmit={handleSubmit(onSubmit)}>
@@ -99,13 +106,13 @@ export default function Formulario() {
               <CampoFormulario
                 type="text"
                 placeholder={campo.placeholder}
-                className={`${errors[campo.campoNome] ? 'erro' : ''}`}
+                className={`${errors[campo.campoNome] ? 'erro' : null}`}
                 {...register(`[${campo.campoNome}]`)}
               />
             ) : (
               <CampoTexto
                 placeholder={campo.placeholder}
-                className={`${errors[campo.campoNome] ? 'erro' : ''}`}
+                className={`${errors[campo.campoNome] ? 'erro' : null}`}
                 {...register(`[${campo.campoNome}]`)}
               />
             )}
@@ -116,14 +123,7 @@ export default function Formulario() {
         ))}
       </ContainerCamposFormulario>
 
-      {/* <CampoTexto
-        placeholder="Mensagem"
-        className={errors.mensagem ? "erro" : ""}
-        {...register("mensagem")}
-      />
-      <MensagemErro >
-        {(errors.mensagem?.message)}
-      </MensagemErro> */}
+      {DadosFormularioEnviado ? <MensagemFormularioEnviado>Mensagem enviada</MensagemFormularioEnviado> : null}
 
       <Botao type="submit">Enviar</Botao>
     </ContainerFormulario>
