@@ -6,6 +6,7 @@ import { useRecoilValue } from "recoil";
 import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
+import { useRef } from "react";
 // import ImagemAmpliada from "./ImagemAmpliada";
 
 const ContainerProjetos = styled.section`
@@ -36,11 +37,12 @@ const Botao = styled.button`
 `;
 
 export default function Projetos() {
+  const containerRef = useRef(null);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
-  const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis();
+  const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
 
   return (
-    <ContainerProjetos>
+    <ContainerProjetos ref={containerRef}>
       <TituloSecao titulo="Projetos" />
       <CardProjetos />
       <ImagemAmpliada /> 

@@ -52,18 +52,16 @@ export default function InformacoesContatos() {
         Conecte-se comigo pelo formulário ou clicando em um dos ícones de mídias sociais abaixo para iniciarmos uma conversa:
       </Paragrafo>
       <ContainerIconesContato>
-        <Link to="/" target="_blank" rel="noopener noreferrer">
+        <Link to="https://www.linkedin.com/in/bruno-tenorio/" target="_blank" rel="noopener noreferrer">
           <Icone as={Linkedin} />
         </Link>
-        <Link to="/" target="_blank" rel="noopener noreferrer">
+        <Link to="https://github.com/tenoriobn/" target="_blank" rel="noopener noreferrer">
           <Icone as={Github} />
         </Link>
-        <Link to="/" target="_blank" rel="noopener noreferrer"
-        >
+        <Link to="mailto:tenoriobn@gmail.com">
           <Icone as={Gmail} />
         </Link>
-        <Link to="/" target="_blank" rel="noopener noreferrer"
-        >
+        <Link to="https://wa.me/5511989400334" target="_blank" rel="noopener noreferrer">
           <Icone as={Whatsapp} />
         </Link>
       </ContainerIconesContato>
