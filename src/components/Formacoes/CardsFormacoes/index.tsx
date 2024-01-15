@@ -5,6 +5,8 @@ import { cor } from "src/common/EstilosGlobais/cores";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { useRecoilValue } from "recoil";
+import { estilosCard } from "src/common/estilos/estilosCard";
+import { estilosBorda } from "src/common/estilos/estilosBorda";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;
@@ -40,16 +42,7 @@ const CardFormacao = styled.div<IEstilizacaoDesativaRolagem>`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-
-  border-radius: 2rem;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-sizing: border-box;
-
-  padding: 1rem;
-
-  max-width: 370px;
-  width: 100%;
+  ${estilosCard}
 
   @media (min-width: 375px) {
     gap: 1.5rem;
@@ -62,10 +55,6 @@ const CardFormacao = styled.div<IEstilizacaoDesativaRolagem>`
 `;
 
 const Logo = styled.img<IEstilizacaoDesativaRolagem>`
-  border-radius: 62.4375rem;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0rem 0rem .375rem .1875rem rgba(23, 23, 23, 0.25);
-
   width: 110px;
   height: 110px;
 `;
@@ -86,15 +75,12 @@ const NomeCurso = styled.h2`
 `;
 
 const Botao = styled(Link)<IEstilizacaoDesativaRolagem>`
-  border-radius: 2rem;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  padding: .75rem 1rem;
-
+  ${estilosBorda}
   color: ${cor.branco};
   font-size: 1rem;
   font-weight: 700;
   text-decoration: none;
+  padding: .75rem 1rem;
 `;
 
 export default function CardsFormacoes() {

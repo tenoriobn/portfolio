@@ -8,13 +8,14 @@ import apresentacao from "src/data/informacoesSobreMim.json";
 import { useRecoilValue } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estilosBorda } from "src/common/estilos/estilosBorda";
 
 const ContainerSobreMim = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  align-items: center;
   gap: 1.5rem;
   min-height: calc(100vh - 112px);
   padding: 3.25rem 0;
@@ -33,9 +34,9 @@ const ContainerSobreMim = styled.section`
 
 const FotoPerfil = styled.img<IEstilizacaoDesativaRolagem>`
   cursor: pointer;
+  ${estilosBorda}
+
   border-radius: 50000%;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0rem 0rem 1rem 1px ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   width: 140px;
   height: 140px;
 

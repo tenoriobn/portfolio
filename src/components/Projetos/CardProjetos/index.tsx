@@ -10,6 +10,7 @@ import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
 // import { useEffect } from "react";
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
 import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import {estilosCard} from "src/common/estilos/estilosCard";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -39,16 +40,7 @@ const ContainerCards = styled.div`
 const Card = styled.div<IEstilizacaoCardsVisiveis>`
   display: grid;
   grid-template-rows: auto 1fr;
-
-  border-radius: 2rem;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0px 0px 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-sizing: border-box;
-
-  padding: 1rem;
-
-  max-width: 370px;
-  width: 100%;
+  ${estilosCard}
 
   &:nth-child(n + ${(props) => props.$estilizacaoCardsVisiveis}){
     display: none;

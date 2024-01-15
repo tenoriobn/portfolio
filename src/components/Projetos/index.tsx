@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
 import CardProjetos from "./CardProjetos";
-import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
 import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
-import { estadoLimiteCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
+import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
 import { useRef } from "react";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import Botao from "../Botao";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -22,24 +21,14 @@ const ContainerProjetos = styled.section`
   }
 `;
 
-const Botao = styled.button<IEstilizacaoDesativaRolagem>`
-  background: none;
-  border-radius: 2rem;
-  border: 2px solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0px 0px 16px .5px ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  cursor: pointer;
-  color: ${cor.branco};
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
+const BotaoProjetos = styled(Botao)`
+  font-size: 1rem;
   margin-top: 2rem;
-  padding: 12px 16px;
 `;
 
 export default function Projetos() {
   const containerRef = useRef(null);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
-  const trocaTema = useRecoilValue(estadoTrocaTema);
   const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
 
   return (
@@ -47,12 +36,9 @@ export default function Projetos() {
       <TituloSecao titulo="Projetos" />
       <CardProjetos />
       <ImagemAmpliada /> 
-      <Botao 
-        onClick={alterarQtdCardsVisiveis}
-        $trocaTema={trocaTema}
-      >
+      <BotaoProjetos onClick={alterarQtdCardsVisiveis}>
         {limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}
-      </Botao>
+      </BotaoProjetos>
     </ContainerProjetos>
   );
 }

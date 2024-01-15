@@ -7,6 +7,7 @@ import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estilosBorda } from "src/common/estilos/estilosBorda";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -21,9 +22,7 @@ const ContainerMenu = styled.header`
 `;
 
 const BotaoMenu = styled.button<IEstilizacaoDesativaRolagem>`
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  border-radius: 31.25rem;
-  box-shadow: 0rem 0rem 1rem .0625rem ${cor.azulColbato};
+  ${estilosBorda}
   box-sizing: border-box;
   cursor: pointer;
   width: 48px;

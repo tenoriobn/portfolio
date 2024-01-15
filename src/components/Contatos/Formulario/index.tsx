@@ -5,6 +5,8 @@ import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormular
 import { useRecoilValue } from "recoil";
 import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import Botao from "src/components/Botao";
+import { estilosBorda } from "src/common/estilos/estilosBorda";
 
 const ContainerFormulario = styled.form<IEstilizacaoDesativaRolagem>`
   order: 2;
@@ -12,9 +14,7 @@ const ContainerFormulario = styled.form<IEstilizacaoDesativaRolagem>`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  border-radius: 2rem;
-  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  ${estilosBorda}
   padding: 1.5rem 1rem;
 
   @media (min-width: 768px) {
@@ -43,9 +43,8 @@ const ContainerCampoFormulario = styled.div`
 const estiloDosCampos = css<IEstilizacaoDesativaRolagem>`
   outline: none;
   background-color: transparent;
-  border-radius: 32px;
-  border: 2px solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  padding: 24px;
+  ${estilosBorda}
+  padding: 1.5rem;
   color: ${cor.branco};
 
   &.erro {
@@ -78,16 +77,7 @@ const MensagemFormularioEnviado = styled.p`
   color: ${cor.verde};
 `;
 
-const Botao = styled.button<IEstilizacaoDesativaRolagem>`
-  background-color: transparent;
-  border-radius: 32px;
-  border: 2px solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  box-shadow: 0px 0px 16px 1px ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  color: ${cor.branco};
-  cursor: pointer;
-  font-weight: 700;
-  padding: 12px 16px;
-
+const BotaoFormulario = styled(Botao)`
   @media (min-width: 768px) {
     max-width: 137px;
   }
@@ -129,7 +119,8 @@ export default function Formulario() {
 
       {DadosFormularioEnviado ? <MensagemFormularioEnviado>Mensagem enviada</MensagemFormularioEnviado> : null}
 
-      <Botao type="submit" $trocaTema={trocaTema}>Enviar</Botao>
+      <BotaoFormulario type="submit">Enviar</BotaoFormulario>
+      
     </ContainerFormulario>
   );
 }
