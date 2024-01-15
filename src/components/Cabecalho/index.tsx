@@ -4,6 +4,9 @@ import { cor } from "src/common/EstilosGlobais/cores";
 import MenuItens from "./MenuItens";
 import Idiomas from "./Idiomas";
 import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
+import { useRecoilState } from "recoil";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -17,8 +20,8 @@ const ContainerMenu = styled.header`
   z-index: 2;
 `;
 
-const BotaoMenu = styled.button`
-  border: .125rem solid ${cor.azul};
+const BotaoMenu = styled.button<IEstilizacaoDesativaRolagem>`
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   border-radius: 31.25rem;
   box-shadow: 0rem 0rem 1rem .0625rem ${cor.azulColbato};
   box-sizing: border-box;
@@ -78,14 +81,14 @@ const ContainerIcones = styled.div`
   }
 `;
 
-const Icone = styled.svg`
+const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
   filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
   cursor: pointer;
   width: 24px;
   height: 24px;
 
   path {
-    fill: ${cor.azul};
+    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
     transition: fill 0.3s ease-in-out;
   }
 
@@ -103,16 +106,19 @@ const Icone = styled.svg`
 
 export default function Cabecalho() {
   const ativarMenu = useAtivarMenu();
+  const [trocaTema, setTrocaTema] = useRecoilState(estadoTrocaTema);
+
+  console.log(trocaTema);
   
   return (
     <ContainerMenu>
-      <BotaoMenu onClick={ativarMenu}>
+      <BotaoMenu $trocaTema={trocaTema} onClick={ativarMenu}>
         <h1>BT</h1>
       </BotaoMenu>
       <MenuItens />
       <ContainerIcones>
-        <Idiomas />
-        <Icone as={Lua} />
+        <Idiomas  />
+        <Icone $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
       </ContainerIcones>
     </ContainerMenu>
   );

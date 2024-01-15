@@ -2,6 +2,9 @@ import styled from "styled-components";
 import listaFormacoes from "src/data/listaFormacoes.json";
 import { Link } from "react-router-dom";
 import { cor } from "src/common/EstilosGlobais/cores";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { useRecoilValue } from "recoil";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;
@@ -30,7 +33,7 @@ const ContainerCardsFormacoes = styled.div`
   }
 `;
 
-const CardFormacao = styled.div`
+const CardFormacao = styled.div<IEstilizacaoDesativaRolagem>`
   flex-basis: calc(50% - 0.75rem);
   display: flex;
   flex-direction: column;
@@ -39,8 +42,8 @@ const CardFormacao = styled.div`
   gap: 1rem;
 
   border-radius: 2rem;
-  border: .125rem solid ${cor.azul};
-  box-shadow: 0rem 0rem 1rem .0625rem ${cor.azul};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   box-sizing: border-box;
 
   padding: 1rem;
@@ -58,9 +61,9 @@ const CardFormacao = styled.div`
   }
 `;
 
-const Logo = styled.img`
+const Logo = styled.img<IEstilizacaoDesativaRolagem>`
   border-radius: 62.4375rem;
-  border: .125rem solid ${cor.azul};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   box-shadow: 0rem 0rem .375rem .1875rem rgba(23, 23, 23, 0.25);
 
   width: 110px;
@@ -82,10 +85,10 @@ const NomeCurso = styled.h2`
   }
 `;
 
-const Botao = styled(Link)`
+const Botao = styled(Link)<IEstilizacaoDesativaRolagem>`
   border-radius: 2rem;
-  border: .125rem solid ${cor.azul};
-  box-shadow: 0rem 0rem 1rem .0625rem ${cor.azul};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   padding: .75rem 1rem;
 
   color: ${cor.branco};
@@ -95,11 +98,13 @@ const Botao = styled(Link)`
 `;
 
 export default function CardsFormacoes() {
+  const trocaTema = useRecoilValue(estadoTrocaTema);
+
   return (
     <ContainerCardsFormacoes>
       {listaFormacoes.map(formacao => (
-        <CardFormacao key={formacao.id}>
-          <Logo src={formacao.logo} alt="" />
+        <CardFormacao key={formacao.id} $trocaTema={trocaTema}>
+          <Logo src={formacao.logo} alt="" $trocaTema={trocaTema} />
           <Paragrafo>{formacao.graduacao}</Paragrafo>
           <NomeCurso>{formacao.curso}</NomeCurso>
           <Paragrafo>{formacao.localidade}</Paragrafo>
@@ -108,6 +113,7 @@ export default function CardsFormacoes() {
             to={formacao.siteInstituicao}                 
             target="_blank"
             rel="noopener noreferrer"
+            $trocaTema={trocaTema}
           >
             Acessar
           </Botao>

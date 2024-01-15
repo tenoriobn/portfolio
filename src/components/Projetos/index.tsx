@@ -4,10 +4,10 @@ import CardProjetos from "./CardProjetos";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
 import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
-import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
+import { estadoLimiteCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
 import { useRef } from "react";
-// import ImagemAmpliada from "./ImagemAmpliada";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -22,11 +22,11 @@ const ContainerProjetos = styled.section`
   }
 `;
 
-const Botao = styled.button`
+const Botao = styled.button<IEstilizacaoDesativaRolagem>`
   background: none;
   border-radius: 2rem;
-  border: 2px solid ${cor.azul};
-  box-shadow: 0px 0px 16px .5px ${cor.azul};
+  border: 2px solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  box-shadow: 0px 0px 16px .5px ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   cursor: pointer;
   color: ${cor.branco};
   font-size: 16px;
@@ -39,6 +39,7 @@ const Botao = styled.button`
 export default function Projetos() {
   const containerRef = useRef(null);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
+  const trocaTema = useRecoilValue(estadoTrocaTema);
   const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
 
   return (
@@ -46,7 +47,12 @@ export default function Projetos() {
       <TituloSecao titulo="Projetos" />
       <CardProjetos />
       <ImagemAmpliada /> 
-      <Botao onClick={alterarQtdCardsVisiveis}>{limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}</Botao>
+      <Botao 
+        onClick={alterarQtdCardsVisiveis}
+        $trocaTema={trocaTema}
+      >
+        {limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}
+      </Botao>
     </ContainerProjetos>
   );
 }

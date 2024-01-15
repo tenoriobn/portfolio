@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
-import { estadoQtdCardsVisiveis } from "src/common/state/atom/atom";
+import { estadoQtdCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
 // import { useEffect } from "react";
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -40,8 +41,8 @@ const Card = styled.div<IEstilizacaoCardsVisiveis>`
   grid-template-rows: auto 1fr;
 
   border-radius: 2rem;
-  border: .125rem solid ${cor.azul};
-  box-shadow: 0px 0px 1rem .0625rem ${cor.azul};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  box-shadow: 0px 0px 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   box-sizing: border-box;
 
   padding: 1rem;
@@ -109,13 +110,22 @@ const ContainerIcon = styled.div`
   }
 `;
 
-const Icone = styled.svg`
+const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
   display: flex;
 
   cursor: pointer;
   width: 32px;
   height: 32px;
   filter: drop-shadow(0px 0px 16px rgba(4, 148, 252, 0.3));
+
+  rect {
+    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    stroke: none;
+  }
+
+  path {
+    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)}
+  }
 
   @media (min-width: 768px) {
     width: 40px;
@@ -125,12 +135,13 @@ const Icone = styled.svg`
 
 export default function CardProjetos() {
   const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
+  const trocaTema = useRecoilValue(estadoTrocaTema);
   const ampliarImagem = useAmpliarImagem();
 
   return (
     <ContainerCards>
       {listaProjetos.map(projeto => (
-        <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis}>
+        <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis} $trocaTema={trocaTema}>
           <Imagem src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
 
           <ContainerConteudo>
@@ -140,11 +151,11 @@ export default function CardProjetos() {
 
             <ContainerIcon>
               <Link to={projeto.linkRepositorio} target="_blank" rel="noopener noreferrer">
-                <Icone as={Github} />
+                <Icone as={Github} $trocaTema={trocaTema} />
               </Link>
 
               <Link to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
-                <Icone as={Vercel} />
+                <Icone as={Vercel} $trocaTema={trocaTema} />
               </Link>
             </ContainerIcon>
           </ContainerConteudo>

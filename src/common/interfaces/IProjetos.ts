@@ -1,5 +1,6 @@
 export interface IEstilizacaoCardsVisiveis {
   $estilizacaoCardsVisiveis: number;
+  $trocaTema?: boolean;
 }
 
 export interface IEstadoQtdCardsVisiveis {

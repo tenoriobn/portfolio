@@ -44,3 +44,8 @@ export const estadoDadosFormularioEnviado = atom({
   key: 'dadosFormularioEnviado',
   default: false
 });
+
+export const estadoTrocaTema = atom({
+  key: 'tema',
+  default: false
+});

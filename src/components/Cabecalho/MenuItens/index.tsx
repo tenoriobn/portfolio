@@ -1,11 +1,12 @@
 import { cor } from "src/common/EstilosGlobais/cores";
-import { IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoDesativaRolagem, IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
 import listaItensMenu from "src/data/listaItensMenu.json";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { estadoLinkAtivo, estadoMenuAtivo } from "src/common/state/atom/atom";
+import { estadoLinkAtivo, estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
 import { Link } from "react-router-dom";
-import backgroundMenu from "./backgroundmenu.svg";
+import fundoMenuEscuro from "./fundoMenuEscuro.svg";
+import fundoMenuClaro from "./fundoMenuClaro.svg";
 
 const ContainerMenuItens = styled.nav<IEstilizacaoMenuAtivo>`
   display: flex;
@@ -15,7 +16,7 @@ const ContainerMenuItens = styled.nav<IEstilizacaoMenuAtivo>`
   transition: left 0.3s ease-out 0s;
 
   @media (max-width: 1199px) {
-    background: url(${backgroundMenu});
+    background: url(${(props) => (props.$trocaTema ? fundoMenuEscuro : fundoMenuClaro)});
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -49,7 +50,7 @@ const ListaItens = styled.ul`
   }
 `;
 
-const Item = styled.li`
+const Item = styled.li<IEstilizacaoDesativaRolagem>`
   text-align: center;
 
   a {
@@ -63,7 +64,7 @@ const Item = styled.li`
     }
 
     &.active {
-      color: ${cor.azul};
+      color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
       text-shadow: 0rem 0rem 1rem ${cor.azulColbato};
     }
 
@@ -76,12 +77,13 @@ const Item = styled.li`
 export default function MenuItens() {
   const menuAtivo = useRecoilValue(estadoMenuAtivo);
   const [linkAtivo, setLinkAtivo] = useRecoilState(estadoLinkAtivo);
+  const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
-    <ContainerMenuItens $menuAtivo={menuAtivo}>
+    <ContainerMenuItens $menuAtivo={menuAtivo} $trocaTema={trocaTema}>
       <ListaItens>
         {listaItensMenu.map(item => (
-          <Item key={item.id}>
+          <Item key={item.id} $trocaTema={trocaTema}>
             <Link
               to={item.href}
               onClick={() => setLinkAtivo(item.id)}

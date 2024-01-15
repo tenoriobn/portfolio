@@ -2,13 +2,14 @@ import { useRecoilValue } from "recoil";
 import { createGlobalStyle } from "styled-components";
 import { cor } from "./cores";
 import Theme from "src/theme";
-import background from "./background.svg";
-import { estadoDesativaRolagem } from "../state/atom/atom";
+import fundoEscuro from "./fundoEscuro.svg";
+import fundoClaro from "./fundoClaro.svg";
+import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom/atom";
 import { IEstilizacaoDesativaRolagem } from "../interfaces/IEstilizacaoCustomizada";
 
 const GlobalStyles = createGlobalStyle<IEstilizacaoDesativaRolagem>`
   body {
-    background-image: url(${background});
+    background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
     background-repeat: no-repeat;
     background-size: cover;
     color: ${cor.branco};
@@ -32,9 +33,10 @@ const GlobalStyles = createGlobalStyle<IEstilizacaoDesativaRolagem>`
 
 const EstilosGlobais = () => {
   const desativaRolagem = useRecoilValue(estadoDesativaRolagem);
+  const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
-    <GlobalStyles $desativaRolagem={desativaRolagem} />
+    <GlobalStyles $trocaTema={trocaTema} $desativaRolagem={desativaRolagem} />
   );
 };
 

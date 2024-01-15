@@ -5,6 +5,9 @@ import Linkedin from "src/assets/icons/linkedin.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { Link } from "react-router-dom";
 import apresentacao from "src/data/informacoesSobreMim.json";
+import { useRecoilValue } from "recoil";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
 
 const ContainerSobreMim = styled.section`
   display: flex;
@@ -28,11 +31,11 @@ const ContainerSobreMim = styled.section`
   }
 `;
 
-const FotoPerfil = styled.img`
+const FotoPerfil = styled.img<IEstilizacaoDesativaRolagem>`
   cursor: pointer;
   border-radius: 50000%;
-  border: .125rem solid ${cor.azul};
-  box-shadow: 0rem 0rem 1rem 1px ${cor.azul};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  box-shadow: 0rem 0rem 1rem 1px ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   width: 140px;
   height: 140px;
 
@@ -47,14 +50,14 @@ const FotoPerfil = styled.img`
   }
 `;
 
-const ParagrafoApresentacao = styled.p`
+const ParagrafoApresentacao = styled.p<IEstilizacaoDesativaRolagem>`
   font-size: .875rem;
   letter-spacing: .0175rem;
   text-align: center;
   max-width: 764px;
 
   .nome__destaque {
-    color: ${cor.azul};
+    color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
     font-size: 1rem;
     font-weight: 700;
   }
@@ -90,11 +93,20 @@ const ContainerIcones = styled.div`
   }
 `;
 
-const Icone = styled.svg`
+const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
   cursor: pointer;
   width: 32px;
   height: 32px;
   filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
+  
+  rect {
+    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  }
+
+  path {
+    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)}
+  }
 
   @media (min-width: 768px) {
     width: 54px;
@@ -103,10 +115,12 @@ const Icone = styled.svg`
 `;
 
 export default function SobreMim() {
+  const trocaTema = useRecoilValue(estadoTrocaTema);
+
   return (
     <ContainerSobreMim>
-      <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" />
-      <ParagrafoApresentacao>
+      <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" $trocaTema={trocaTema} />
+      <ParagrafoApresentacao $trocaTema={trocaTema}>
         {apresentacao.saudacao}
         <span className="nome__destaque">{apresentacao.nome}</span>
         {apresentacao.mensagem}
@@ -118,7 +132,7 @@ export default function SobreMim() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone as={Linkedin} />
+          <Icone as={Linkedin} $trocaTema={trocaTema} />
         </Link>
 
         <Link 
@@ -126,7 +140,7 @@ export default function SobreMim() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone as={Github} />
+          <Icone as={Github} $trocaTema={trocaTema} />
         </Link>
       </ContainerIcones>
     </ContainerSobreMim>
