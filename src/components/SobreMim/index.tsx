@@ -7,8 +7,9 @@ import { Link } from "react-router-dom";
 import apresentacao from "src/data/informacoesSobreMim.json";
 import { useRecoilValue } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosBorda } from "src/common/estilos/estilosBorda";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerSobreMim = styled.section`
   display: flex;
@@ -32,7 +33,7 @@ const ContainerSobreMim = styled.section`
   }
 `;
 
-const FotoPerfil = styled.img<IEstilizacaoDesativaRolagem>`
+const FotoPerfil = styled.img<IEstilizacaoCustomizada>`
   cursor: pointer;
   ${estilosBorda}
 
@@ -51,7 +52,7 @@ const FotoPerfil = styled.img<IEstilizacaoDesativaRolagem>`
   }
 `;
 
-const ParagrafoApresentacao = styled.p<IEstilizacaoDesativaRolagem>`
+const ParagrafoApresentacao = styled.p<IEstilizacaoCustomizada>`
   font-size: .875rem;
   letter-spacing: .0175rem;
   text-align: center;
@@ -94,21 +95,11 @@ const ContainerIcones = styled.div`
   }
 `;
 
-const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
-  cursor: pointer;
+const Icone = styled.svg<IEstilizacaoCustomizada>`
+  ${estilosIcones}
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
   
-  rect {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  }
-
-  path {
-    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)}
-  }
-
   @media (min-width: 768px) {
     width: 54px;
     height: 54px;

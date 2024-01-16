@@ -1,5 +1,5 @@
 import { cor } from "src/common/EstilosGlobais/cores";
-import { IEstilizacaoDesativaRolagem, IEstilizacaoMenuAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
 import listaItensMenu from "src/data/listaItensMenu.json";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import fundoMenuEscuro from "./fundoMenuEscuro.svg";
 import fundoMenuClaro from "./fundoMenuClaro.svg";
 
-const ContainerMenuItens = styled.nav<IEstilizacaoMenuAtivo>`
+const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ const ListaItens = styled.ul`
   }
 `;
 
-const Item = styled.li<IEstilizacaoDesativaRolagem>`
+const Item = styled.li<IEstilizacaoCustomizada>`
   text-align: center;
 
   a {

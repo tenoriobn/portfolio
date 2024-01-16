@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import listaFerramentas from "src/data/listaFerramentas.json";
 import { Link } from "react-router-dom";
+import { cor } from "src/common/EstilosGlobais/cores";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import { useRecoilValue } from "recoil";
 
 const ContainerFerramentas = styled.div`
   display: grid;
@@ -25,10 +29,14 @@ const ContainerFerramentas = styled.div`
   }
 `;
 
-const Icone = styled.img`
-  filter: drop-shadow(0px 0px 6px rgba(23, 23, 23, 0.25));
+const Icone = styled.img<IEstilizacaoCustomizada>`
+  filter: drop-shadow(0rem 0rem .375rem ${(props) => (props.$trocaTema ? cor.cinzaEscuro : cor.cinzaMuitoClaro)});
   width: 32px;
   height: 32px;
+
+  &:hover {
+    opacity: .7;
+  }
 
   @media (min-width: 768px) {
     width: 48px;
@@ -42,6 +50,8 @@ const Icone = styled.img`
 `;
 
 export default function Ferramentas() {
+  const trocaTema = useRecoilValue(estadoTrocaTema);
+
   return (
     <ContainerFerramentas>
       {listaFerramentas.map(ferramenta => (
@@ -51,7 +61,7 @@ export default function Ferramentas() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone src={ferramenta.icone} />
+          <Icone src={ferramenta.icone} $trocaTema={trocaTema} />
         </Link>
       ))}
     </ContainerFerramentas>

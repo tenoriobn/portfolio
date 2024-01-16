@@ -2,10 +2,10 @@ import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
 import Formulario from "./Formulario";
 import InformacoesContatos from "./InformacoesContatos";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
-import { estilosBorda } from "src/common/estilos/estilosBorda";
+import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
 
 const ContainerContatos = styled.section`
   padding: 3.25rem 0;
@@ -15,7 +15,7 @@ const ContainerContatos = styled.section`
   }
 `;
 
-const ContainerOpcoesContatos = styled.div<IEstilizacaoDesativaRolagem>`
+const ContainerOpcoesContatos = styled.div<IEstilizacaoCustomizada>`
   margin-top: 1.5rem;
 
   @media (min-width: 768px) {

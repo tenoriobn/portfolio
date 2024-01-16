@@ -3,14 +3,13 @@ import Github from "src/assets/icons/github.svg?react";
 import Vercel from "src/assets/icons/vercel.svg?react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { cor } from "src/common/EstilosGlobais/cores";
 import { useRecoilValue } from "recoil";
 import { estadoQtdCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
-// import { useEffect } from "react";
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
-import {estilosCard} from "src/common/estilos/estilosCard";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import {estilosCard} from "src/common/estilosPadronizados/estilosCard";
+import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -102,22 +101,10 @@ const ContainerIcon = styled.div`
   }
 `;
 
-const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
-  display: flex;
-
-  cursor: pointer;
+const Icone = styled.svg<IEstilizacaoCustomizada>`
+  ${estilosIcones}
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0px 0px 16px rgba(4, 148, 252, 0.3));
-
-  rect {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    stroke: none;
-  }
-
-  path {
-    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)}
-  }
 
   @media (min-width: 768px) {
     width: 40px;
@@ -127,8 +114,8 @@ const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
 
 export default function CardProjetos() {
   const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
-  const trocaTema = useRecoilValue(estadoTrocaTema);
   const ampliarImagem = useAmpliarImagem();
+  const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
     <ContainerCards>

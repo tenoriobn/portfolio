@@ -28,8 +28,8 @@ const BotaoProjetos = styled(Botao)`
 
 export default function Projetos() {
   const containerRef = useRef(null);
-  const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
   const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
+  const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
 
   return (
     <ContainerProjetos ref={containerRef}>

@@ -6,8 +6,9 @@ import Idiomas from "./Idiomas";
 import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosBorda } from "src/common/estilos/estilosBorda";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -21,7 +22,7 @@ const ContainerMenu = styled.header`
   z-index: 2;
 `;
 
-const BotaoMenu = styled.button<IEstilizacaoDesativaRolagem>`
+const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   ${estilosBorda}
   box-sizing: border-box;
   cursor: pointer;
@@ -80,21 +81,13 @@ const ContainerIcones = styled.div`
   }
 `;
 
-const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
-  filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
-  cursor: pointer;
+const Icone = styled.svg<IEstilizacaoCustomizada>`
+  ${estilosIcones}
   width: 24px;
   height: 24px;
 
   path {
     fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    transition: fill 0.3s ease-in-out;
-  }
-
-  &:hover {
-    path {
-      fill: ${cor.branco};
-    }
   }
 
   @media (min-width: 768px) {
@@ -106,8 +99,6 @@ const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
 export default function Cabecalho() {
   const ativarMenu = useAtivarMenu();
   const [trocaTema, setTrocaTema] = useRecoilState(estadoTrocaTema);
-
-  console.log(trocaTema);
   
   return (
     <ContainerMenu>

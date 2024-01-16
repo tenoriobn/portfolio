@@ -6,8 +6,8 @@ import Gmail from "src/assets/icons/gmail.svg?react";
 import Whatsapp from "src/assets/icons/whatsapp.svg?react";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerInformacoesContatos = styled.div`
   margin-top: 1.5rem;
@@ -30,22 +30,10 @@ const ContainerIconesContato = styled.div`
   }
 `;
 
-const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
-  display: flex;
-
-  cursor: pointer;
+const Icone = styled.svg<IEstilizacaoCustomizada>`
+  ${estilosIcones}
   width: 32px;
   height: 32px;
-  filter: drop-shadow(0px 0px 16px rgba(4, 148, 252, 0.3));
-
-  rect {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  }
-
-  path {
-    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)}
-  }
 
   @media (min-width: 768px) {
     width: 40px;

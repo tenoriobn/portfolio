@@ -5,14 +5,14 @@ import { cor } from 'src/common/EstilosGlobais/cores';
 import ListaIdiomas from './ListaIdiomas';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'src/common/state/atom/atom';
-import { IEstilizacaoDesativaRolagem } from 'src/common/interfaces/IEstilizacaoCustomizada';
+import { IEstilizacaoCustomizada } from 'src/common/interfaces/IEstilizacaoCustomizada';
 
 const ContainerIdiomas = styled.li`
   list-style: none;
   position: relative;
 `;
 
-const Icone = styled.svg<IEstilizacaoDesativaRolagem>`
+const Icone = styled.svg<IEstilizacaoCustomizada>`
   filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
   cursor: pointer;
   width: 24px;

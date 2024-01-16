@@ -1,13 +1,6 @@
-export interface IEstilizacaoDesativaRolagem {
+export interface IEstilizacaoCustomizada {
   $desativaRolagem?: boolean;
   $trocaTema?: boolean;
-}
-
-export interface IEstilizacaoMenuAtivo {
-  $menuAtivo: boolean;
-  $trocaTema?: boolean;
-}
-
-export interface IEstilizacaolistaIdiomasAtivo {
-  $listaIdiomasAtivo: boolean;
+  $menuAtivo?: boolean;
+  $listaIdiomasAtivo?: boolean;
 }

@@ -5,9 +5,9 @@ import Theme from "src/theme";
 import fundoEscuro from "./fundoEscuro.svg";
 import fundoClaro from "./fundoClaro.svg";
 import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom/atom";
-import { IEstilizacaoDesativaRolagem } from "../interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 
-const GlobalStyles = createGlobalStyle<IEstilizacaoDesativaRolagem>`
+const GlobalStyles = createGlobalStyle<IEstilizacaoCustomizada>`
   body {
     background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
     background-repeat: no-repeat;

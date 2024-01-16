@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import listaFormacoes from "src/data/listaFormacoes.json";
 import { Link } from "react-router-dom";
-import { cor } from "src/common/EstilosGlobais/cores";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoDesativaRolagem } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { useRecoilValue } from "recoil";
-import { estilosCard } from "src/common/estilos/estilosCard";
-import { estilosBorda } from "src/common/estilos/estilosBorda";
+import { estilosCard } from "src/common/estilosPadronizados/estilosCard";
+import { estilosBotao } from "src/common/estilosPadronizados/estilosBotao";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;
@@ -35,7 +34,7 @@ const ContainerCardsFormacoes = styled.div`
   }
 `;
 
-const CardFormacao = styled.div<IEstilizacaoDesativaRolagem>`
+const CardFormacao = styled.div<IEstilizacaoCustomizada>`
   flex-basis: calc(50% - 0.75rem);
   display: flex;
   flex-direction: column;
@@ -54,7 +53,7 @@ const CardFormacao = styled.div<IEstilizacaoDesativaRolagem>`
   }
 `;
 
-const Logo = styled.img<IEstilizacaoDesativaRolagem>`
+const Logo = styled.img<IEstilizacaoCustomizada>`
   width: 110px;
   height: 110px;
 `;
@@ -74,13 +73,8 @@ const NomeCurso = styled.h2`
   }
 `;
 
-const Botao = styled(Link)<IEstilizacaoDesativaRolagem>`
-  ${estilosBorda}
-  color: ${cor.branco};
-  font-size: 1rem;
-  font-weight: 700;
-  text-decoration: none;
-  padding: .75rem 1rem;
+const Botao = styled(Link)<IEstilizacaoCustomizada>`
+  ${estilosBotao}
 `;
 
 export default function CardsFormacoes() {

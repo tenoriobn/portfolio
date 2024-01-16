@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { cor } from "src/common/EstilosGlobais/cores";
-import { IEstilizacaolistaIdiomasAtivo } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { IIdioma } from "src/common/interfaces/IIdioma";
 import { estadoIdiomaAtivo, estadoListaIdiomasAtivo } from "src/common/state/atom/atom";
 import listaIdiomas from "src/data/listaIdiomas.json";
 import styled from "styled-components";
 
-const ContainerListaIdiomas = styled.ul<IEstilizacaolistaIdiomasAtivo>`
+const ContainerListaIdiomas = styled.ul<IEstilizacaoCustomizada>`
   position: absolute;
   display: ${(props) => (props.$listaIdiomasAtivo ? 'flex' : 'none')};
   flex-direction: column;
