@@ -1,0 +1,113 @@
+Opções do menu: {
+  About me
+  Projects
+  Education
+  Skills
+  Contacts
+}
+
+Conteúdo da seção Sobre mim: {
+  Hello, I'm Bruno Tenório, originally from Itaquaquecetuba, in the east zone of São Paulo. In 2010, at the age of 13, I delved into programming by creating my first server for the game Fatality Gunz, even without prior knowledge of c++, databases, php, or protocols. I was confident that it was possible to learn and master what I loved. In 2020, I started courses at Alura, focusing on front-end development. Currently, I am honing my skills in both front and back-end, aiming to work in a cutting-edge technology company where I can grow professionally and continue learning.
+}
+
+Conteúdo dos cards da seção Projetos: {
+  Nome da seção: Projects
+
+  {
+    Card 1:
+    IP Address Tracker
+    ReactJS / Styled Components / TypeScript / API
+    This application allows you to visualize geographical information of IP addresses, implementing search functionality and presentation of geospatial data.
+  },
+  {
+    Card 2:
+    E-commerce
+    ReactJS / Styled Components
+    This e-commerce application emphasizes fidelity to the proposed design. It implements responsiveness, interactivity, and essential functionalities.
+  },
+  {
+    Card 3:
+    Multi-step Form
+    ReactJS / SCSS
+    This application aims to faithfully reproduce the proposed design, ensuring the progressive completion of each step, providing interactive elements.
+  },
+  {
+    Card 4:
+    Tip Calculator
+    HTML / CSS / Tailwind / JavaScript
+    This application aims to provide functionalities to calculate the appropriate tip and total cost of the bill per person, offering a functional and intuitive user experience.
+  },
+  {
+    Card 5:
+    Interactive Pricing Component
+    HTML / SCSS / Tailwind / JavaScript
+    This application features slider functionalities to view and switch between different page view packages and their respective monthly prices.
+  },
+  {
+    Card 6:
+    Notifications Page
+    HTML / SCSS / JavaScript
+    This application seeks to faithfully reproduce the proposed layout. The project aims to offer an interface that allows distinguishing between 'unread' and 'read' notifications.
+  },
+
+  Nome do Botão: {
+    View More
+  }
+}
+
+Conteudo da seção Formações: {
+  
+  Nome da seção: Education
+
+  {
+    Card 1:
+    Technologist - FATEC
+    Commercial Management
+    Itaquaquecetuba - SP
+    08/2019 - 07/2022
+  },
+  {
+    Card 2:
+    Learning Platform - ALURA
+    Full Stack Javascript
+    Virtual
+    08/2021 - Present
+  },
+  {
+    Card 3:
+    Bachelor's Degree - UNIVESP
+    Information Technology
+    Itaquaquecetuba - SP
+    08/2022 - Present
+  },
+
+  Nome do Botão: {
+    Access
+  }
+}
+
+Habilidades: {
+  Nome da seção: Skills
+}
+
+Contacts Section: {
+  Nome da seção: Contacts
+
+  Conteudo textual: {
+    Connect with me through the form or by clicking on one of the social media icons below to start a conversation.
+  },
+  Nome dos inputs: {
+    Name
+    Email
+    Phone
+    Subject
+    Message
+  },
+  Nome do Botão: {
+    Send
+  }
+}
+
+Footer: {
+  ©2023 Bruno Tenório - All rights reserved
+}

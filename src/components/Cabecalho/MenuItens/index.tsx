@@ -1,12 +1,14 @@
 import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
-import listaItensMenu from "src/data/listaItensMenu.json";
+// import listaItensMenu from "src/data/listaItensMenu.json";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { estadoLinkAtivo, estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
 import { Link } from "react-router-dom";
 import fundoMenuEscuro from "./fundoMenuEscuro.svg";
 import fundoMenuClaro from "./fundoMenuClaro.svg";
+import { useTranslation } from "react-i18next";
+import { IMenuItens } from "src/common/interfaces/ICabecalho";
 
 const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
   display: flex;
@@ -78,11 +80,13 @@ export default function MenuItens() {
   const menuAtivo = useRecoilValue(estadoMenuAtivo);
   const [linkAtivo, setLinkAtivo] = useRecoilState(estadoLinkAtivo);
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
+  const listaMenuItens: IMenuItens[] = t('cabecalho.menuItens', { returnObjects: true });
 
   return (
     <ContainerMenuItens $menuAtivo={menuAtivo} $trocaTema={trocaTema}>
       <ListaItens>
-        {listaItensMenu.map(item => (
+        {listaMenuItens.map(item => (
           <Item key={item.id} $trocaTema={trocaTema}>
             <Link
               to={item.href}

@@ -33,6 +33,7 @@ const Icone = styled.img<IEstilizacaoCustomizada>`
   filter: drop-shadow(0rem 0rem .375rem ${(props) => (props.$trocaTema ? cor.cinzaEscuro : cor.cinzaMuitoClaro)});
   width: 32px;
   height: 32px;
+  transition: all .3s ease-in-out;
 
   &:hover {
     opacity: .7;

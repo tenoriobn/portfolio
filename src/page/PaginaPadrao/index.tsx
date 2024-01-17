@@ -8,6 +8,8 @@ import Projetos from "src/components/Projetos";
 import Rodape from "src/components/Rodape";
 import Theme from "src/theme";
 import styled, { ThemeProvider } from "styled-components";
+import useConfigurarI18n from "src/common/state/hooks/hooksTraducao/useConfigurarI18n";
+import { I18nextProvider } from "react-i18next";
 
 const ContainerGlobal = styled.div`
   position: relative;
@@ -39,21 +41,28 @@ const Conteudo = styled.main`
 `;
 
 export default function PaginaPadrao() {
+  const i18n = useConfigurarI18n();
+
+  if (!i18n) {
+    return null;
+  }
 
   return (
-    <ThemeProvider theme={Theme}>
-      <EstilosGlobais />
-      <ContainerGlobal>
-        <Cabecalho />
-        <Conteudo>
-          <SobreMim />
-          <Projetos />
-          <Formacoes />
-          <Habilidades />
-          <Contatos />
-        </Conteudo>
-        <Rodape />
-      </ContainerGlobal>
-    </ThemeProvider>
+    <I18nextProvider i18n={i18n}>
+      <ThemeProvider theme={Theme}>
+        <EstilosGlobais />
+        <ContainerGlobal>
+          <Cabecalho />
+          <Conteudo>
+            <SobreMim />
+            <Projetos />
+            <Formacoes />
+            <Habilidades />
+            <Contatos />
+          </Conteudo>
+          <Rodape />
+        </ContainerGlobal>
+      </ThemeProvider>
+    </I18nextProvider>
   );
 }

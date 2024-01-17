@@ -22,11 +22,10 @@ export const estilosIcones = css<IEstilizacaoCustomizada>`
   &:hover {
     rect {
       fill: transparent!important;
-      stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
     }
 
     path {
-      fill: ${(props) => (props.$trocaTema ? cor.branco : cor.branco)}
+      fill: ${cor.branco};
     }
   }
 `;

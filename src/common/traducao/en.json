@@ -1,0 +1,267 @@
+{
+  "cabecalho": {
+    "menuItens": [
+      {
+        "id": 1,
+        "nome": "About me",
+        "href": "/"
+      },
+      {
+        "id": 2,
+        "nome": "Projects",
+        "href": "/projetos"
+      },
+      {
+        "id": 3,
+        "nome": "Education",
+        "href": "/formacoes"
+      },
+      {
+        "id": 4,
+        "nome": "Skills",
+        "href": "/habilidades"
+      },
+      {
+        "id": 5,
+        "nome": "Contacts",
+        "href": "/contatos"
+      }
+    ]
+  },
+  "sobreMim": {
+    "saudacao": "Hello, I'm ",
+    "nome": "Bruno Tenório, ",
+    "mensagem": "originally from Itaquaquecetuba, in the east zone of São Paulo. In 2010, at the age of 13, I delved into programming by creating my first server for the game Fatality Gunz, even without prior knowledge of c++, databases, php, or protocols. I was confident that it was possible to learn and master what I loved. In 2020, I started courses at Alura, focusing on front-end development. Currently, I am honing my skills in both front and back-end, aiming to work in a cutting-edge technology company where I can grow professionally and continue learning."
+  },
+  "projetos": {
+    "tituloSecao": "Projects",
+    "cardsProjetos":
+    [
+      {
+      "id": 1,
+      "imagem": "/src/components/Projetos/CardProjetos/img/Rastreador de endereço.jpg",
+      "nome": "IP Address Tracker",
+      "ferramentas": "ReactJS / Styled Components / TypeScript / API",
+      "descricao": "This application allows you to visualize geographical information of IP addresses, implementing search functionality and presentation of geospatial data.",
+      "linkRepositorio": "https://github.com/tenoriobn/ipaddresstracker",
+      "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
+      },
+      {
+        "id": 2,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Comércio Eletrônico.jpg",
+        "nome": "E-commerce",
+        "ferramentas": "ReactJS /  Styled Componets",
+        "descricao": "This e-commerce application emphasizes fidelity to the proposed design. It implements responsiveness, interactivity, and essential functionalities.",
+        "linkRepositorio": "https://github.com/tenoriobn/sneakers",
+        "linkHospedagem": "https://sneakers-sepia.vercel.app/"
+      },
+      {
+        "id": 3,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Formulario de várias etapas.jpg",
+        "nome": "Multi-step Form",
+        "ferramentas": "ReactJS / SCSS",
+        "descricao": "This application aims to faithfully reproduce the proposed design, ensuring the progressive completion of each step, providing interactive elements.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-20",
+        "linkHospedagem": "https://projeto-20.vercel.app/"
+      },
+      {
+        "id": 4,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Calculadora de gorjetas.jpg",
+        "nome": "Tip Calculator",
+        "ferramentas": "HTML / CSS / Tailwind / JavaScript",
+        "descricao": "This application aims to provide functionalities to calculate the appropriate tip and total cost of the bill per person, offering a functional and intuitive user experience.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-19",
+        "linkHospedagem": "https://projeto-19.vercel.app/"
+      },
+      {
+        "id": 5,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.jpg",
+        "nome": "Interactive Pricing Component",
+        "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
+        "descricao": "This application features slider functionalities to view and switch between different page view packages and their respective monthly prices.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-18",
+        "linkHospedagem": "https://projeto-18.vercel.app/"
+      },
+      {
+        "id": 6,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Notifications Page",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "This application seeks to faithfully reproduce the proposed layout. The project aims to offer an interface that allows distinguishing between 'unread' and 'read' notifications.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+    
+      {
+        "id": 7,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 8,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 9,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 10,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 11,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 12,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 13,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 14,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 15,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      },
+      {
+        "id": 16,
+        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.jpg",
+        "nome": "Página de notificações",
+        "ferramentas": "HTML / SCSS / JavaScript",
+        "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
+        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
+        "linkHospedagem": "https://projeto-17.vercel.app/"
+      }
+    ],
+    "verMais": "View More",
+    "verMenos": "See less"
+  },
+  "formacoes": {
+    "tituloSecao": "Education",
+    "cardsFormacoes":
+    [
+      {
+        "id": 1,
+        "logo": "/src/components/Formacoes/CardsFormacoes/img/Fatec.png",
+        "graduacao": "Technologist - FATEC",
+        "curso": "Commercial Management",
+        "localidade": "Itaquaquecetuba – SP",
+        "data": "08/2019 – 07/2022",
+        "siteInstituicao": "http://www.fatecsp.br/paginas/historia_fatecsp.php#div_menu"
+      },
+      {
+        "id": 2,
+        "logo": "/src/components/Formacoes/CardsFormacoes/img/Alura.png",
+        "graduacao": "Learning Platform - ALURA",
+        "curso": "Full Stack Javascript",
+        "localidade": "Virtual",
+        "data": "08/2021 – Presente",
+        "siteInstituicao": "https://www.alura.com.br/sobre"
+      },
+      {
+        "id": 3,
+        "logo": "/src/components/Formacoes/CardsFormacoes/img/Univesp.png",
+        "graduacao": "Bachelor's Degree - UNIVESP",
+        "curso": "Information Technology",
+        "localidade": "Itaquaquecetuba – SP",
+        "data": "08/2022 – Presente",
+        "siteInstituicao": "https://univesp.br/institucional/historia"
+      }
+    ],
+    "acessar": "Access"
+  },
+  "habilidades": {
+    "tituloSecao": "Skills"
+  },
+  "contatos": {
+    "tituloSecao": "Contacts",
+    "conteudoTextual": "Connect with me through the form or by clicking on one of the social media icons below to start a conversation:",
+    "camposFormulario": [
+      {
+        "id": 1,
+        "campoNome": "nome",
+        "placeholder": "Name",
+        "value": "nome"
+      },
+      {
+        "id": 2,
+        "campoNome": "email",
+        "placeholder": "Email",
+        "value": "email"
+      },
+      {
+        "id": 3,
+        "campoNome": "telefone",
+        "placeholder": "Phone",
+        "value": "telefone"
+      },
+      {
+        "id": 4,
+        "campoNome": "tema",
+        "placeholder": "Subject",
+        "value": "tema"
+      },
+      {
+        "id": 5,
+        "campoNome": "mensagem",
+        "placeholder": "Message",
+        "value": "mensagem"
+      }
+    ],
+    "enviar": "Send",
+    "mensagemEnvio": "Message sent"
+  },
+  "rodape": {
+    "conteudoTextual": "2023 Bruno Tenório - All rights reserved"
+  }
+}

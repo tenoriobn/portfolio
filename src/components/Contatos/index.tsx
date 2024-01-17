@@ -6,6 +6,7 @@ import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCusto
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
 import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { useTranslation } from "react-i18next";
 
 const ContainerContatos = styled.section`
   padding: 3.25rem 0;
@@ -38,10 +39,11 @@ const ContainerOpcoesContatos = styled.div<IEstilizacaoCustomizada>`
 
 export default function Contatos() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
 
   return (
     <ContainerContatos>
-      <TituloSecao titulo="Contatos" />
+      <TituloSecao titulo={t('contatos.tituloSecao')} />
       <ContainerOpcoesContatos $trocaTema={trocaTema}>
         <Formulario />
         <InformacoesContatos />

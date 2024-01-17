@@ -4,12 +4,13 @@ import Github from "src/assets/icons/github.svg?react";
 import Linkedin from "src/assets/icons/linkedin.svg?react";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { Link } from "react-router-dom";
-import apresentacao from "src/data/informacoesSobreMim.json";
+// import apresentacao from "src/data/informacoesSobreMim.json";
 import { useRecoilValue } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
 import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { useTranslation } from "react-i18next";
 
 const ContainerSobreMim = styled.section`
   display: flex;
@@ -108,14 +109,15 @@ const Icone = styled.svg<IEstilizacaoCustomizada>`
 
 export default function SobreMim() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
 
   return (
     <ContainerSobreMim>
       <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" $trocaTema={trocaTema} />
       <ParagrafoApresentacao $trocaTema={trocaTema}>
-        {apresentacao.saudacao}
-        <span className="nome__destaque">{apresentacao.nome}</span>
-        {apresentacao.mensagem}
+        {t('sobreMim.saudacao')}
+        <span className="nome__destaque">{t('sobreMim.nome')}</span>
+        {t('sobreMim.mensagem')}
       </ParagrafoApresentacao>
 
       <ContainerIcones>

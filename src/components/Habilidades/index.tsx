@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
 import Ferramentas from "./Logotipos";
+import { useTranslation } from "react-i18next";
 
 const ContainerHabilidades = styled.section`
   display: flex;
@@ -23,9 +24,11 @@ const ContainerHabilidades = styled.section`
 `;
 
 export default function Habilidades() {
+  const [t] = useTranslation("global");
+
   return (
     <ContainerHabilidades>
-      <TituloSecao titulo="Habilidades" />
+      <TituloSecao titulo={t('habilidades.tituloSecao')} />
       <Ferramentas />
     </ContainerHabilidades>
   );

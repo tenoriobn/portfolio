@@ -1,15 +1,16 @@
-import listaProjetos from "src/data/listaProjetos.json";
+// import listaProjetos from "src/data/listaProjetos.json";
 import Github from "src/assets/icons/github.svg?react";
 import Vercel from "src/assets/icons/vercel.svg?react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { estadoQtdCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
+import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import {estilosCard} from "src/common/estilosPadronizados/estilosCard";
 import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { useTranslation } from "react-i18next";
 
 const ContainerCards = styled.div`
   box-sizing: border-box;
@@ -116,10 +117,12 @@ export default function CardProjetos() {
   const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
   const ampliarImagem = useAmpliarImagem();
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
+  const cardsProjetos:ICardsProjetos[] = t('projetos.cardsProjetos', { returnObjects: true });
 
   return (
     <ContainerCards>
-      {listaProjetos.map(projeto => (
+      {cardsProjetos.map(projeto => (
         <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis} $trocaTema={trocaTema}>
           <Imagem src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
 

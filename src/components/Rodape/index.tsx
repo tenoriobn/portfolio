@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const ContainerRodape = styled.footer`
@@ -17,9 +18,11 @@ const ContainerRodape = styled.footer`
 `;
 
 export default function Rodape() {
+  const [t] = useTranslation("global");
+
   return (
     <ContainerRodape>
-      <p>©2023 Bruno Tenório - Todos os direitos reservados</p>
+      <p>© {t('rodape.conteudoTextual')}</p>
     </ContainerRodape>
   );
 }

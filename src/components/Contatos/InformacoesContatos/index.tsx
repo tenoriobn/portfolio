@@ -8,6 +8,7 @@ import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { useTranslation } from "react-i18next";
 
 const ContainerInformacoesContatos = styled.div`
   margin-top: 1.5rem;
@@ -48,11 +49,12 @@ const Icone = styled.svg<IEstilizacaoCustomizada>`
 
 export default function InformacoesContatos() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
 
   return (
     <ContainerInformacoesContatos>
       <Paragrafo>
-        Conecte-se comigo pelo formulário ou clicando em um dos ícones de mídias sociais abaixo para iniciarmos uma conversa:
+        {t('contatos.conteudoTextual')}
       </Paragrafo>
       <ContainerIconesContato>
         <Link to="https://www.linkedin.com/in/bruno-tenorio/" target="_blank" rel="noopener noreferrer">

@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 import { cor } from "src/common/EstilosGlobais/cores";
-import listaCamposFormulario from "src/data/listaCamposFormulario.json";
+// import listaCamposFormulario from "src/data/listaCamposFormulario.json";
 import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
 import { useRecoilValue } from "recoil";
 import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import Botao from "src/components/Botao";
 import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
+import { useTranslation } from "react-i18next";
 
 const ContainerFormulario = styled.form<IEstilizacaoCustomizada>`
   order: 2;
@@ -93,10 +95,13 @@ export default function Formulario() {
   const DadosFormularioEnviado = useRecoilValue(estadoDadosFormularioEnviado);
   const trocaTema = useRecoilValue(estadoTrocaTema);
 
+  const [t] = useTranslation("global");
+  const camposFormulario:IDadosFormulario[] = t('contatos.camposFormulario', { returnObjects: true });
+
   return (
     <ContainerFormulario onSubmit={handleSubmit(onSubmit)} $trocaTema={trocaTema}>
       <ContainerCamposFormulario>
-        {listaCamposFormulario.map((campo) => (
+        {camposFormulario.map((campo) => (
           <ContainerCampoFormulario key={campo.id}>
             {campo.campoNome !== 'mensagem' ? (
               <CampoFormulario
@@ -121,9 +126,9 @@ export default function Formulario() {
         ))}
       </ContainerCamposFormulario>
 
-      {DadosFormularioEnviado ? <MensagemFormularioEnviado>Mensagem enviada</MensagemFormularioEnviado> : null}
+      {DadosFormularioEnviado ? <MensagemFormularioEnviado>{t('contatos.mensagemEnvio')}</MensagemFormularioEnviado> : null}
 
-      <BotaoFormulario type="submit">Enviar</BotaoFormulario>
+      <BotaoFormulario type="submit">{t('contatos.enviar')}</BotaoFormulario>
       
     </ContainerFormulario>
   );

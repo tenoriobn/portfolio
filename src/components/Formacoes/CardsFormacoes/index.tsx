@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import listaFormacoes from "src/data/listaFormacoes.json";
+// import listaFormacoes from "src/data/listaFormacoes.json";
 import { Link } from "react-router-dom";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { useRecoilValue } from "recoil";
 import { estilosCard } from "src/common/estilosPadronizados/estilosCard";
 import { estilosBotao } from "src/common/estilosPadronizados/estilosBotao";
+import { ICardsFormacoes } from "src/common/interfaces/IFormacoes";
+import { useTranslation } from "react-i18next";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;
@@ -79,10 +81,12 @@ const Botao = styled(Link)<IEstilizacaoCustomizada>`
 
 export default function CardsFormacoes() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
+  const cardsFormacoes:ICardsFormacoes[] = t('formacoes.cardsFormacoes', { returnObjects: true });
 
   return (
     <ContainerCardsFormacoes>
-      {listaFormacoes.map(formacao => (
+      {cardsFormacoes.map(formacao => (
         <CardFormacao key={formacao.id} $trocaTema={trocaTema}>
           <Logo src={formacao.logo} alt="" $trocaTema={trocaTema} />
           <Paragrafo>{formacao.graduacao}</Paragrafo>
@@ -95,7 +99,7 @@ export default function CardsFormacoes() {
             rel="noopener noreferrer"
             $trocaTema={trocaTema}
           >
-            Acessar
+            {t('formacoes.acessar')}
           </Botao>
         </CardFormacao>
       ))}

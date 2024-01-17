@@ -7,6 +7,7 @@ import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
 import { useRef } from "react";
 import Botao from "../Botao";
+import { useTranslation } from "react-i18next";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -30,14 +31,15 @@ export default function Projetos() {
   const containerRef = useRef(null);
   const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
+  const [t] = useTranslation("global");
 
   return (
     <ContainerProjetos ref={containerRef}>
-      <TituloSecao titulo="Projetos" />
+      <TituloSecao titulo={t('projetos.tituloSecao')} />
       <CardProjetos />
       <ImagemAmpliada /> 
       <BotaoProjetos onClick={alterarQtdCardsVisiveis}>
-        {limiteCardsVisiveis ? 'Ver menos' : 'Ver mais'}
+        {limiteCardsVisiveis ? `${t('projetos.verMenos')}` : `${t('projetos.verMais')}`}
       </BotaoProjetos>
     </ContainerProjetos>
   );
