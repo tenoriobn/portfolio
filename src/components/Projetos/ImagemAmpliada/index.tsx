@@ -4,19 +4,18 @@ import iconeFechar from "./Fechar.svg?react";
 import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
 
-const CaixaDialogoImagemAmpliada = styled.dialog` 
-  max-height: 100vh;
-  overflow-y: hidden;
-  background-color: #000000b7;
+const DialogImagemAmpliada = styled.dialog` 
+  background-color: ${cor.cinzaMuitoEscuro};
   border: none;
   box-sizing: border-box;
-
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   width: auto;
+  max-height: 100vh;
   height: 100%;
+  overflow-y: hidden;
   z-index: 7;
 
   @media (max-width: 767px) {
@@ -25,18 +24,17 @@ const CaixaDialogoImagemAmpliada = styled.dialog`
 `;
 
 const ContainerImagemAmpliada = styled.div`
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   max-width: 1024px;
   width: 100%;
   box-sizing: border-box;
-  padding: 48px;
+  padding: 3rem;
 `;
 
 const ContainerIconeFechar = styled.div`
@@ -58,7 +56,7 @@ const IconeFechar = styled(iconeFechar)`
   }
 `;
 
-const Imagem = styled.img`
+const ImagemAmpliadaVisualizada = styled.img`
   width: 100%;
 `;
 
@@ -72,13 +70,13 @@ export default function ImagemAmpliada() {
   };
 
   return (
-    <CaixaDialogoImagemAmpliada open={!!imagemSelecionada}>
+    <DialogImagemAmpliada open={!!imagemSelecionada}>
       <ContainerImagemAmpliada>
         <ContainerIconeFechar onClick={fecharImagemAmpliada} >
           <IconeFechar />
         </ContainerIconeFechar>
-        <Imagem src={imagemSelecionada} alt="" />
+        <ImagemAmpliadaVisualizada src={imagemSelecionada} alt="" />
       </ContainerImagemAmpliada>
-    </CaixaDialogoImagemAmpliada>
+    </DialogImagemAmpliada>
   );
 }

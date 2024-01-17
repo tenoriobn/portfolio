@@ -35,10 +35,9 @@ const ContainerSobreMim = styled.section`
 `;
 
 const FotoPerfil = styled.img<IEstilizacaoCustomizada>`
-  cursor: pointer;
   ${estilosBorda}
-
   border-radius: 50000%;
+  cursor: pointer;
   width: 140px;
   height: 140px;
 
@@ -53,7 +52,7 @@ const FotoPerfil = styled.img<IEstilizacaoCustomizada>`
   }
 `;
 
-const ParagrafoApresentacao = styled.p<IEstilizacaoCustomizada>`
+const DescricaoSobreMim = styled.p<IEstilizacaoCustomizada>`
   font-size: .875rem;
   letter-spacing: .0175rem;
   text-align: center;
@@ -83,7 +82,7 @@ const ParagrafoApresentacao = styled.p<IEstilizacaoCustomizada>`
   }
 `;
 
-const ContainerIcones = styled.div`
+const ContainerCanaisComunicacao = styled.div`
   display: flex;
   gap: 1rem;
 
@@ -114,13 +113,13 @@ export default function SobreMim() {
   return (
     <ContainerSobreMim>
       <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" $trocaTema={trocaTema} />
-      <ParagrafoApresentacao $trocaTema={trocaTema}>
+      <DescricaoSobreMim $trocaTema={trocaTema}>
         {t('sobreMim.saudacao')}
         <span className="nome__destaque">{t('sobreMim.nome')}</span>
         {t('sobreMim.mensagem')}
-      </ParagrafoApresentacao>
+      </DescricaoSobreMim>
 
-      <ContainerIcones>
+      <ContainerCanaisComunicacao>
         <Link 
           to="https://www.linkedin.com/in/bruno-tenorio/" 
           target="_blank"
@@ -136,7 +135,7 @@ export default function SobreMim() {
         >
           <Icone as={Github} $trocaTema={trocaTema} />
         </Link>
-      </ContainerIcones>
+      </ContainerCanaisComunicacao>
     </ContainerSobreMim>
   );
 }

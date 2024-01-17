@@ -14,8 +14,8 @@ const ContainerCardsFormacoes = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   flex-wrap: wrap;
+  gap: 1rem;
   margin-top: 1.5rem;
 
   @media (min-width: 375px) {
@@ -55,14 +55,18 @@ const CardFormacao = styled.div<IEstilizacaoCustomizada>`
   }
 `;
 
-const Logo = styled.img<IEstilizacaoCustomizada>`
+const LogoInstituicao = styled.img<IEstilizacaoCustomizada>`
   width: 110px;
   height: 110px;
 `;
 
-const Paragrafo = styled.p`
+const TextoCentralizado = styled.p`
   text-align: center;
 `;
+
+const NivelAcademico = styled(TextoCentralizado)``;
+const LocalidadeInstituicao = styled(TextoCentralizado)``;
+const PeriodoAcademico = styled(TextoCentralizado)``;
 
 const NomeCurso = styled.h2`
   font-size: 1rem;
@@ -88,11 +92,11 @@ export default function CardsFormacoes() {
     <ContainerCardsFormacoes>
       {cardsFormacoes.map(formacao => (
         <CardFormacao key={formacao.id} $trocaTema={trocaTema}>
-          <Logo src={formacao.logo} alt="" $trocaTema={trocaTema} />
-          <Paragrafo>{formacao.graduacao}</Paragrafo>
+          <LogoInstituicao src={formacao.logo} alt="" $trocaTema={trocaTema} />
+          <NivelAcademico>{formacao.graduacao}</NivelAcademico>
           <NomeCurso>{formacao.curso}</NomeCurso>
-          <Paragrafo>{formacao.localidade}</Paragrafo>
-          <Paragrafo>{formacao.data}</Paragrafo>
+          <LocalidadeInstituicao>{formacao.localidade}</LocalidadeInstituicao>
+          <PeriodoAcademico>{formacao.data}</PeriodoAcademico>
           <Botao 
             to={formacao.siteInstituicao}                 
             target="_blank"

@@ -15,11 +15,11 @@ const ContainerInformacoesContatos = styled.div`
   flex: 1;
 `;
 
-const Paragrafo = styled.p`
+const InstrucaoContato = styled.p`
   text-align: center;
 `;
 
-const ContainerIconesContato = styled.div`
+const ContainerCanaisComunicacao = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,10 +53,10 @@ export default function InformacoesContatos() {
 
   return (
     <ContainerInformacoesContatos>
-      <Paragrafo>
+      <InstrucaoContato>
         {t('contatos.conteudoTextual')}
-      </Paragrafo>
-      <ContainerIconesContato>
+      </InstrucaoContato>
+      <ContainerCanaisComunicacao>
         <Link to="https://www.linkedin.com/in/bruno-tenorio/" target="_blank" rel="noopener noreferrer">
           <Icone as={Linkedin} $trocaTema={trocaTema} />
         </Link>
@@ -69,7 +69,7 @@ export default function InformacoesContatos() {
         <Link to="https://wa.me/5511989400334" target="_blank" rel="noopener noreferrer">
           <Icone as={Whatsapp} $trocaTema={trocaTema} />
         </Link>
-      </ContainerIconesContato>
+      </ContainerCanaisComunicacao>
     </ContainerInformacoesContatos>
   );
 }

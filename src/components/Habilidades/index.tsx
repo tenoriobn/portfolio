@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
-import Ferramentas from "./Logotipos";
+import Ferramentas from "./Ferramentas";
 import { useTranslation } from "react-i18next";
 
 const ContainerHabilidades = styled.section`

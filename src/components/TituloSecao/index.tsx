@@ -1,8 +1,5 @@
+import { ITitulo } from "src/common/interfaces/ITitulo";
 import styled from "styled-components";
-
-interface TituloSecaoProps {
-  titulo: string;
-}
 
 const Titulo = styled.h2`
   font-size: 1.75rem;
@@ -20,7 +17,7 @@ const Titulo = styled.h2`
   }
 `;
 
-export default function TituloSecao({titulo}: TituloSecaoProps) {
+export default function TituloSecao({titulo}: ITitulo) {
   return (
     <Titulo>{titulo}</Titulo>
   );

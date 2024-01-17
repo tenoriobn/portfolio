@@ -12,11 +12,10 @@ import {estilosCard} from "src/common/estilosPadronizados/estilosCard";
 import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
 import { useTranslation } from "react-i18next";
 
-const ContainerCards = styled.div`
-  box-sizing: border-box;
+const ContainerCardsProjetos = styled.div`
   display: grid;
   gap: 1rem;
-
+  box-sizing: border-box;
   margin-top: 1.5rem;
 
   @media (min-width: 375px) {
@@ -37,7 +36,7 @@ const ContainerCards = styled.div`
   }
 `;
 
-const Card = styled.div<IEstilizacaoCardsVisiveis>`
+const CardProjeto = styled.div<IEstilizacaoCardsVisiveis>`
   display: grid;
   grid-template-rows: auto 1fr;
   ${estilosCard}
@@ -51,7 +50,7 @@ const Card = styled.div<IEstilizacaoCardsVisiveis>`
   }
 `;
 
-const Imagem = styled.img`
+const ImagemProjeto = styled.img`
   border-radius: 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
@@ -63,9 +62,8 @@ const Imagem = styled.img`
   }
 `;
 
-const ContainerConteudo = styled.div`
+const ContainerDetalhesProjeto = styled.div`
   display: grid;
-  
   row-gap: 1rem;
   
   @media (min-width: 768px) {
@@ -79,7 +77,7 @@ const ContainerConteudo = styled.div`
   }
 `;
 
-const NomeProjeto = styled.h2`
+const Nome = styled.h2`
   font-size: 1rem;
   font-weight: 800;
   letter-spacing: .02rem;
@@ -88,10 +86,17 @@ const NomeProjeto = styled.h2`
 
 const Paragrafo = styled.p`
   text-align: center;
+`;
+
+const Ferramentas = styled(Paragrafo)`
   align-self: center;
 `;
 
-const ContainerIcon = styled.div`
+const Descricao = styled(Paragrafo)`
+  align-self: flex-start;
+`;
+
+const ContainerLinksProjeto = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,17 +126,17 @@ export default function CardProjetos() {
   const cardsProjetos:ICardsProjetos[] = t('projetos.cardsProjetos', { returnObjects: true });
 
   return (
-    <ContainerCards>
+    <ContainerCardsProjetos>
       {cardsProjetos.map(projeto => (
-        <Card key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis} $trocaTema={trocaTema}>
-          <Imagem src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
+        <CardProjeto key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis} $trocaTema={trocaTema}>
+          <ImagemProjeto src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
 
-          <ContainerConteudo>
-            <NomeProjeto>{projeto.nome}</NomeProjeto>
-            <Paragrafo>{projeto.ferramentas}</Paragrafo>
-            <Paragrafo>{projeto.descricao}</Paragrafo>
+          <ContainerDetalhesProjeto>
+            <Nome>{projeto.nome}</Nome>
+            <Ferramentas>{projeto.ferramentas}</Ferramentas>
+            <Descricao>{projeto.descricao}</Descricao>
 
-            <ContainerIcon>
+            <ContainerLinksProjeto>
               <Link to={projeto.linkRepositorio} target="_blank" rel="noopener noreferrer">
                 <Icone as={Github} $trocaTema={trocaTema} />
               </Link>
@@ -139,11 +144,11 @@ export default function CardProjetos() {
               <Link to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
                 <Icone as={Vercel} $trocaTema={trocaTema} />
               </Link>
-            </ContainerIcon>
-          </ContainerConteudo>
-        </Card>
+            </ContainerLinksProjeto>
+          </ContainerDetalhesProjeto>
+        </CardProjeto>
       ))}
-    </ContainerCards>
+    </ContainerCardsProjetos>
   );
 }
 

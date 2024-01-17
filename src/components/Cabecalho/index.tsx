@@ -68,7 +68,7 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   }
 `;
 
-const ContainerIcones = styled.div`
+const ContainerPreferenciasUsuario = styled.div`
   display: flex;
   gap: 1rem;
 
@@ -81,7 +81,7 @@ const ContainerIcones = styled.div`
   }
 `;
 
-const Icone = styled.svg<IEstilizacaoCustomizada>`
+const Tema = styled.svg<IEstilizacaoCustomizada>`
   ${estilosIcones}
   width: 24px;
   height: 24px;
@@ -106,10 +106,10 @@ export default function Cabecalho() {
         <h1>BT</h1>
       </BotaoMenu>
       <MenuItens />
-      <ContainerIcones>
+      <ContainerPreferenciasUsuario>
         <Idiomas  />
-        <Icone $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
-      </ContainerIcones>
+        <Tema $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
+      </ContainerPreferenciasUsuario>
     </ContainerMenu>
   );
 }

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
@@ -18,7 +18,8 @@ const ContainerListaIdiomas = styled.ul<IEstilizacaoCustomizada>`
   width: 100%;
 `;
 
-const Idioma = styled(Link)`
+const Idioma = styled.option`
+  cursor: pointer;
   color: ${cor.cinzaClaro};
   font-size: 1rem;
   font-weight: 500;
@@ -45,15 +46,13 @@ export default function ListaIdiomas() {
   return (
     <ContainerListaIdiomas $listaIdiomasAtivo={listaIdiomasAtivo}>
       {listaIdiomas.map(idioma => (
-        <li key={idioma.id}>
-          <Idioma
-            to="#"
-            onClick={() => trocarIdioma(idioma)}
-            className={idiomaAtivo === idioma.id ? "idiomaAtivo" : ""}
-          >
-            {idioma.nome}
-          </Idioma>
-        </li>
+        <Idioma
+          key={idioma.id}
+          onClick={() => trocarIdioma(idioma)}
+          className={idiomaAtivo === idioma.id ? "idiomaAtivo" : ""}
+        >
+          {idioma.nome}
+        </Idioma>
       ))}
     </ContainerListaIdiomas>
   );

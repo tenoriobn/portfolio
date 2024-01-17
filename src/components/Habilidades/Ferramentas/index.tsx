@@ -29,14 +29,16 @@ const ContainerFerramentas = styled.div`
   }
 `;
 
-const Icone = styled.img<IEstilizacaoCustomizada>`
+const LinkDocumentacaoFerramenta = styled(Link)``;
+
+const IconeFerramenta = styled.img<IEstilizacaoCustomizada>`
   filter: drop-shadow(0rem 0rem .375rem ${(props) => (props.$trocaTema ? cor.cinzaEscuro : cor.cinzaMuitoClaro)});
   width: 32px;
   height: 32px;
   transition: all .3s ease-in-out;
 
   &:hover {
-    opacity: .7;
+    opacity: .6;
   }
 
   @media (min-width: 768px) {
@@ -56,14 +58,14 @@ export default function Ferramentas() {
   return (
     <ContainerFerramentas>
       {listaFerramentas.map(ferramenta => (
-        <Link
+        <LinkDocumentacaoFerramenta
           to={ferramenta.link}
           key={ferramenta.id}
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone src={ferramenta.icone} $trocaTema={trocaTema} />
-        </Link>
+          <IconeFerramenta src={ferramenta.icone} $trocaTema={trocaTema} />
+        </LinkDocumentacaoFerramenta>
       ))}
     </ContainerFerramentas>
   );
