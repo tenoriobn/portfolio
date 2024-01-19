@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
-import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
+import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
 import { useTranslation } from "react-i18next";
 
 const ContainerSobreMim = styled.section`
@@ -35,7 +35,7 @@ const ContainerSobreMim = styled.section`
 `;
 
 const FotoPerfil = styled.img<IEstilizacaoCustomizada>`
-  ${estilosBorda}
+  ${estilosBordaCard}
   border-radius: 50000%;
   cursor: pointer;
   width: 140px;
@@ -96,7 +96,7 @@ const ContainerCanaisComunicacao = styled.div`
 `;
 
 const Icone = styled.svg<IEstilizacaoCustomizada>`
-  ${estilosIcones}
+  ${estiloIconeSocial}
   width: 32px;
   height: 32px;
   

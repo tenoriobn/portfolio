@@ -5,7 +5,7 @@ import InformacoesContatos from "./InformacoesContatos";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
-import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
 import { useTranslation } from "react-i18next";
 
 const ContainerContatos = styled.section`
@@ -20,7 +20,7 @@ const ContainerOpcoesContatos = styled.div<IEstilizacaoCustomizada>`
   margin-top: 1.5rem;
 
   @media (min-width: 768px) {
-    ${estilosBorda}
+    ${estilosBordaCard}
     gap: 1.5rem;
     margin-top: 2.5rem;
     padding: 1.5rem;

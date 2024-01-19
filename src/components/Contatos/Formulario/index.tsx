@@ -6,7 +6,7 @@ import { useRecoilValue } from "recoil";
 import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import Botao from "src/components/Botao";
-import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
+import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
 import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
 import { useTranslation } from "react-i18next";
 
@@ -16,7 +16,7 @@ const ContainerFormulario = styled.form<IEstilizacaoCustomizada>`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  ${estilosBorda}
+  ${estilosBordaCard}
   padding: 1.5rem 1rem;
 
   @media (min-width: 768px) {
@@ -45,7 +45,7 @@ const ContainerCampoFormulario = styled.div`
 const estiloDosCampos = css<IEstilizacaoCustomizada>`
   outline: none;
   background-color: transparent;
-  ${estilosBorda}
+  ${estilosBordaBotaoEInputs};
   padding: 1.5rem;
   color: ${cor.branco};
   transition: all .3s ease-in-out;
@@ -59,7 +59,7 @@ const estiloDosCampos = css<IEstilizacaoCustomizada>`
   }
 
   &:focus {
-    border-color: ${cor.cinzaClaro};
+    border-color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   }
 `;
 
@@ -69,6 +69,7 @@ const CampoFormulario = styled.input<IEstilizacaoCustomizada>`
 
 const CampoTexto = styled.textarea<IEstilizacaoCustomizada>`
   ${estiloDosCampos}
+  resize: none;
 
   min-height: 210px;
   height: 100%;

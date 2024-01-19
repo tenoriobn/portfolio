@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Global from "../global.svg?react";
 import styled from 'styled-components';
-import { cor } from 'src/common/EstilosGlobais/cores';
 import ListaIdiomas from './ListaIdiomas';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'src/common/state/atom/atom';
 import { IEstilizacaoCustomizada } from 'src/common/interfaces/IEstilizacaoCustomizada';
+import { estiloIconeCabecalho } from 'src/common/estilosPadronizados/estilosIcones';
 
 const ContainerIdiomas = styled.li`
   list-style: none;
@@ -13,26 +13,7 @@ const ContainerIdiomas = styled.li`
 `;
 
 const Icone = styled.svg<IEstilizacaoCustomizada>`
-  filter: drop-shadow(0rem 0rem 1rem ${cor.azulColbato});
-  cursor: pointer;
-  width: 24px;
-  height: 24px;
-
-  path {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    transition: fill 0.3s ease-in-out;
-  }
-
-  &:hover {
-    path {
-      fill: ${cor.branco};
-    }
-  }
-
-  @media (min-width: 768px) {
-    width: 32px;
-    height: 32px;
-  }
+  ${estiloIconeCabecalho};
 `;
 
 export default function Idiomas() {

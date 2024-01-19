@@ -1,13 +1,13 @@
 import { css } from "styled-components";
 import { cor } from "../EstilosGlobais/cores";
-import { estilosBorda } from "./estilosBorda";
+import { estilosBordaBotaoEInputs } from "./estilosBorda";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 
 export const estilosBotao = css<IEstilizacaoCustomizada>`
-  ${estilosBorda}
+  ${estilosBordaBotaoEInputs};
   background: none;
   cursor: pointer;
-  color: ${cor.branco};
+  color: ${cor.cinzaClaro};
   font-size: 1rem;
   font-weight: 700;
   text-align: center;

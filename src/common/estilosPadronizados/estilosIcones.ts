@@ -2,30 +2,56 @@ import { css } from "styled-components";
 import { cor } from "../EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 
-export const estilosIcones = css<IEstilizacaoCustomizada>`
+const estiloIcone = css<IEstilizacaoCustomizada>`
   display: flex;
   border-radius: 100%;
   cursor: pointer;
   filter: drop-shadow(0rem 0rem 1rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaMuitoClaro)});
-  
+`;
+
+export const estiloIconeSocial = css<IEstilizacaoCustomizada>`
+  ${estiloIcone};
+
   rect {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    fill: ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
+    stroke: ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
     transition: all .3s ease-in-out;
   }
 
   path {
-    fill: ${(props) => (props.$trocaTema ? cor.branco : cor.azul)};
+    fill: ${(props) => (props.$trocaTema ? cor.cinzaClaro : cor.azul)};
     transition: all .3s ease-in-out;
   }
 
   &:hover {
     rect {
-      fill: transparent!important;
+      fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
     }
 
     path {
-      fill: ${cor.branco};
+      fill: ${(props) => (props.$trocaTema ? cor.branco: cor.azul)};
     }
+  }
+`;
+
+export const estiloIconeCabecalho = css<IEstilizacaoCustomizada>`
+  ${estiloIcone}
+  width: 24px;
+  height: 24px;
+
+  path {
+    fill: ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    path {
+      fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 32px;
+    height: 32px;
   }
 `;

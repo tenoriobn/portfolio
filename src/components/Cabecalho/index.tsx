@@ -7,8 +7,8 @@ import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosBorda } from "src/common/estilosPadronizados/estilosBorda";
-import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
+import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerMenu = styled.header`
   display: flex;
@@ -23,7 +23,8 @@ const ContainerMenu = styled.header`
 `;
 
 const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
-  ${estilosBorda}
+  ${estilosBordaCard}
+  border-color: ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
   box-sizing: border-box;
   cursor: pointer;
   width: 48px;
@@ -32,7 +33,7 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   z-index: 2;
 
   h1 {
-    color: ${cor.branco};
+    color: ${cor.cinzaClaro};
     font-size: .875rem;
     font-weight: 700;
     line-height: normal;
@@ -42,7 +43,7 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   }
 
   &:hover {
-    border-color: ${cor.branco};
+    border-color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
 
     h1 {
       color: ${cor.branco};
@@ -82,18 +83,7 @@ const ContainerPreferenciasUsuario = styled.div`
 `;
 
 const Tema = styled.svg<IEstilizacaoCustomizada>`
-  ${estilosIcones}
-  width: 24px;
-  height: 24px;
-
-  path {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-  }
-
-  @media (min-width: 768px) {
-    width: 32px;
-    height: 32px;
-  }
+  ${estiloIconeCabecalho};
 `;
 
 export default function Cabecalho() {

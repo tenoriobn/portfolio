@@ -9,7 +9,7 @@ import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "src/common/interfaces
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import {estilosCard} from "src/common/estilosPadronizados/estilosCard";
-import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
 import { useTranslation } from "react-i18next";
 
 const ContainerCardsProjetos = styled.div`
@@ -108,7 +108,7 @@ const ContainerLinksProjeto = styled.div`
 `;
 
 const Icone = styled.svg<IEstilizacaoCustomizada>`
-  ${estilosIcones}
+  ${estiloIconeSocial}
   width: 32px;
   height: 32px;
 

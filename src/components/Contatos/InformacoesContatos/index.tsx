@@ -7,7 +7,7 @@ import Whatsapp from "src/assets/icons/whatsapp.svg?react";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { useRecoilValue } from "recoil";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosIcones } from "src/common/estilosPadronizados/estilosIcones";
+import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
 import { useTranslation } from "react-i18next";
 
 const ContainerInformacoesContatos = styled.div`
@@ -32,7 +32,7 @@ const ContainerCanaisComunicacao = styled.div`
 `;
 
 const Icone = styled.svg<IEstilizacaoCustomizada>`
-  ${estilosIcones}
+  ${estiloIconeSocial}
   width: 32px;
   height: 32px;
 

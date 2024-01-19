@@ -1,8 +1,8 @@
 import { css } from "styled-components";
-import { estilosBorda } from "./estilosBorda";
+import { estilosBordaCard } from "./estilosBorda";
 
 export const estilosCard = css`
-  ${estilosBorda}
+  ${estilosBordaCard}
   box-sizing: border-box;
   cursor: pointer;
   max-width: 370px;

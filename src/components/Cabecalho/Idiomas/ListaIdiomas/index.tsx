@@ -1,8 +1,8 @@
 // import { Link } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estadoListaIdiomasAtivo } from "src/common/state/atom/atom";
+import { estadoListaIdiomasAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
 import useTrocarIdioma from "src/common/state/hooks/hooksTraducao/useTrocarIdioma";
 import listaIdiomas from "src/data/listaIdiomas.json";
 import styled from "styled-components";
@@ -18,7 +18,7 @@ const ContainerListaIdiomas = styled.ul<IEstilizacaoCustomizada>`
   width: 100%;
 `;
 
-const Idioma = styled.option`
+const Idioma = styled.option<IEstilizacaoCustomizada>`
   cursor: pointer;
   color: ${cor.cinzaClaro};
   font-size: 1rem;
@@ -27,11 +27,11 @@ const Idioma = styled.option`
   transition: color .3s ease-in-out 0s;
 
   &:hover {
-    color: ${cor.branco};
+    color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   }
 
   &.idiomaAtivo {
-    color: ${cor.azul};
+    color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
   }
 
   @media (min-width: 768px) {
@@ -42,6 +42,7 @@ const Idioma = styled.option`
 export default function ListaIdiomas() {
   const [listaIdiomasAtivo] = useRecoilState(estadoListaIdiomasAtivo);
   const { trocarIdioma, idiomaAtivo } = useTrocarIdioma();
+  const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
     <ContainerListaIdiomas $listaIdiomasAtivo={listaIdiomasAtivo}>
@@ -50,6 +51,7 @@ export default function ListaIdiomas() {
           key={idioma.id}
           onClick={() => trocarIdioma(idioma)}
           className={idiomaAtivo === idioma.id ? "idiomaAtivo" : ""}
+          $trocaTema={trocaTema}
         >
           {idioma.nome}
         </Idioma>
