@@ -36,9 +36,10 @@ const IconeFerramenta = styled.img<IEstilizacaoCustomizada>`
   width: 32px;
   height: 32px;
   transition: all .3s ease-in-out;
+  opacity: .6;
 
   &:hover {
-    opacity: .6;
+    opacity: 1;
   }
 
   @media (min-width: 768px) {

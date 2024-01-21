@@ -62,12 +62,12 @@ const Item = styled.li<IEstilizacaoCustomizada>`
     transition: color .3s ease-in-out 0s;
 
     &:hover {
-      color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+      color: ${cor.branco};
     }
 
     &.active {
       color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
-      text-shadow: 0rem 0rem 1rem ${cor.azulColbato};
+      text-shadow: 0rem 0rem 1rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
     }
 
     @media (min-width: 768px) {

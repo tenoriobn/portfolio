@@ -59,7 +59,7 @@ const estiloDosCampos = css<IEstilizacaoCustomizada>`
   }
 
   &:focus {
-    border-color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    border-color: ${cor.branco};
   }
 `;
 

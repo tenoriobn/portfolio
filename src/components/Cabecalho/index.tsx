@@ -7,7 +7,6 @@ import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
 import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
 
 const ContainerMenu = styled.header`
@@ -23,8 +22,9 @@ const ContainerMenu = styled.header`
 `;
 
 const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
-  ${estilosBordaCard}
-  border-color: ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
+  border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaClaro)};
+  border-radius: 31.25rem;
+  box-shadow: 0rem 0rem 1rem .0625rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
   box-sizing: border-box;
   cursor: pointer;
   width: 48px;
@@ -33,7 +33,7 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   z-index: 2;
 
   h1 {
-    color: ${cor.cinzaClaro};
+    color: ${cor.branco};
     font-size: .875rem;
     font-weight: 700;
     line-height: normal;
@@ -43,7 +43,7 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   }
 
   &:hover {
-    border-color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    border-color: ${cor.branco};
 
     h1 {
       color: ${cor.branco};

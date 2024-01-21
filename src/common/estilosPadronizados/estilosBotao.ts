@@ -7,7 +7,7 @@ export const estilosBotao = css<IEstilizacaoCustomizada>`
   ${estilosBordaBotaoEInputs};
   background: none;
   cursor: pointer;
-  color: ${cor.cinzaClaro};
+  color: ${cor.branco};
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
