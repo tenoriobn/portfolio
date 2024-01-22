@@ -2,9 +2,9 @@ import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
 // import listaItensMenu from "src/data/listaItensMenu.json";
-import { useRecoilState, useRecoilValue } from "recoil";
-import { estadoLinkAtivo, estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
-import { Link } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import { estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
+import { Link } from "react-scroll";
 import fundoMenuEscuro from "./fundoMenuEscuro.svg";
 import fundoMenuClaro from "./fundoMenuClaro.svg";
 import { useTranslation } from "react-i18next";
@@ -56,6 +56,7 @@ const Item = styled.li<IEstilizacaoCustomizada>`
   text-align: center;
 
   a {
+    cursor: pointer;
     color: ${cor.cinzaClaro};
     font-size: 1rem;
     font-weight: 700;
@@ -78,7 +79,6 @@ const Item = styled.li<IEstilizacaoCustomizada>`
 
 export default function MenuItens() {
   const menuAtivo = useRecoilValue(estadoMenuAtivo);
-  const [linkAtivo, setLinkAtivo] = useRecoilState(estadoLinkAtivo);
   const trocaTema = useRecoilValue(estadoTrocaTema);
   const [t] = useTranslation("global");
   const listaMenuItens: IMenuItens[] = t('cabecalho.menuItens', { returnObjects: true });
@@ -90,8 +90,10 @@ export default function MenuItens() {
           <Item key={item.id} $trocaTema={trocaTema}>
             <Link
               to={item.href}
-              onClick={() => setLinkAtivo(item.id)}
-              className={linkAtivo === item.id ? "active" : ""}
+              spy={true}
+              smooth={true}
+              offset={item.offset}
+              duration={500}
             >
               {item.nome}
             </Link>

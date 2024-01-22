@@ -4,27 +4,32 @@
       {
         "id": 1,
         "nome": "Sobre mí",
-        "href": "/"
+        "href": "sobreMim",
+        "offset": -130
       },
       {
         "id": 2,
         "nome": "Proyectos",
-        "href": "/projetos"
+        "href": "projetos",
+        "offset": -60
       },
       {
         "id": 3,
         "nome": "Formación",
-        "href": "/formacoes"
+        "href": "formacoes",
+        "offset": -60
       },
       {
         "id": 4,
         "nome": "Habilidades",
-        "href": "/habilidades"
+        "href": "habilidades",
+        "offset": -60
       },
       {
         "id": 5,
         "nome": "Contactos",
-        "href": "/contatos"
+        "href": "contatos",
+        "offset": -60
       }
     ]
   },

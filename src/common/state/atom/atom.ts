@@ -5,6 +5,7 @@ export const estadoMenuAtivo = atom({
   default: false,
 });
 
+
 export const estadoDesativaRolagem = atom({
   key: 'desativaRolagem',
   default: false
@@ -13,11 +14,6 @@ export const estadoDesativaRolagem = atom({
 export const estadoTrocaTema = atom({
   key: 'tema',
   default: true
-});
-
-export const estadoLinkAtivo = atom({
-  key: 'linkAtivo',
-  default: 1,
 });
 
 export const estadoListaIdiomasAtivo = atom({

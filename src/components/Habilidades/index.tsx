@@ -27,7 +27,7 @@ export default function Habilidades() {
   const [t] = useTranslation("global");
 
   return (
-    <ContainerHabilidades>
+    <ContainerHabilidades id="habilidades">
       <TituloSecao titulo={t('habilidades.tituloSecao')} />
       <Ferramentas />
     </ContainerHabilidades>

@@ -34,7 +34,7 @@ export default function Projetos() {
   const [t] = useTranslation("global");
 
   return (
-    <ContainerProjetos ref={containerRef}>
+    <ContainerProjetos id="projetos" ref={containerRef}>
       <TituloSecao titulo={t('projetos.tituloSecao')} />
       <CardProjetos />
       <ImagemAmpliada /> 

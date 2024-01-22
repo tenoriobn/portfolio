@@ -42,7 +42,7 @@ export default function Contatos() {
   const [t] = useTranslation("global");
 
   return (
-    <ContainerContatos>
+    <ContainerContatos id="contatos">
       <TituloSecao titulo={t('contatos.tituloSecao')} />
       <ContainerOpcoesContatos $trocaTema={trocaTema}>
         <Formulario />

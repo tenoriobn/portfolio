@@ -15,7 +15,7 @@ export default function Formacoes() {
   const [t] = useTranslation("global");
 
   return (
-    <ContainerFormacoes>
+    <ContainerFormacoes id="formacoes">
       <TituloSecao titulo={t('formacoes.tituloSecao')} />
       <CardsFormacoes />
     </ContainerFormacoes>

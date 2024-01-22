@@ -111,7 +111,7 @@ export default function SobreMim() {
   const [t] = useTranslation("global");
 
   return (
-    <ContainerSobreMim>
+    <ContainerSobreMim id="sobreMim">
       <FotoPerfil src={fotoPerfil} alt="Foto de Perfil" $trocaTema={trocaTema} />
       <DescricaoSobreMim $trocaTema={trocaTema}>
         {t('sobreMim.saudacao')}
