@@ -8,17 +8,48 @@ import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
+import fundoMenuEscuro from "./MenuItens/fundoMenuEscuro.svg";
+import fundoMenuClaro from "./MenuItens/fundoMenuClaro.svg";
+
+const FundoMenu = styled.div<IEstilizacaoCustomizada>`
+  position:sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+
+  backdrop-filter: blur(48.349998474121094px);
+  background: url(${(props) => (props.$trocaTema ? fundoMenuEscuro : fundoMenuClaro)});
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: 1px solid;
+  border-color: ${(props) => (props.$trocaTema ? 'rgb(255 255 255 / 4%)' : 'rgb(255 255 255 / 15%)')};
+  box-shadow: 0rem 0rem 1rem -0.5rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
+`;
 
 const ContainerMenu = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position:sticky;
-  left: 0;
-  right: 0;
-  top: 0;
-  padding: 2rem 0;
-  z-index: 2;
+  padding: 2rem 1rem;
+
+  @media (min-width: 375px) {
+    padding: 2rem 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 2rem 3rem;
+  }
+
+  @media (min-width: 992px) {
+    margin: 0 auto;
+    max-width: 1524px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 2rem 0px;
+    width: 80%;
+  }
 `;
 
 const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
@@ -91,15 +122,17 @@ export default function Cabecalho() {
   const [trocaTema, setTrocaTema] = useRecoilState(estadoTrocaTema);
   
   return (
-    <ContainerMenu>
-      <BotaoMenu $trocaTema={trocaTema} onClick={ativarMenu}>
-        <h1>BT</h1>
-      </BotaoMenu>
-      <MenuItens />
-      <ContainerPreferenciasUsuario>
-        <Idiomas  />
-        <Tema $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
-      </ContainerPreferenciasUsuario>
-    </ContainerMenu>
+    <FundoMenu $trocaTema={trocaTema}>
+      <ContainerMenu>
+        <BotaoMenu $trocaTema={trocaTema} onClick={ativarMenu}>
+          <h1>BT</h1>
+        </BotaoMenu>
+        <MenuItens />
+        <ContainerPreferenciasUsuario>
+          <Idiomas  />
+          <Tema $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
+        </ContainerPreferenciasUsuario>
+      </ContainerMenu>
+    </FundoMenu>
   );
 }

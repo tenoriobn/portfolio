@@ -13,13 +13,15 @@ import { I18nextProvider } from "react-i18next";
 
 const ContainerGlobal = styled.div`
   position: relative;
-
   box-sizing: border-box;
   min-height: 100vh;
-  padding: 0 1rem;
-
-  margin: 0 auto;
   width: 100%;
+`;
+
+const Conteudo = styled.main`
+  align-self: center;
+
+  padding: 0 1rem;
 
   @media (min-width: 375px) {
     padding: 0 1.5rem;
@@ -29,15 +31,16 @@ const ContainerGlobal = styled.div`
     padding: 0 3rem;
   }
 
-  @media (min-width: 990px) {
-    width: 80%;
-    max-width: 1158px;
+  @media (min-width: 992px) {
     padding: 0;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 764px;
   }
-`;
 
-const Conteudo = styled.main`
-  align-self: center;
+  @media (min-width: 1200px) {
+    max-width: 1158px;
+  }
 `;
 
 export default function PaginaPadrao() {
