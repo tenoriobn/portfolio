@@ -35,8 +35,8 @@ export const estiloIconeSocial = css<IEstilizacaoCustomizada>`
   ${estiloIcone};
 
   rect {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaMuitoClaro)};
-    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaMuitoClaro)};
+    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaMedio)};
+    stroke: ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaMedio)};
     transition: all .3s ease-in-out;
   }
 

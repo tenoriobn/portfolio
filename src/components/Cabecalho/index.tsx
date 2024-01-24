@@ -8,8 +8,6 @@ import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
-import fundoMenuEscuro from "./MenuItens/fundoMenuEscuro.svg";
-import fundoMenuClaro from "./MenuItens/fundoMenuClaro.svg";
 
 const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   position:sticky;
@@ -17,14 +15,9 @@ const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   right: 0;
   top: 0;
   z-index: 2;
-
-  backdrop-filter: blur(48.349998474121094px);
-  background: url(${(props) => (props.$trocaTema ? fundoMenuEscuro : fundoMenuClaro)});
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-bottom: 1px solid;
-  border-color: ${(props) => (props.$trocaTema ? 'rgb(255 255 255 / 4%)' : 'rgb(255 255 255 / 15%)')};
-  box-shadow: 0rem 0rem 1rem -0.5rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
+  background: ${(props) => (props.$trocaTema ? 'rgba(24, 26, 34, 0.658)' : 'rgba(4, 148, 252, 0.75)')};
+  backdrop-filter: blur(500px);
+  transition: all .3s ease-in-out;
 `;
 
 const ContainerMenu = styled.header`

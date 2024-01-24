@@ -59,7 +59,7 @@ const DescricaoSobreMim = styled.p<IEstilizacaoCustomizada>`
   max-width: 764px;
 
   .nome__destaque {
-    color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+    color: ${(props) => (props.$trocaTema ? cor.azul : cor.azulMuitoEscuro)};
     font-size: 1rem;
     font-weight: 700;
   }

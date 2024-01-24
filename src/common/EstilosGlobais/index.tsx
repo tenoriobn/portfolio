@@ -19,6 +19,7 @@ const GlobalStyles = createGlobalStyle<IEstilizacaoCustomizada>`
     line-height: normal;
     letter-spacing: .0175rem;
     overflow: ${(props) => (props.$desativaRolagem ? 'hidden' : 'inherit')};
+    transition: all .3s ease-in-out;
     
     a {
       text-decoration: none;

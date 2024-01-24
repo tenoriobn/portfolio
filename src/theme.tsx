@@ -1,15 +1,18 @@
 const Theme = {
   colors: {
-    azul: '#0494FC',
+    azul: 'rgb(4, 148, 252)',
+    azulClaro: 'rgba(4, 148, 252, 0.75)',
     azulColbato: 'rgba(4, 148, 252, 0.30)',
-    azulEscuro: '#181A22',
-    branco: '#FFFFFF',
+    azulEscuro: 'rgba(24, 26, 34, 0.658)',
+    azulMuitoEscuro: 'rgb(24, 26, 34)',
+    branco: 'rgb(255, 255, 255)',
     cinzaClaro: 'rgba(255, 255, 255, 0.50)',
-    cinzaMuitoClaro: 'rgba(255, 255, 255, 0.40)',
+    cinzaMedio: 'rgba(255, 255, 255, 0.40)',
     cinzaEscuro: 'rgba(23, 23, 23, 0.25)',
     cinzaMuitoEscuro: 'rgba(0, 0, 0, 0.781)',
-    verde: '#04aa1f',
-    vermelho: '#dd0707'
+
+    verde: 'rgb(4, 170, 31)',
+    vermelho: 'rgb(221, 7, 7)'
   },
   font: {
     nunito: 'Nunito, sans-serif',

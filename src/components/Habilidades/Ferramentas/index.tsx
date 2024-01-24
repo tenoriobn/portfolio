@@ -32,7 +32,7 @@ const ContainerFerramentas = styled.div`
 const LinkDocumentacaoFerramenta = styled(Link)``;
 
 const IconeFerramenta = styled.img<IEstilizacaoCustomizada>`
-  filter: drop-shadow(0rem 0rem .375rem ${(props) => (props.$trocaTema ? cor.cinzaEscuro : cor.cinzaMuitoClaro)});
+  filter: drop-shadow(0rem 0rem .375rem ${(props) => (props.$trocaTema ? cor.cinzaEscuro : cor.cinzaMedio)});
   width: 32px;
   height: 32px;
   transition: all .3s ease-in-out;

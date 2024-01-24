@@ -56,6 +56,7 @@ const ImagemProjeto = styled.img`
   margin-bottom: 1rem;
   max-height: 184px;
   width: 100%;
+  object-fit: cover;
 
   @media (min-width: 375px) {
     margin-bottom: 1.5rem;

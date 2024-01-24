@@ -2,6 +2,7 @@ import styled from "styled-components";
 import TituloSecao from "../TituloSecao";
 import Ferramentas from "./Ferramentas";
 import { useTranslation } from "react-i18next";
+import Botao from "../Botao";
 
 const ContainerHabilidades = styled.section`
   display: flex;
@@ -23,6 +24,11 @@ const ContainerHabilidades = styled.section`
   }
 `;
 
+const BotaoHabilidades = styled(Botao)`
+  align-self: center;
+  margin-top: 2rem;
+`;
+
 export default function Habilidades() {
   const [t] = useTranslation("global");
 
@@ -30,6 +36,9 @@ export default function Habilidades() {
     <ContainerHabilidades id="habilidades">
       <TituloSecao titulo={t('habilidades.tituloSecao')} />
       <Ferramentas />
+      <BotaoHabilidades>
+        Ver mais
+      </BotaoHabilidades>
     </ContainerHabilidades>
   );
 }
