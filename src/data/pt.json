@@ -5,7 +5,7 @@
         "id": 1,
         "nome": "Sobre mim",
         "href": "sobreMim",
-        "offset": -130
+        "offset": -200
       },
       {
         "id": 2,
@@ -31,6 +31,20 @@
         "href": "contatos",
         "offset": -60
       }
+    ],
+    "listaIdiomas": [
+      {
+        "id": 1,
+        "nome": "pt"
+      },
+      {
+        "id": 2,
+        "nome": "en"
+      },
+      {
+        "id": 3,
+        "nome": "es"
+      }
     ]
   },
   "sobreMim": {
@@ -44,7 +58,7 @@
     [
       {
       "id": 1,
-      "imagem": "/src/components/Projetos/CardProjetos/img/Rastreador de endereço.svg",
+      "imagem": "/src/components/Projetos/CardProjetos/assets/Rastreador de endereço.svg",
       "nome": "Rastreador de endereço IP",
       "ferramentas": "ReactJS / Styled Components / TypeScript / API",
       "descricao": "Esta aplicação permite visualizar informações geográficas de endereços IP, implementando funcionalidades de pesquisa e apresentação de dados geoespaciais.",
@@ -53,7 +67,7 @@
       },
       {
         "id": 2,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Comércio Eletrônico.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Comércio Eletrônico.svg",
         "nome": "Comércio eletrônico",
         "ferramentas": "ReactJS /  Styled Componets",
         "descricao": "Essa aplicação de comércio eletrônico, enfatizando a fidelidade ao design proposto. Implementação de responsividade, interatividade e funcionalidades essenciais.",
@@ -62,7 +76,7 @@
       },
       {
         "id": 3,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Formulario de várias etapas.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Formulario de várias etapas.svg",
         "nome": "Formulário de várias etapas",
         "ferramentas": "ReactJS / SCSS",
         "descricao": "Essa aplicação busca reproduzir fielmente o design proposto, garantindo a conclusão progressiva de cada etapa, proporcionando elementos interativos.",
@@ -71,7 +85,7 @@
       },
       {
         "id": 4,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Calculadora de gorjetas.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Calculadora de gorjetas.svg",
         "nome": "Calculadora de gorjetas",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
         "descricao": "Essa aplicação visa oferece funcionalidades para calcular a gorjeta adequada e o custo total da conta por pessoa, proporcionando uma experiência funcional e intuitiva para o usuário.",
@@ -80,7 +94,7 @@
       },
       {
         "id": 5,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Componente de preço interativo.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Componente de preço interativo.svg",
         "nome": "Componente de preços interativo",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
         "descricao": "Essa aplicação tem funcionalidades de controle deslizante para visualizar e alternar entre diferentes pacotes de visualizações de página e seus respectivos preços mensais.",
@@ -89,7 +103,7 @@
       },
       {
         "id": 6,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -99,7 +113,7 @@
     
       {
         "id": 7,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -108,7 +122,7 @@
       },
       {
         "id": 8,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -117,7 +131,7 @@
       },
       {
         "id": 9,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -126,7 +140,7 @@
       },
       {
         "id": 10,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -135,7 +149,7 @@
       },
       {
         "id": 11,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -144,7 +158,7 @@
       },
       {
         "id": 12,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -153,7 +167,7 @@
       },
       {
         "id": 13,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -162,7 +176,7 @@
       },
       {
         "id": 14,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -171,7 +185,7 @@
       },
       {
         "id": 15,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -180,7 +194,7 @@
       },
       {
         "id": 16,
-        "imagem": "/src/components/Projetos/CardProjetos/img/Pagina de notificações.svg",
+        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -197,7 +211,7 @@
     [
       {
         "id": 1,
-        "logo": "/src/components/Formacoes/CardsFormacoes/img/Fatec.png",
+        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Fatec.png",
         "graduacao": "Tecnólogo – FATEC",
         "curso": "Gestão Comercial",
         "localidade": "Itaquaquecetuba – SP",
@@ -206,7 +220,7 @@
       },
       {
         "id": 2,
-        "logo": "/src/components/Formacoes/CardsFormacoes/img/Alura.png",
+        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Alura.png",
         "graduacao": "Plataforma de aprendizado – ALURA",
         "curso": "Full Stack Javascript",
         "localidade": "Virtual",
@@ -215,7 +229,7 @@
       },
       {
         "id": 3,
-        "logo": "/src/components/Formacoes/CardsFormacoes/img/Univesp.png",
+        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Univesp.png",
         "graduacao": "Bacharelado – UNIVESP",
         "curso": "Tecnologia da Informação",
         "localidade": "Itaquaquecetuba – SP",
@@ -226,7 +240,99 @@
     "acessar": "Acessar"
   },
   "habilidades": {
-    "tituloSecao": "Habilidades"
+    "tituloSecao": "Habilidades",
+    "listaFerramentas": [
+      {
+        "id": 1,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/HTML.svg?react",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+      },
+      {
+        "id": 2,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Css.svg?react",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+      },
+      {
+        "id": 3,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Sass.svg?react",
+        "link": "https://sass-lang.com/documentation/"
+      },
+      {
+        "id": 4,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/JS.svg?react",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+      },
+      {
+        "id": 5,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/TS.svg?react",
+        "link": "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html"
+      },
+      {
+        "id": 6,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/MySQL.svg?react",
+        "link": "https://www.mysql.com/why-mysql/"
+      },
+      {
+        "id": 7,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Bootstrap.svg?react",
+        "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+      },
+      {
+        "id": 8,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Tailwind.svg?react",
+        "link": "https://tailwindcss.com/docs/installation"
+      },
+      {
+        "id": 9,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Nodejs.svg?react",
+        "link": "https://nodejs.org/en/about"
+      },
+      {
+        "id": 10,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/material-ui.svg?react",
+        "link": "https://mui.com/material-ui/getting-started/"
+      },
+      {
+        "id": 11,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/react.svg?react",
+        "link": "https://react.dev/learn"
+      },
+      {
+        "id": 12,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/styled components.svg?react",
+        "link": "https://styled-components.com/docs"
+      },
+      {
+        "id": 13,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/figma.svg?react",
+        "link": "https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-"
+      },
+      {
+        "id": 14,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/github.svg?react",
+        "link": "https://github.com/about"
+      },
+      {
+        "id": 15,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/git.svg?react",
+        "link": "https://git-scm.com/about"
+      },
+      {
+        "id": 16,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/vercel.svg?react",
+        "link": "https://vercel.com/docs"
+      },
+      {
+        "id": 17,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Postman.svg?react",
+        "link": "https://www.postman.com/home"
+      },
+      {
+        "id": 18,
+        "icone": "/src/components/Habilidades/Ferramentas/assets/Wordpress.svg?react",
+        "link": "https://wordpress.com/pt-br/about/"
+      }
+    ]
   },
   "contatos": {
     "tituloSecao": "Contatos",

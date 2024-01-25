@@ -1,14 +1,14 @@
 import styled from "styled-components";
+import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
 import Linkedin from "src/assets/icons/linkedin.svg?react";
 import Github from "src/assets/icons/github.svg?react";
 import Gmail from "src/assets/icons/gmail.svg?react";
 import Whatsapp from "src/assets/icons/whatsapp.svg?react";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { useRecoilValue } from "recoil";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
-import { useTranslation } from "react-i18next";
 
 const ContainerInformacoesContatos = styled.div`
   margin-top: 1.5rem;

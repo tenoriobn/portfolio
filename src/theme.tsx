@@ -1,10 +1,9 @@
 const Theme = {
   colors: {
     azul: 'rgb(4, 148, 252)',
-    azulClaro: 'rgba(4, 148, 252, 0.75)',
+    azulClaro: 'rgb(4, 149, 252)',
     azulColbato: 'rgba(4, 148, 252, 0.30)',
-    azulEscuro: 'rgba(24, 26, 34, 0.658)',
-    azulMuitoEscuro: 'rgb(24, 26, 34)',
+    azulEscuro: 'rgb(24, 26, 34)',
     branco: 'rgb(255, 255, 255)',
     cinzaClaro: 'rgba(255, 255, 255, 0.50)',
     cinzaMedio: 'rgba(255, 255, 255, 0.40)',

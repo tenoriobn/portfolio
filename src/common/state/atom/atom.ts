@@ -5,7 +5,6 @@ export const estadoMenuAtivo = atom({
   default: false,
 });
 
-
 export const estadoDesativaRolagem = atom({
   key: 'desativaRolagem',
   default: false
@@ -40,8 +39,6 @@ export const estadoImagemSelecionada = atom({
   key: 'imagemSelecionada',
   default: ''
 });
-
-
 
 export const estadoDadosFormularioEnviado = atom({
   key: 'dadosFormularioEnviado',

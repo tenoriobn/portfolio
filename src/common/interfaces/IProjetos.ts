@@ -1,6 +1,7 @@
-export interface IEstilizacaoCardsVisiveis {
+import { IEstilizacaoCustomizada } from "./IEstilizacaoCustomizada";
+
+export interface IEstilizacaoCardsVisiveis extends IEstilizacaoCustomizada {
   $estilizacaoCardsVisiveis: number;
-  $trocaTema?: boolean;
 }
 
 export interface IEstadoQtdCardsVisiveis {

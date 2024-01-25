@@ -5,7 +5,6 @@ export const estilosCard = css`
   ${estilosBordaCard}
   box-sizing: border-box;
   cursor: pointer;
-  max-width: 370px;
   width: 100%;
   padding: 1rem;
 `;

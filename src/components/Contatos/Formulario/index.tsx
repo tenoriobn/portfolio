@@ -1,14 +1,14 @@
 import styled, { css } from "styled-components";
-import { cor } from "src/common/EstilosGlobais/cores";
-// import listaCamposFormulario from "src/data/listaCamposFormulario.json";
-import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
 import { useRecoilValue } from "recoil";
-import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import Botao from "src/components/Botao";
-import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
-import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
 import { useTranslation } from "react-i18next";
+// import listaCamposFormulario from "src/data/listaCamposFormulario.json";
+import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
+import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
+import { cor } from "src/common/EstilosGlobais/cores";
+import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";
+import Botao from "src/components/Botao";
 
 const ContainerFormulario = styled.form<IEstilizacaoCustomizada>`
   order: 2;

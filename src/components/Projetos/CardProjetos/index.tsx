@@ -1,16 +1,16 @@
 // import listaProjetos from "src/data/listaProjetos.json";
-import Github from "src/assets/icons/github.svg?react";
-import Vercel from "src/assets/icons/vercel.svg?react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { estadoQtdCardsVisiveis, estadoTrocaTema } from "src/common/state/atom/atom";
-import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
 import useAmpliarImagem from "src/common/state/hooks/hooksProjetos/useAmpliarImagem";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import {estilosCard} from "src/common/estilosPadronizados/estilosCard";
 import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
-import { useTranslation } from "react-i18next";
+import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "src/common/interfaces/IProjetos";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import Github from "src/assets/icons/github.svg?react";
+import Vercel from "src/assets/icons/vercel.svg?react";
 
 const ContainerCardsProjetos = styled.div`
   display: grid;

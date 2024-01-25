@@ -1,10 +1,12 @@
 // import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { IIdioma } from "src/common/interfaces/IIdioma";
 import { estadoListaIdiomasAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
 import useTrocarIdioma from "src/common/state/hooks/hooksTraducao/useTrocarIdioma";
-import listaIdiomas from "src/data/listaIdiomas.json";
+// import listaIdiomas from "src/data/listaIdiomas.json";
 import styled from "styled-components";
 
 const ContainerListaIdiomas = styled.ul<IEstilizacaoCustomizada>`
@@ -43,6 +45,8 @@ export default function ListaIdiomas() {
   const [listaIdiomasAtivo] = useRecoilState(estadoListaIdiomasAtivo);
   const { trocarIdioma, idiomaAtivo } = useTrocarIdioma();
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
+  const listaIdiomas:IIdioma[] = t('cabecalho.listaIdiomas', { returnObjects: true });
 
   return (
     <ContainerListaIdiomas $listaIdiomasAtivo={listaIdiomasAtivo}>

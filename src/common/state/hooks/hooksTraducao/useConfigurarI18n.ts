@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import i18next, { i18n as I18nInstance } from 'i18next';
 import { initReactI18next } from 'react-i18next';
-import pt from 'src/common/traducao/pt.json';
-import en from 'src/common/traducao/en.json';
-import es from 'src/common/traducao/es.json';
+import pt from 'src/data/pt.json';
+import en from 'src/data/en.json';
+import es from 'src/data/es.json';
 
 const useConfigurarI18n = (): I18nInstance | null => {
   const [i18nInitialized, setI18nInitialized] = useState(false);

@@ -1,10 +1,10 @@
 import { RecoilRoot } from "recoil";
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import PaginaPadrao from "./page/PaginaPadrao.tsx";
 import SobreMim from "./components/SobreMim";
-import PaginaPadrao from "./page/PaginaPadrao";
-import Habilidades from "./components/Habilidades";
 import Projetos from "./components/Projetos";
 import Formacoes from "./components/Formacoes";
+import Habilidades from "./components/Habilidades";
 import Contatos from "./components/Contatos";
 
 function App() {

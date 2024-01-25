@@ -1,5 +1,5 @@
-import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 const ContainerRodape = styled.footer`
   padding: 1.5rem;

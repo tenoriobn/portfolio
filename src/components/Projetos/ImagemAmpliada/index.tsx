@@ -1,8 +1,8 @@
-import { cor } from "src/common/EstilosGlobais/cores";
 import styled from "styled-components";
-import iconeFechar from "./Fechar.svg?react";
-import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
 import { useRecoilState } from "recoil";
+import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
+import { cor } from "src/common/EstilosGlobais/cores";
+import iconeFechar from "./assets/Fechar.svg?react";
 
 const DialogImagemAmpliada = styled.dialog` 
   background-color: ${cor.cinzaMuitoEscuro};

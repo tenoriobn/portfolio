@@ -1,12 +1,16 @@
 import { useRecoilState, useRecoilValue } from "recoil";
 import { estadoLimiteCardsVisiveis, estadoQtdCardsVisiveis } from "../../atom/atom";
-import listaProjetos from "src/data/listaProjetos.json";
+// import listaProjetos from "src/data/listaProjetos.json";
 import useDefinirQtdPadraoCardsVisiveis from "./useDefinirQtdPadraoCardsVisiveis";
 import { RefObject } from "react";
+import { useTranslation } from "react-i18next";
+import { ICardsProjetos } from "src/common/interfaces/IProjetos";
 
 const useAlternarQtdCardsVisiveis = (containerRef: RefObject<HTMLDivElement>) => {
   const [qtdCardsVisiveis, setQtdCardsVisiveis] = useRecoilState(estadoQtdCardsVisiveis);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
+  const [t] = useTranslation("global");
+  const listaProjetos:ICardsProjetos[] = t('projetos.cardsProjetos', { returnObjects: true });
 
   useDefinirQtdPadraoCardsVisiveis({ qtdCardsVisiveis, setQtdCardsVisiveis });
 

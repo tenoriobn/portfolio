@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import Lua from "./lua.svg?react";
+import { useRecoilState } from "recoil";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
+import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
 import { cor } from "src/common/EstilosGlobais/cores";
 import MenuItens from "./MenuItens";
 import Idiomas from "./Idiomas";
-import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
-import { useRecoilState } from "recoil";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
+import Lua from "./assets/lua.svg?react";
 
 const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   position:sticky;
@@ -15,7 +15,7 @@ const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   right: 0;
   top: 0;
   z-index: 2;
-  background: ${(props) => (props.$trocaTema ? 'rgba(24, 26, 34, 0.658)' : 'rgba(4, 148, 252, 0.75)')};
+  background: ${(props) => (props.$trocaTema ? cor.azulEscuro : cor.azulClaro)};
   backdrop-filter: blur(500px);
   transition: all .3s ease-in-out;
 `;

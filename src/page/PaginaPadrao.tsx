@@ -1,15 +1,15 @@
-import EstilosGlobais from "src/common/EstilosGlobais";
-import Cabecalho from "src/components/Cabecalho";
-import SobreMim from "src/components/SobreMim";
-import Contatos from "src/components/Contatos";
-import Formacoes from "src/components/Formacoes";
-import Habilidades from "src/components/Habilidades";
-import Projetos from "src/components/Projetos";
-import Rodape from "src/components/Rodape";
-import Theme from "src/theme";
+import EstilosGlobais from "src/common/estilosGlobais";
 import styled, { ThemeProvider } from "styled-components";
 import useConfigurarI18n from "src/common/state/hooks/hooksTraducao/useConfigurarI18n";
 import { I18nextProvider } from "react-i18next";
+import Theme from "src/theme";
+import Cabecalho from "src/components/Cabecalho";
+import SobreMim from "src/components/SobreMim";
+import Projetos from "src/components/Projetos";
+import Formacoes from "src/components/Formacoes";
+import Habilidades from "src/components/Habilidades";
+import Contatos from "src/components/Contatos";
+import Rodape from "src/components/Rodape";
 
 const ContainerGlobal = styled.div`
   position: relative;
@@ -20,7 +20,6 @@ const ContainerGlobal = styled.div`
 
 const Conteudo = styled.main`
   align-self: center;
-
   padding: 0 1rem;
 
   @media (min-width: 375px) {
@@ -45,7 +44,6 @@ const Conteudo = styled.main`
 
 export default function PaginaPadrao() {
   const i18n = useConfigurarI18n();
-
   if (!i18n) {
     return null;
   }

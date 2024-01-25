@@ -1,16 +1,16 @@
 import styled from "styled-components";
-import fotoPerfil from "./Perfil.svg";
-import Github from "src/assets/icons/github.svg?react";
-import Linkedin from "src/assets/icons/linkedin.svg?react";
-import { cor } from "src/common/EstilosGlobais/cores";
-import { Link } from "react-router-dom";
-// import apresentacao from "src/data/informacoesSobreMim.json";
 import { useRecoilValue } from "recoil";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+import { cor } from "src/common/EstilosGlobais/cores";
+// import apresentacao from "src/data/informacoesSobreMim.json";
 import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
 import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
-import { useTranslation } from "react-i18next";
+import fotoPerfil from "./assets/Perfil.svg";
+import Github from "src/assets/icons/github.svg?react";
+import Linkedin from "src/assets/icons/linkedin.svg?react";
 
 const ContainerSobreMim = styled.section`
   display: flex;
@@ -59,7 +59,7 @@ const DescricaoSobreMim = styled.p<IEstilizacaoCustomizada>`
   max-width: 764px;
 
   .nome__destaque {
-    color: ${(props) => (props.$trocaTema ? cor.azul : cor.azulMuitoEscuro)};
+    color: ${(props) => (props.$trocaTema ? cor.azul : cor.azulEscuro)};
     font-size: 1rem;
     font-weight: 700;
   }

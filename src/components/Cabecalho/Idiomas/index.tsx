@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
-import Global from "../global.svg?react";
 import styled from 'styled-components';
-import ListaIdiomas from './ListaIdiomas';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import { Link } from 'react-router-dom';
 import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'src/common/state/atom/atom';
 import { IEstilizacaoCustomizada } from 'src/common/interfaces/IEstilizacaoCustomizada';
 import { estiloIconeCabecalho } from 'src/common/estilosPadronizados/estilosIcones';
+import Global from "../assets/global.svg?react";
+import ListaIdiomas from './ListaIdiomas';
 
 const ContainerIdiomas = styled.li`
   list-style: none;

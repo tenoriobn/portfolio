@@ -1,13 +1,13 @@
 import styled from "styled-components";
+import { useRecoilValue } from "recoil";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
+import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import TituloSecao from "../TituloSecao";
 import CardProjetos from "./CardProjetos";
-import { useRecoilValue } from "recoil";
-import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
-import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
 import ImagemAmpliada from "./ImagemAmpliada";
-import { useRef } from "react";
 import Botao from "../Botao";
-import { useTranslation } from "react-i18next";
 
 const ContainerProjetos = styled.section`
   display: flex;

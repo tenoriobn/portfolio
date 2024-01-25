@@ -1,13 +1,13 @@
-import { cor } from "src/common/EstilosGlobais/cores";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import styled from "styled-components";
-// import listaItensMenu from "src/data/listaItensMenu.json";
 import { useRecoilValue } from "recoil";
-import { estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
 import { Link } from "react-scroll";
-import fundoMenuEscuro from "./fundoMenuEscuro.svg";
-import fundoMenuClaro from "./fundoMenuClaro.svg";
 import { useTranslation } from "react-i18next";
+import { estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
+import { cor } from "src/common/EstilosGlobais/cores";
+// import listaItensMenu from "src/data/listaItensMenu.json";
+import fundoMenuEscuro from "../assets/fundoMenuEscuro.svg";
+import fundoMenuClaro from "../assets/fundoMenuClaro.svg";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { IMenuItens } from "src/common/interfaces/ICabecalho";
 
 const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`

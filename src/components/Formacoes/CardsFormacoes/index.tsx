@@ -1,13 +1,13 @@
 import styled from "styled-components";
 // import listaFormacoes from "src/data/listaFormacoes.json";
-import { Link } from "react-router-dom";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { useRecoilValue } from "recoil";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { estilosCard } from "src/common/estilosPadronizados/estilosCard";
 import { estilosBotao } from "src/common/estilosPadronizados/estilosBotao";
+import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { ICardsFormacoes } from "src/common/interfaces/IFormacoes";
-import { useTranslation } from "react-i18next";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;
@@ -79,7 +79,7 @@ const NomeCurso = styled.h2`
   }
 `;
 
-const Botao = styled(Link)<IEstilizacaoCustomizada>`
+const LinkInstituicao = styled(Link)<IEstilizacaoCustomizada>`
   ${estilosBotao}
 `;
 
@@ -97,14 +97,14 @@ export default function CardsFormacoes() {
           <NomeCurso>{formacao.curso}</NomeCurso>
           <LocalidadeInstituicao>{formacao.localidade}</LocalidadeInstituicao>
           <PeriodoAcademico>{formacao.data}</PeriodoAcademico>
-          <Botao 
+          <LinkInstituicao 
             to={formacao.siteInstituicao}                 
             target="_blank"
             rel="noopener noreferrer"
             $trocaTema={trocaTema}
           >
             {t('formacoes.acessar')}
-          </Botao>
+          </LinkInstituicao>
         </CardFormacao>
       ))}
     </ContainerCardsFormacoes>

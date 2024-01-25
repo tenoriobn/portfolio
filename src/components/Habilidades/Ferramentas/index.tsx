@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import listaFerramentas from "src/data/listaFerramentas.json";
+// import listaFerramentas from "src/data/listaFerramentas.json";
+import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { estadoTrocaTema } from "src/common/state/atom/atom";
 import { cor } from "src/common/EstilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { useRecoilValue } from "recoil";
+import { IFerramentas } from "src/common/interfaces/IHabilidades";
 
 const ContainerFerramentas = styled.div`
   display: grid;
@@ -55,6 +57,8 @@ const IconeFerramenta = styled.img<IEstilizacaoCustomizada>`
 
 export default function Ferramentas() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  const [t] = useTranslation("global");
+  const listaFerramentas:IFerramentas[] = t('habilidades.listaFerramentas', { returnObjects: true });
 
   return (
     <ContainerFerramentas>

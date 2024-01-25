@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 import TituloSecao from "../TituloSecao";
 import CardsFormacoes from "./CardsFormacoes";
-import { useTranslation } from "react-i18next";
 
 const ContainerFormacoes = styled.section`
   padding: 3.25rem 0;
