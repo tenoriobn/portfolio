@@ -2,10 +2,14 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 
 const ContainerRodape = styled.footer`
-  padding: 1.5rem;
+  padding: 1rem;
 
   p {
     text-align: center;
+  }
+
+  @media (min-width: 375px) {
+    padding: 1.5rem;
   }
 
   @media (min-width: 768px) {

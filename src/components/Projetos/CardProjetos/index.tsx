@@ -1,4 +1,3 @@
-// import listaProjetos from "src/data/listaProjetos.json";
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
@@ -16,7 +15,6 @@ const ContainerCardsProjetos = styled.div`
   display: grid;
   gap: 1rem;
   box-sizing: border-box;
-  margin-top: 1.5rem;
 
   @media (min-width: 375px) {
     gap: 1.5rem;
@@ -24,11 +22,6 @@ const ContainerCardsProjetos = styled.div`
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 2.5rem;
-  }
-
-  @media (min-width: 992px) {
-    margin-top: 5rem;
   }
 
   @media (min-width: 1200px) {

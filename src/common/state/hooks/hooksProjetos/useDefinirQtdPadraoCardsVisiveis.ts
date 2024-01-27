@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { estadoLimiteCardsVisiveis } from "../../atom/atom";
-// import listaProjetos from "src/data/listaProjetos.json";
 import { IEstadoQtdCardsVisiveis } from "src/common/interfaces/IProjetos";
 import { useTranslation } from "react-i18next";
 import { ICardsProjetos } from "src/common/interfaces/IProjetos";

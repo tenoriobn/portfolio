@@ -5,31 +5,31 @@
         "id": 1,
         "nome": "Sobre mí",
         "href": "sobreMim",
-        "offset": -130
+        "offset": -140
       },
       {
         "id": 2,
         "nome": "Proyectos",
         "href": "projetos",
-        "offset": -60
+        "offset": -96
       },
       {
         "id": 3,
         "nome": "Formación",
         "href": "formacoes",
-        "offset": -60
+        "offset": -96
       },
       {
         "id": 4,
         "nome": "Habilidades",
         "href": "habilidades",
-        "offset": -60
+        "offset": -96
       },
       {
         "id": 5,
         "nome": "Contactos",
         "href": "contatos",
-        "offset": -60
+        "offset": -48
       }
     ]
   },

@@ -3,8 +3,7 @@ import { useRecoilValue } from "recoil";
 import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 import { estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
-import { cor } from "src/common/EstilosGlobais/cores";
-// import listaItensMenu from "src/data/listaItensMenu.json";
+import { cor } from "src/common/estilosGlobais/cores";
 import fundoMenuEscuro from "../assets/fundoMenuEscuro.svg";
 import fundoMenuClaro from "../assets/fundoMenuClaro.svg";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
@@ -66,7 +65,7 @@ const Item = styled.li<IEstilizacaoCustomizada>`
       color: ${cor.branco};
     }
 
-    &.active {
+    &.ativo {
       color: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
       text-shadow: 0rem 0rem 1rem ${(props) => (props.$trocaTema ? cor.azulColbato : cor.cinzaClaro)};
     }
@@ -89,11 +88,12 @@ export default function MenuItens() {
         {listaMenuItens.map(item => (
           <Item key={item.id} $trocaTema={trocaTema}>
             <Link
+              activeClass="ativo"
               to={item.href}
               spy={true}
               smooth={true}
               offset={item.offset}
-              duration={500}
+              duration={600}
             >
               {item.nome}
             </Link>

@@ -1,10 +1,9 @@
 import styled, { css } from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
-// import listaCamposFormulario from "src/data/listaCamposFormulario.json";
 import { estadoDadosFormularioEnviado, estadoTrocaTema } from "src/common/state/atom/atom";
 import { useValidarCamposFormulario } from "src/common/state/hooks/hooksFormulario/useValidarCamposFormulario";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { IDadosFormulario } from "src/common/interfaces/IDadosFormulario";

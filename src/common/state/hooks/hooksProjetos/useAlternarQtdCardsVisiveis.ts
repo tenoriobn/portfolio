@@ -1,9 +1,8 @@
-import { useRecoilState, useRecoilValue } from "recoil";
-import { estadoLimiteCardsVisiveis, estadoQtdCardsVisiveis } from "../../atom/atom";
-// import listaProjetos from "src/data/listaProjetos.json";
-import useDefinirQtdPadraoCardsVisiveis from "./useDefinirQtdPadraoCardsVisiveis";
 import { RefObject } from "react";
 import { useTranslation } from "react-i18next";
+import { useRecoilState, useRecoilValue } from "recoil";
+import { estadoLimiteCardsVisiveis, estadoQtdCardsVisiveis } from "../../atom/atom";
+import useDefinirQtdPadraoCardsVisiveis from "./useDefinirQtdPadraoCardsVisiveis";
 import { ICardsProjetos } from "src/common/interfaces/IProjetos";
 
 const useAlternarQtdCardsVisiveis = (containerRef: RefObject<HTMLDivElement>) => {

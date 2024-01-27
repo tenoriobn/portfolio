@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
-import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
+import useAtivarMenu from "src/common/state/hooks/hooksCabecalho/useAtivarMenu";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
 import { cor } from "src/common/estilosGlobais/cores";
@@ -108,6 +108,10 @@ const ContainerPreferenciasUsuario = styled.div`
 
 const Tema = styled.svg<IEstilizacaoCustomizada>`
   ${estiloIconeCabecalho};
+
+  path {
+    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.branco)};
+  }
 `;
 
 export default function Cabecalho() {

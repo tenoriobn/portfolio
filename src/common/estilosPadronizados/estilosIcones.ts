@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { cor } from "../EstilosGlobais/cores";
+import { cor } from "../estilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 
 const estiloIcone = css<IEstilizacaoCustomizada>`
@@ -15,7 +15,6 @@ export const estiloIconeCabecalho = css<IEstilizacaoCustomizada>`
   height: 24px;
 
   path {
-    fill: ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaClaro)};
     transition: all .3s ease-in-out;
   }
 

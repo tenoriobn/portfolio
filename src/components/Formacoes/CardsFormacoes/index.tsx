@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import listaFormacoes from "src/data/listaFormacoes.json";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -16,7 +15,6 @@ const ContainerCardsFormacoes = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1.5rem;
 
   @media (min-width: 375px) {
     gap: 1.5rem;
@@ -24,11 +22,6 @@ const ContainerCardsFormacoes = styled.div`
 
   @media (min-width: 768px) {
     flex-direction: row;
-    margin-top: 2.5rem;
-  }
-
-  @media (min-width: 992px) {
-    margin-top: 5rem;
   }
 
   @media (min-width: 1200px) {

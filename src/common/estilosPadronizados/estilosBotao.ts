@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { cor } from "../EstilosGlobais/cores";
+import { cor } from "../estilosGlobais/cores";
 import { estilosBordaBotaoEInputs } from "./estilosBorda";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 

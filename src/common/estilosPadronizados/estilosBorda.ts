@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 
 export const estilosBorda = css<IEstilizacaoCustomizada>`

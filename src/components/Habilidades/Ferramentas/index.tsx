@@ -1,10 +1,9 @@
 import styled from "styled-components";
-// import listaFerramentas from "src/data/listaFerramentas.json";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { IFerramentas } from "src/common/interfaces/IHabilidades";
 
@@ -13,7 +12,10 @@ const ContainerFerramentas = styled.div`
   grid-template-columns: repeat(6, 32px);
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 1.5rem;
+
+  @media (max-width: 319px) {
+    grid-template-columns: repeat(4, auto);
+  }
 
   @media (min-width: 375px) {
     gap: 1.5rem;
@@ -21,13 +23,11 @@ const ContainerFerramentas = styled.div`
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(6, 48px);
-    row-gap: 5rem;
-    margin-top: 2.5rem;
+    row-gap: 3rem;
   }
 
   @media (min-width: 992px) {
     grid-template-columns: repeat(6, 64px);
-    margin-top: 5rem;
   }
 `;
 

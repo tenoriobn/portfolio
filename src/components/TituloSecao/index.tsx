@@ -6,6 +6,7 @@ const Titulo = styled.h2`
   font-weight: 700;
   letter-spacing: .035rem;
   text-align: center;
+  margin-bottom: 2.5rem;
 
   @media (min-width: 768px) {
     font-size: 2rem;
@@ -14,6 +15,7 @@ const Titulo = styled.h2`
 
   @media (min-width: 992px) {
     font-size: 3rem;
+    margin-bottom: 5rem;
   }
 `;
 

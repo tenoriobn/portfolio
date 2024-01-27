@@ -17,17 +17,11 @@ const ContainerContatos = styled.section`
 `;
 
 const ContainerOpcoesContatos = styled.div<IEstilizacaoCustomizada>`
-  margin-top: 1.5rem;
-
   @media (min-width: 768px) {
     ${estilosBordaCard}
     gap: 1.5rem;
     margin-top: 2.5rem;
     padding: 1.5rem;
-  }
-
-  @media (min-width: 992px) {
-    margin-top: 5rem;
   }
 
   @media (min-width: 1200px) {
