@@ -4,7 +4,7 @@ import { estadoTrocaTema } from "src/common/state/atom/atom";
 import useAtivarMenu from "src/common/state/hooks/hookCabecalho/useAtivarMenu";
 import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
 import { estiloIconeCabecalho } from "src/common/estilosPadronizados/estilosIcones";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 import MenuItens from "./MenuItens";
 import Idiomas from "./Idiomas";
 import Lua from "./assets/lua.svg?react";

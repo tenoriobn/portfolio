@@ -1,40 +1,39 @@
 import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 import iconeFechar from "./assets/Fechar.svg?react";
 
 const DialogImagemAmpliada = styled.dialog` 
-  background-color: ${cor.cinzaMuitoEscuro};
-  border: none;
-  box-sizing: border-box;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
+  display: ${(props) => (props.open ? 'flex' : 'none')};
+  align-items: center;
+  justify-content: center;
+  background-color: ${cor.cinzaMuitoEscuro};
   width: auto;
-  max-height: 100vh;
   height: 100%;
-  overflow-y: hidden;
   z-index: 7;
-
-  @media (max-width: 767px) {
-    display: none;
-  }
 `;
 
 const ContainerImagemAmpliada = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  max-width: 1024px;
-  width: 100%;
+  
   box-sizing: border-box;
-  padding: 3rem;
+  width: 80%;
+  padding: 3rem; 
+
+  @media (min-width: 1128px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1440px) {
+    width: 65%;
+  }
 `;
 
 const ContainerIconeFechar = styled.div`

@@ -17,6 +17,8 @@ const ContainerProjetos = styled.section`
 
   padding: 3.25rem 0;
 
+  position: relative;
+
   @media (min-width: 992px) {
     padding: 6.25rem 0;
   }
