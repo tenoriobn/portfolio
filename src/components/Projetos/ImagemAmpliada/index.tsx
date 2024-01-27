@@ -3,6 +3,8 @@ import { useRecoilState } from "recoil";
 import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
 import { cor } from "src/common/estilosGlobais/cores";
 import iconeFechar from "./assets/Fechar.svg?react";
+import { useRef } from "react";
+import useFecharAoClicarFora from "src/common/state/hooks/hooksGlobais/useFecharAoClicarFora";
 
 const DialogImagemAmpliada = styled.dialog` 
   position: fixed;
@@ -68,9 +70,17 @@ export default function ImagemAmpliada() {
     setDesativaRolagem(!desativaRolagem);
   };
 
+  
+  const containerImagemAmpliadaRef = useRef(null);
+  const fecharContainerImagemAmpliada = () => {
+    setImagemSelecionada('');
+    setDesativaRolagem(false);
+  };
+  useFecharAoClicarFora({ ref: containerImagemAmpliadaRef, aoClicarFora: fecharContainerImagemAmpliada });
+
   return (
     <DialogImagemAmpliada open={!!imagemSelecionada}>
-      <ContainerImagemAmpliada>
+      <ContainerImagemAmpliada ref={containerImagemAmpliadaRef}>
         <ContainerIconeFechar onClick={fecharImagemAmpliada} >
           <IconeFechar />
         </ContainerIconeFechar>
