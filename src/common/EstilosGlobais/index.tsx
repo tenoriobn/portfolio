@@ -2,10 +2,10 @@ import { useRecoilValue } from "recoil";
 import { createGlobalStyle } from "styled-components";
 import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom/atom";
 import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
-import { cor } from "./cores";
 import Theme from "src/theme";
 import fundoEscuro from "./assets/fundoEscuro.svg";
 import fundoClaro from "./assets/fundoClaro.svg";
+import { cor } from "src/common/EstilosGlobais/cores";
 
 const GlobalStyles = createGlobalStyle<IEstilizacaoCustomizada>`
   body {
