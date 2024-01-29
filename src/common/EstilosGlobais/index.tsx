@@ -5,7 +5,7 @@ import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
 import Theme from "src/theme";
 import fundoEscuro from "./assets/fundoEscuro.svg";
 import fundoClaro from "./assets/fundoClaro.svg";
-import { cor } from "src/common/EstilosGlobais/cores";
+import { cor } from "src/common/estilosGlobais/cores";
 
 const GlobalStyles = createGlobalStyle<IEstilizacaoCustomizada>`
   body {
