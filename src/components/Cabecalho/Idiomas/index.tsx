@@ -83,11 +83,11 @@ export default function Idiomas() {
   const listaIdiomas: IIdioma[] = t('cabecalho.listaIdiomas', { returnObjects: true });
 
   const listaIdiomasRef = useRef(null);
+  
   const fecharListaIdiomas = () => {
     setListaIdiomasAtivo(false);
   };
   useFecharAoClicarFora({ ref: listaIdiomasRef, aoClicarFora: fecharListaIdiomas });
-
 
   return (
     <ContainerIdiomas 
