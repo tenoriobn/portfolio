@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { estilosCard } from "src/common/estilosPadronizados/estilosCard";
-import { estilosBotao } from "src/common/estilosPadronizados/estilosBotao";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { ICardsFormacoes } from "src/common/interfaces/IFormacoes";
+import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
+import { estilosCard } from "../../../common/EstilosElementosPadrao/estilosCard";
+import { estilosBotao } from "../../../common/EstilosElementosPadrao/estilosBotao";
+import { estadoTrocaTema } from "../../../common/state/atom";
+import { ICardsFormacoes } from "../../../common/interface/IFormacoes";
 
 const ContainerCardsFormacoes = styled.div`
   display: flex;

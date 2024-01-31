@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { useRecoilValue } from "recoil";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
+
 import TituloSecao from "../TituloSecao";
 import Formulario from "./Formulario";
-import InformacoesContatos from "./InformacoesContatos";
+import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
+import { estilosBordaCard } from "../../common/EstilosElementosPadrao/estilosBorda";
+import { estadoTrocaTema } from "../../common/state/atom";
+import InformacoesContatos from "./InformacoesContatos/indes";
+
 
 const ContainerContatos = styled.section`
   padding: 3.25rem 0;

@@ -1,19 +1,19 @@
 import { useRecoilValue } from "recoil";
 import { createGlobalStyle } from "styled-components";
-import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom/atom";
-import { IEstilizacaoCustomizada } from "../interfaces/IEstilizacaoCustomizada";
-import Theme from "src/theme";
-import fundoEscuro from "./assets/fundoEscuro.svg";
-import fundoClaro from "./assets/fundoClaro.svg";
-import { cor } from "src/common/estilosGlobais/cores";
+import fundoEscuro from "./assets/fundoEscuro.png";
+import fundoClaro from "./assets/fundoClaro.png";
+import { IEstilizacaoCustomizada } from "../interface/IEstilizacaoCustomizada";
+import { cor } from "../Tema/cores";
+import Tema from "../Tema";
+import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom";
 
-const GlobalStyles = createGlobalStyle<IEstilizacaoCustomizada>`
+const EstiloGlobalPadrao = createGlobalStyle<IEstilizacaoCustomizada>`
   body {
     background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
     background-repeat: no-repeat;
     background-size: cover;
     color: ${cor.branco};
-    font-family: ${Theme.font.nunito};
+    font-family: ${Tema.fonte.nunito};
     font-size: .875rem;
     font-weight: 400;
     line-height: normal;
@@ -37,7 +37,7 @@ const EstilosGlobais = () => {
   const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
-    <GlobalStyles $trocaTema={trocaTema} $desativaRolagem={desativaRolagem} />
+    <EstiloGlobalPadrao $trocaTema={trocaTema} $desativaRolagem={desativaRolagem} />
   );
 };
 

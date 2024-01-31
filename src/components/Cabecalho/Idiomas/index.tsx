@@ -2,15 +2,17 @@ import styled, { css } from 'styled-components';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { cor } from 'src/common/estilosGlobais/cores';
-import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'src/common/state/atom/atom';
-import useTrocarIdioma from 'src/common/state/hooks/hooksTraducao/useTrocarIdioma';
-import useFecharAoClicarFora from 'src/common/state/hooks/hooksGlobais/useFecharAoClicarFora';
-import { estiloIconeCabecalho } from 'src/common/estilosPadronizados/estilosIcones';
-import { IEstilizacaoCustomizada } from 'src/common/interfaces/IEstilizacaoCustomizada';
-import { IIdioma } from 'src/common/interfaces/IIdioma';
+
+
 import Global from "../assets/global.svg?react";
 import { useRef } from 'react';
+import { cor } from '../../../common/Tema/cores';
+import { estadoListaIdiomasAtivo, estadoTrocaTema } from '../../../common/state/atom';
+import { estiloIconeCabecalho } from '../../../common/EstilosElementosPadrao/estilosIcones';
+import { IEstilizacaoCustomizada } from '../../../common/interface/IEstilizacaoCustomizada';
+import useTrocarIdioma from '../../../common/state/hooks/cabecalho/useTrocarIdioma';
+import useFecharAoClicarFora from '../../../common/state/hooks/hooksGlobais/useFecharAoClicarFora';
+import { IIdioma } from '../../../common/interface/ICabecalho';
 
 const estiloFundoListaIdiomas = css<IEstilizacaoCustomizada>`
   background-color: ${(props) => (

@@ -44,7 +44,7 @@
     [
       {
       "id": 1,
-      "imagem": "/src/components/Projetos/CardProjetos/assets/Rastreador de endereço.svg",
+      "imagem": "assets/imagensCardsProjetos/Rastreador de endereço.svg",
       "nome": "IP Address Tracker",
       "ferramentas": "ReactJS / Styled Components / TypeScript / API",
       "descricao": "This application allows you to visualize geographical information of IP addresses, implementing search functionality and presentation of geospatial data.",
@@ -53,7 +53,7 @@
       },
       {
         "id": 2,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Comércio Eletrônico.svg",
+        "imagem": "assets/imagensCardsProjetos/Comércio Eletrônico.svg",
         "nome": "E-commerce",
         "ferramentas": "ReactJS /  Styled Componets",
         "descricao": "This e-commerce application emphasizes fidelity to the proposed design. It implements responsiveness, interactivity, and essential functionalities.",
@@ -62,7 +62,7 @@
       },
       {
         "id": 3,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Formulario de várias etapas.svg",
+        "imagem": "assets/imagensCardsProjetos/Formulario de várias etapas.svg",
         "nome": "Multi-step Form",
         "ferramentas": "ReactJS / SCSS",
         "descricao": "This application aims to faithfully reproduce the proposed design, ensuring the progressive completion of each step, providing interactive elements.",
@@ -71,7 +71,7 @@
       },
       {
         "id": 4,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Calculadora de gorjetas.svg",
+        "imagem": "assets/imagensCardsProjetos/Calculadora de gorjetas.svg",
         "nome": "Tip Calculator",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
         "descricao": "This application aims to provide functionalities to calculate the appropriate tip and total cost of the bill per person, offering a functional and intuitive user experience.",
@@ -80,7 +80,7 @@
       },
       {
         "id": 5,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Componente de preço interativo.svg",
+        "imagem": "assets/imagensCardsProjetos/Componente de preço interativo.svg",
         "nome": "Interactive Pricing Component",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
         "descricao": "This application features slider functionalities to view and switch between different page view packages and their respective monthly prices.",
@@ -89,7 +89,7 @@
       },
       {
         "id": 6,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Notifications Page",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "This application seeks to faithfully reproduce the proposed layout. The project aims to offer an interface that allows distinguishing between 'unread' and 'read' notifications.",
@@ -99,7 +99,7 @@
     
       {
         "id": 7,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -108,7 +108,7 @@
       },
       {
         "id": 8,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -117,7 +117,7 @@
       },
       {
         "id": 9,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -126,7 +126,7 @@
       },
       {
         "id": 10,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -135,7 +135,7 @@
       },
       {
         "id": 11,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -144,7 +144,7 @@
       },
       {
         "id": 12,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -153,7 +153,7 @@
       },
       {
         "id": 13,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -162,7 +162,7 @@
       },
       {
         "id": 14,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -171,7 +171,7 @@
       },
       {
         "id": 15,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -180,7 +180,7 @@
       },
       {
         "id": 16,
-        "imagem": "/src/components/Projetos/CardProjetos/assets/Pagina de notificações.svg",
+        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
         "descricao": "Essa aplicação busca reproduzir fielmente o layout proposto. O projeto visa oferecer uma interface que permita distinguir entre notificações 'não lidas' e 'lidas'.",
@@ -197,7 +197,7 @@
     [
       {
         "id": 1,
-        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Fatec.png",
+        "logo": "assets/imagensCardsFormacoes/Fatec.png",
         "graduacao": "Technologist - FATEC",
         "curso": "Commercial Management",
         "localidade": "Itaquaquecetuba – SP",
@@ -206,20 +206,20 @@
       },
       {
         "id": 2,
-        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Alura.png",
+        "logo": "assets/imagensCardsFormacoes/Alura.png",
         "graduacao": "Learning Platform - ALURA",
         "curso": "Full Stack Javascript",
         "localidade": "Virtual",
-        "data": "08/2021 – Presente",
+        "data": "08/2021 – Present",
         "siteInstituicao": "https://www.alura.com.br/sobre"
       },
       {
         "id": 3,
-        "logo": "/src/components/Formacoes/CardsFormacoes/assets/Univesp.png",
+        "logo": "assets/imagensCardsFormacoes/Univesp.png",
         "graduacao": "Bachelor's Degree - UNIVESP",
         "curso": "Information Technology",
         "localidade": "Itaquaquecetuba – SP",
-        "data": "08/2022 – Presente",
+        "data": "08/2022 – Present",
         "siteInstituicao": "https://univesp.br/cursos/bacharel-em-tecnologia-da-informacao"
       }
     ],

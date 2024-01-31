@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { cor } from "src/common/estilosGlobais/cores";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { IFerramentas } from "src/common/interfaces/IHabilidades";
+import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
+import { cor } from "../../../common/Tema/cores";
+import { IFerramentas } from "../../../common/interface/IFerramentas";
+import { estadoTrocaTema } from "../../../common/state/atom";
+
 
 const ContainerFerramentas = styled.div`
   display: grid;

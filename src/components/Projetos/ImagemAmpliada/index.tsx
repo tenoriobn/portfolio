@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { useRecoilState } from "recoil";
-import { estadoDesativaRolagem, estadoImagemSelecionada } from "src/common/state/atom/atom";
-import { cor } from "src/common/estilosGlobais/cores";
+
 import iconeFechar from "./assets/Fechar.svg?react";
 import { useRef } from "react";
-import useFecharAoClicarFora from "src/common/state/hooks/hooksGlobais/useFecharAoClicarFora";
+import { cor } from "../../../common/Tema/cores";
+import { estadoDesativaRolagem, estadoImagemSelecionada } from "../../../common/state/atom";
+import useFecharAoClicarFora from "../../../common/state/hooks/hooksGlobais/useFecharAoClicarFora";
 
 const DialogImagemAmpliada = styled.dialog` 
   position: fixed;

@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { estadoTrocaTema } from "src/common/state/atom/atom";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { cor } from "src/common/estilosGlobais/cores";
-import { estilosBordaCard } from "src/common/estilosPadronizados/estilosBorda";
-import { estiloIconeSocial } from "src/common/estilosPadronizados/estilosIcones";
 import fotoPerfil from "./assets/Perfil.svg";
-import Github from "src/assets/icons/github.svg?react";
-import Linkedin from "src/assets/icons/linkedin.svg?react";
+import Github from "../../assets/icons/github.svg?react";
+import Linkedin from "../../assets/icons/linkedin.svg?react";
+import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
+import { cor } from "../../common/Tema/cores";
+import { estadoTrocaTema } from "../../common/state/atom";
+import { estilosBordaCard } from "../../common/EstilosElementosPadrao/estilosBorda";
+import { estiloIconeSocial } from "../../common/EstilosElementosPadrao/estilosIcones";
 
 const ContainerSobreMim = styled.section`
   display: flex;

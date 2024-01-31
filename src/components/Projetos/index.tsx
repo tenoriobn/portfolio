@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { estadoLimiteCardsVisiveis } from "src/common/state/atom/atom";
-import useAlternarQtdCardsVisiveis from "src/common/state/hooks/hooksProjetos/useAlternarQtdCardsVisiveis";
 import TituloSecao from "../TituloSecao";
-import CardProjetos from "./CardProjetos";
+import CardProjetos from "./CardsProjetos";
 import ImagemAmpliada from "./ImagemAmpliada";
 import Botao from "../Botao";
+import { estadoLimiteCardsVisiveis } from "../../common/state/atom";
+import useAlternarQtdCardsVisiveis from "../../common/state/hooks/projetos/useAlternarQtdCardsVisiveis";
 
 const ContainerProjetos = styled.section`
   display: flex;

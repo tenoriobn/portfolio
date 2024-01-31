@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
-import { estadoMenuAtivo, estadoTrocaTema } from "src/common/state/atom/atom";
-import { cor } from "src/common/estilosGlobais/cores";
-import fundoMenuEscuro from "../assets/fundoMenuEscuro.svg";
-import fundoMenuClaro from "../assets/fundoMenuClaro.svg";
-import { IEstilizacaoCustomizada } from "src/common/interfaces/IEstilizacaoCustomizada";
-import { IMenuItens } from "src/common/interfaces/ICabecalho";
+import fundoMenuEscuro from "../assets/fundoMenuEscuro.png";
+import fundoMenuClaro from "../assets/fundoMenuClaro.png";
+import { cor } from "../../../common/Tema/cores";
+import { estadoMenuAtivo, estadoTrocaTema } from "../../../common/state/atom";
+import { IMenuItens } from "../../../common/interface/ICabecalho";
+import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
+import { Link } from "react-scroll";
 
 const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
   display: flex;
@@ -26,7 +26,7 @@ const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
     width: 100%;
     min-height: 100vh;
     padding: 9rem 0;
-    box-sizing: border-box;
+
 
     @media (min-width: 768px) {
       left: ${(props) => (props.$menuAtivo ? '0' : '-50%')};
