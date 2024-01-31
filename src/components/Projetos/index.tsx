@@ -8,6 +8,7 @@ import ImagemAmpliada from "./ImagemAmpliada";
 import Botao from "../Botao";
 import { estadoLimiteCardsVisiveis } from "../../common/state/atom";
 import useAlternarQtdCardsVisiveis from "../../common/state/hooks/projetos/useAlternarQtdCardsVisiveis";
+import { ICardsProjetos } from "../../common/interface/IProjetos";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -34,15 +35,22 @@ export default function Projetos() {
   const alterarQtdCardsVisiveis = useAlternarQtdCardsVisiveis(containerRef);
   const limiteCardsVisiveis = useRecoilValue(estadoLimiteCardsVisiveis);
   const [t] = useTranslation("global");
+  const listaProjetos:ICardsProjetos[] = t('projetos.cardsProjetos', { returnObjects: true });
+  const qtdMinimaProjetos = window.innerWidth >= 1200 ? 6 : 4;
 
   return (
     <ContainerProjetos id="projetos" ref={containerRef}>
       <TituloSecao titulo={t('projetos.tituloSecao')} />
       <CardProjetos />
       <ImagemAmpliada /> 
-      <BotaoProjetos onClick={alterarQtdCardsVisiveis}>
-        {limiteCardsVisiveis ? `${t('projetos.verMenos')}` : `${t('projetos.verMais')}`}
-      </BotaoProjetos>
+      {
+        listaProjetos.length > qtdMinimaProjetos ?
+          <BotaoProjetos onClick={alterarQtdCardsVisiveis}>
+            {limiteCardsVisiveis ? `${t('projetos.verMenos')}` : `${t('projetos.verMais')}`}
+          </BotaoProjetos>
+        : ""
+      }
+
     </ContainerProjetos>
   );
 }
