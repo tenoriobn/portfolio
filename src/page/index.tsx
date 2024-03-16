@@ -7,7 +7,17 @@ import Habilidades from "../components/Habilidades";
 import Contatos from "../components/Contatos";
 import Rodape from "../components/Rodape";
 
-const ContainerGlobal = styled.div`
+import fundoEscuro from "./assets/fundoEscuro.png";
+import fundoClaro from "./assets/fundoClaro.png";
+import { useRecoilValue } from "recoil";
+import { estadoTrocaTema } from "../common/state/atom";
+import { IEstilizacaoCustomizada } from "../common/interface/IEstilizacaoCustomizada";
+
+const ContainerGlobal = styled.div<IEstilizacaoCustomizada>`
+  background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image .3s ease-in-out;
   position: relative;
   box-sizing: border-box;
   min-height: 100vh;
@@ -39,9 +49,10 @@ const Conteudo = styled.main`
 `;
 
 export default function PaginaPadrao() {
+  const trocaTema = useRecoilValue(estadoTrocaTema);
 
   return (
-      <ContainerGlobal>
+      <ContainerGlobal $trocaTema={trocaTema}>
         <Cabecalho />
         <Conteudo>
           <SobreMim />

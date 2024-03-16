@@ -1,7 +1,6 @@
 import { useRecoilValue } from "recoil";
 import { createGlobalStyle } from "styled-components";
-import fundoEscuro from "./assets/fundoEscuro.png";
-import fundoClaro from "./assets/fundoClaro.png";
+
 import { IEstilizacaoCustomizada } from "../interface/IEstilizacaoCustomizada";
 import { cor } from "../Tema/cores";
 import Tema from "../Tema";
@@ -9,9 +8,7 @@ import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom";
 
 const EstiloGlobalPadrao = createGlobalStyle<IEstilizacaoCustomizada>`
   body {
-    background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: ${(props) => (props.$trocaTema ? cor.azulEscuro : cor.azulClaro)};
     color: ${cor.branco};
     font-family: ${Tema.fonte.nunito};
     font-size: .875rem;
