@@ -6,7 +6,9 @@ const useCorTemaDinamica = (trocaTema: boolean) => {
     const metaCorTema = document.querySelector('meta[name="theme-color"]');
     
     if (metaCorTema) {
-      metaCorTema.setAttribute('content', trocaTema ? cor.azulEscuro : cor.azul);
+      setTimeout(() => {
+        metaCorTema.setAttribute('content', trocaTema ? cor.azulEscuro : cor.azul);
+      }, 300);
     }
   }, [trocaTema]);
 };
