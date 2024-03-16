@@ -15,6 +15,7 @@ const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   right: 0;
   top: 0;
   z-index: 2;
+  background: ${(props) => (props.$trocaTema ? cor.azulEscuro : cor.azulClaro)};
   transition: all .3s ease-in-out;
 `;
 
