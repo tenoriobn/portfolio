@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
 import fundoMenuEscuro from "../assets/fundoMenuEscuro.png";
 import fundoMenuClaro from "../assets/fundoMenuClaro.png";
@@ -77,7 +77,7 @@ const Item = styled.li<IEstilizacaoCustomizada>`
 `;
 
 export default function MenuItens() {
-  const menuAtivo = useRecoilValue(estadoMenuAtivo);
+  const [menuAtivo, useMenuAtivo] = useRecoilState(estadoMenuAtivo);
   const trocaTema = useRecoilValue(estadoTrocaTema);
   const [t] = useTranslation("global");
   const listaMenuItens: IMenuItens[] = t('cabecalho.menuItens', { returnObjects: true });
@@ -94,6 +94,7 @@ export default function MenuItens() {
               smooth={true}
               offset={item.offset}
               duration={600}
+              onClick={() => useMenuAtivo(false)}
             >
               {item.nome}
             </Link>
