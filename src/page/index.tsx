@@ -6,12 +6,12 @@ import Formacoes from "../components/Formacoes";
 import Habilidades from "../components/Habilidades";
 import Contatos from "../components/Contatos";
 import Rodape from "../components/Rodape";
-
 import fundoEscuro from "./assets/fundoEscuro.png";
 import fundoClaro from "./assets/fundoClaro.png";
 import { useRecoilValue } from "recoil";
 import { estadoTrocaTema } from "../common/state/atom";
 import { IEstilizacaoCustomizada } from "../common/interface/IEstilizacaoCustomizada";
+import useCorTemaDinamica from "../common/state/hooks/corTemaNavegador/useCorTemaNavegador";
 
 const ContainerGlobal = styled.div<IEstilizacaoCustomizada>`
   background-image: url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)});
@@ -50,6 +50,7 @@ const Conteudo = styled.main`
 
 export default function PaginaPadrao() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
+  useCorTemaDinamica(trocaTema);
 
   return (
       <ContainerGlobal $trocaTema={trocaTema}>
