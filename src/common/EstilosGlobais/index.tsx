@@ -17,6 +17,19 @@ const EstiloGlobalPadrao = createGlobalStyle<IEstilizacaoCustomizada>`
     letter-spacing: .0175rem;
     overflow: ${(props) => (props.$desativaRolagem ? 'hidden' : 'inherit')};
     transition: all .3s ease-in-out;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: ${cor.cinzaClaro};
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${cor.cinzaClaro};
+      border-radius: .375rem;
+    }
     
     a {
       text-decoration: none;
