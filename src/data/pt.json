@@ -49,15 +49,24 @@
   },
   "sobreMim": {
     "saudacao": "Olá, sou ",
-    "nome": "Bruno Tenório, ",
-    "mensagem": "natural de Itaquaquecetuba, zona leste de São Paulo. Em 2010, aos 13 anos, embarquei na programação ao criar meu primeiro servidor para o jogo Fatality Gunz, mesmo sem conhecimento prévio em c++, bancos de dados, php ou protocolos, eu estava convicto de que era possível aprender e dominar o que eu tanto gostava. Em 2020, iniciei os cursos da Alura, focando no front-end. Atualmente, estou lapidando minhas skills em front e back-end, visando atuar em uma empresa de tecnologia de ponta, onde poderei crescer profissionalmente e continuar aprendendo."
+    "nome": "Bruno Tenorio, ",
+    "mensagem": "desenvolvedor front-end focado em criar interfaces modernas, funcionais e de alto desempenho. Com experiência em projetos desafiadores, combino habilidades técnicas e criatividade para entregar soluções digitais que proporcionam uma excelente experiência ao usuário. Além de meu foco em front-end, estou ampliando meu conhecimento em back-end para oferecer soluções mais completas e escaláveis. Busco sempre unir inovação e qualidade, entregando resultados impactantes nos projetos que enfrento."
   },
   "projetos": {
     "tituloSecao": "Projetos",
     "cardsProjetos":
     [
       {
-      "id": 1,
+        "id": 8,
+        "imagem": "assets/imagensCardsProjetos/exploradordepaises.jpg",
+        "nome": "Explorador de Países",
+        "ferramentas": "ReactJS / Styled Components / TypeScript / API",
+        "descricao": "Aplicação em React e TypeScript para explorar informações de países, com busca, filtro por região e alternância de tema, oferecendo uma navegação personalizada.",
+        "linkRepositorio": "https://github.com/tenoriobn/restcountriesapi",
+        "linkHospedagem": "https://restcountriesapi-gules.vercel.app/"
+      },
+      {
+      "id": 7,
       "imagem": "assets/imagensCardsProjetos/Rastreador de endereço.svg",
       "nome": "Rastreador de endereço IP",
       "ferramentas": "ReactJS / Styled Components / TypeScript / API",
@@ -66,7 +75,16 @@
       "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
       },
       {
-        "id": 2,
+        "id": 6,
+        "imagem": "assets/imagensCardsProjetos/medicinaestetica.jpg",
+        "nome": "LP - Medicina Estética",
+        "ferramentas": "HTML / CSS / JavaScript",
+        "descricao": "Landing page responsiva para comercialização de curso em Medicina Estética, com seções interativas, navegação fluida e uma experiência otimizada para conversões.",
+        "linkRepositorio": "https://github.com/tenoriobn/medicina-estetica",
+        "linkHospedagem": "https://medicina-estetica.vercel.app/"
+      },
+      {
+        "id": 5,
         "imagem": "assets/imagensCardsProjetos/Comércio Eletrônico.svg",
         "nome": "Comércio eletrônico",
         "ferramentas": "ReactJS /  Styled Componets",
@@ -75,7 +93,7 @@
         "linkHospedagem": "https://sneakers-sepia.vercel.app/"
       },
       {
-        "id": 3,
+        "id": 4,
         "imagem": "assets/imagensCardsProjetos/Formulario de várias etapas.svg",
         "nome": "Formulário de várias etapas",
         "ferramentas": "ReactJS / SCSS",
@@ -84,7 +102,7 @@
         "linkHospedagem": "https://projeto-20.vercel.app/"
       },
       {
-        "id": 4,
+        "id": 3,
         "imagem": "assets/imagensCardsProjetos/Calculadora de gorjetas.svg",
         "nome": "Calculadora de gorjetas",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
@@ -93,7 +111,7 @@
         "linkHospedagem": "https://projeto-19.vercel.app/"
       },
       {
-        "id": 5,
+        "id": 2,
         "imagem": "assets/imagensCardsProjetos/Componente de preço interativo.svg",
         "nome": "Componente de preços interativo",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
@@ -102,7 +120,7 @@
         "linkHospedagem": "https://projeto-18.vercel.app/"
       },
       {
-        "id": 6,
+        "id": 1,
         "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de notificações",
         "ferramentas": "HTML / SCSS / JavaScript",
@@ -154,92 +172,195 @@
       {
         "id": 1,
         "icone": "assets/iconesFerramentas/HTML.svg?react",
-        "link": "https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
+        "titulo": "HTML"
       },
       {
         "id": 2,
         "icone": "assets/iconesFerramentas/Css.svg?react",
-        "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
+        "titulo": "CSS"
       },
       {
         "id": 3,
         "icone": "assets/iconesFerramentas/Sass.svg?react",
-        "link": "https://sass-lang.com/documentation/"
+        "link": "https://sass-lang.com/documentation/",
+        "titulo": "Sass"
+      },
+      {
+        "id": 17,
+        "icone": "assets/iconesFerramentas/Bootstrap.svg?react",
+        "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        "titulo": "Bootstrap"
+      },
+      {
+        "id": 18,
+        "icone": "assets/iconesFerramentas/Tailwind.svg?react",
+        "link": "https://tailwindcss.com/docs/installation",
+        "titulo": "Tailwind CSS"
+      },
+
+      {
+        "id": 19,
+        "icone": "assets/iconesFerramentas/material-ui.svg?react",
+        "link": "https://mui.com/material-ui/getting-started/",
+        "titulo": "Material-UI"
+      },
+      {
+        "id": 20,
+        "icone": "assets/iconesFerramentas/styled components.svg?react",
+        "link": "https://styled-components.com/docs",
+        "titulo": "Styled Components"
+      },
+      {
+        "id": 21,
+        "icone": "assets/iconesFerramentas/Bulma.svg?react",
+        "link": "https://bulma.io/documentation/",
+        "titulo": "Bulma"
+      },
+      {
+        "id": 24,
+        "icone": "assets/iconesFerramentas/figma.svg?react",
+        "link": "https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-",
+        "titulo": "Figma"
       },
       {
         "id": 4,
         "icone": "assets/iconesFerramentas/JS.svg?react",
-        "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
+        "titulo": "JavaScript"
       },
       {
         "id": 5,
         "icone": "assets/iconesFerramentas/TS.svg?react",
-        "link": "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html"
+        "link": "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html",
+        "titulo": "TypeScript"
       },
       {
         "id": 6,
-        "icone": "assets/iconesFerramentas/MySQL.svg?react",
-        "link": "https://www.mysql.com/why-mysql/"
+        "icone": "assets/iconesFerramentas/react.svg?react",
+        "link": "https://react.dev/learn",
+        "titulo": "React"
       },
       {
         "id": 7,
-        "icone": "assets/iconesFerramentas/Bootstrap.svg?react",
-        "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+        "icone": "assets/iconesFerramentas/NextJS.svg?react",
+        "link": "https://nextjs.org/",
+        "titulo": "Next.js"
       },
       {
         "id": 8,
-        "icone": "assets/iconesFerramentas/Tailwind.svg?react",
-        "link": "https://tailwindcss.com/docs/installation"
+        "icone": "assets/iconesFerramentas/VueJS.svg?react",
+        "link": "https://vuejs.org/",
+        "titulo": "Vue.js"
       },
       {
         "id": 9,
-        "icone": "assets/iconesFerramentas/Nodejs.svg?react",
-        "link": "https://nodejs.org/en/about"
+        "icone": "assets/iconesFerramentas/react-query.svg?react",
+        "link": "https://tanstack.com/query/v5/docs/framework/react/overview",
+        "titulo": "React Query"
       },
       {
         "id": 10,
-        "icone": "assets/iconesFerramentas/material-ui.svg?react",
-        "link": "https://mui.com/material-ui/getting-started/"
+        "icone": "assets/iconesFerramentas/Nodejs.svg?react",
+        "link": "https://nodejs.org/en/about",
+        "titulo": "Node.js"
       },
       {
         "id": 11,
-        "icone": "assets/iconesFerramentas/react.svg?react",
-        "link": "https://react.dev/learn"
+        "icone": "assets/iconesFerramentas/ExpressJS.svg?react",
+        "link": "https://expressjs.com/pt-br/",
+        "titulo": "Express Js"
       },
       {
         "id": 12,
-        "icone": "assets/iconesFerramentas/styled components.svg?react",
-        "link": "https://styled-components.com/docs"
+        "icone": "assets/iconesFerramentas/Sequelize.svg?react",
+        "link": "https://sequelize.org/",
+        "titulo": "Sequelize"
       },
       {
         "id": 13,
-        "icone": "assets/iconesFerramentas/figma.svg?react",
-        "link": "https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-"
+        "icone": "assets/iconesFerramentas/MySQL.svg?react",
+        "link": "https://www.mysql.com/why-mysql/",
+        "titulo": "MySQL"
       },
       {
         "id": 14,
-        "icone": "assets/iconesFerramentas/github.svg?react",
-        "link": "https://github.com/about"
+        "icone": "assets/iconesFerramentas/MongoDB.svg?react",
+        "link": "https://www.mongodb.com/pt-br",
+        "titulo": "MongoDB"
       },
       {
         "id": 15,
-        "icone": "assets/iconesFerramentas/git.svg?react",
-        "link": "https://git-scm.com/about"
+        "icone": "assets/iconesFerramentas/SQLite.svg?react",
+        "link": "https://www.sqlite.org/",
+        "titulo": "SQLITE"
       },
       {
         "id": 16,
+        "icone": "assets/iconesFerramentas/PostgreSQL.svg?react",
+        "link": "https://www.postgresql.org/",
+        "titulo": "PostgreSQL"
+      },
+      {
+        "id": 22,
+        "icone": "assets/iconesFerramentas/Cypress.svg?react",
+        "link": "https://docs.cypress.io/app/get-started/why-cypress",
+        "titulo": "Cypress"
+      },
+      {
+        "id": 23,
+        "icone": "assets/iconesFerramentas/Jest.svg?react",
+        "link": "https://jestjs.io/pt-BR/docs/getting-started",
+        "titulo": "Jest"
+      },
+      {
+        "id": 25,
+        "icone": "assets/iconesFerramentas/github.svg?react",
+        "link": "https://github.com/about",
+        "titulo": "GitHub"
+      },
+      {
+        "id": 26,
+        "icone": "assets/iconesFerramentas/git.svg?react",
+        "link": "https://git-scm.com/about",
+        "titulo": "Git"
+      },
+      {
+        "id": 27,
         "icone": "assets/iconesFerramentas/vercel.svg?react",
-        "link": "https://vercel.com/docs"
+        "link": "https://vercel.com/docs",
+        "titulo": "Vercel"
       },
       {
-        "id": 17,
+        "id": 28,
+        "icone": "assets/iconesFerramentas/Netlify.svg?react",
+        "link": "https://docs.netlify.com/",
+        "titulo": "NetLify"
+      },
+      {
+        "id": 29,
+        "icone": "assets/iconesFerramentas/Heroku.svg?react",
+        "link": "https://devcenter.heroku.com/",
+        "titulo": "Heroku"
+      },
+      {
+        "id": 30,
         "icone": "assets/iconesFerramentas/Postman.svg?react",
-        "link": "https://www.postman.com/home"
+        "link": "https://www.postman.com/home",
+        "titulo": "Postman"
       },
       {
-        "id": 18,
+        "id": 31,
+        "icone": "assets/iconesFerramentas/Insomnia.svg?react",
+        "link": "https://docs.insomnia.rest/",
+        "titulo": "Insomnia"
+      },
+      {
+        "id": 32,
         "icone": "assets/iconesFerramentas/Wordpress.svg?react",
-        "link": "https://wordpress.com/pt-br/about/"
+        "link": "https://wordpress.com/pt-br/about/",
+        "titulo": "WordPress"
       }
     ]
   },
@@ -282,6 +403,6 @@
     "mensagemEnvio": "Mensagem enviada"
   },
   "rodape": {
-    "conteudoTextual": "2023 Bruno Tenório - Todos os direitos reservados"
+    "conteudoTextual": "Bruno Tenório - Todos os direitos reservados"
   }
 }

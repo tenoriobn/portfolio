@@ -83,11 +83,16 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   }
 
   @media (min-width: 992px) {
+    cursor: auto;
     width: 60px;
     height: 60px;
 
     h1 {
       font-size: 1.5rem;
+    }
+
+    &:hover {
+      border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaClaro)};
     }
   }
 `;
