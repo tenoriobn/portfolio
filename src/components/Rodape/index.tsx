@@ -22,11 +22,12 @@ const ContainerRodape = styled.footer`
 `;
 
 export default function Rodape() {
+  const currentYear = new Date().getFullYear();
   const [t] = useTranslation("global");
 
   return (
     <ContainerRodape>
-      <p>© {t('rodape.conteudoTextual')}</p>
+      <p>© {currentYear} {t('rodape.conteudoTextual')}</p>
     </ContainerRodape>
   );
 }

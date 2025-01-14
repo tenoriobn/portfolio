@@ -36,7 +36,6 @@ const ContainerSobreMim = styled.section`
 const FotoPerfil = styled.img<IEstilizacaoCustomizada>`
   ${estilosBordaCard}
   border-radius: 50000%;
-  cursor: pointer;
   width: 140px;
   height: 140px;
 

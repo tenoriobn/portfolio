@@ -35,15 +35,24 @@
   },
   "sobreMim": {
     "saudacao": "Hola, soy ",
-    "nome": "Bruno Tenório, ",
-    "mensagem": "originario de Itaquaquecetuba, en la zona este de São Paulo. En 2010, a los 13 años, me adentré en la programación creando mi primer servidor para el juego Fatality Gunz, incluso sin conocimientos previos de c++, bases de datos, php o protocolos. Estaba convencido de que era posible aprender y dominar lo que me apasionaba. En 2020, comencé cursos en Alura, enfocándome en el desarrollo front-end. Actualmente, estoy perfeccionando mis habilidades en front y back-end, con el objetivo de trabajar en una empresa tecnológica de vanguardia donde pueda crecer profesionalmente y seguir aprendiendo."
+    "nome": "Bruno Tenorio, ",
+    "mensagem": "desarrollador front-end enfocado en crear interfaces modernas, funcionales y de alto rendimiento. Con experiencia en proyectos desafiantes, combino habilidades técnicas y creatividad para entregar soluciones digitales que brindan una excelente experiencia al usuario. Además de mi enfoque en el front-end, estoy ampliando mis conocimientos en back-end para ofrecer soluciones más completas y escalables. Siempre busco unir innovación y calidad, entregando resultados impactantes en los proyectos en los que participo."
   },
   "projetos": {
     "tituloSecao": "Proyectos",
     "cardsProjetos":
     [
       {
-      "id": 1,
+        "id": 8,
+        "imagem": "assets/imagensCardsProjetos/exploradordepaises.jpg",
+        "nome": "Explorador de Países",
+        "ferramentas": "ReactJS / Styled Components / TypeScript / API",
+        "descricao": "Aplicación en React y TypeScript para explorar información sobre países, con búsqueda, filtro por región y alternancia de tema, ofreciendo una navegación personalizada.",
+        "linkRepositorio": "https://github.com/tenoriobn/restcountriesapi",
+        "linkHospedagem": "https://restcountriesapi-gules.vercel.app/"
+      },
+      {
+      "id": 7,
       "imagem": "assets/imagensCardsProjetos/Rastreador de endereço.svg",
       "nome": "Rastreador de Direcciones IP",
       "ferramentas": "ReactJS / Styled Components / TypeScript / API",
@@ -52,7 +61,16 @@
       "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
       },
       {
-        "id": 2,
+        "id": 6,
+        "imagem": "assets/imagensCardsProjetos/medicinaestetica.jpg",
+        "nome": "LP - Medicina Estética",
+        "ferramentas": "HTML / CSS / JavaScript",
+        "descricao": "Landing page para la comercialización de un curso de Medicina Estética, con secciones interactivas, navegación fluida y una experiencia optimizada para conversiones.",
+        "linkRepositorio": "https://github.com/tenoriobn/medicina-estetica",
+        "linkHospedagem": "https://medicina-estetica.vercel.app/"
+      },
+      {
+        "id": 5,
         "imagem": "assets/imagensCardsProjetos/Comércio Eletrônico.svg",
         "nome": "Comercio Electrónico",
         "ferramentas": "ReactJS /  Styled Componets",
@@ -61,7 +79,7 @@
         "linkHospedagem": "https://sneakers-sepia.vercel.app/"
       },
       {
-        "id": 3,
+        "id": 4,
         "imagem": "assets/imagensCardsProjetos/Formulario de várias etapas.svg",
         "nome": "Formulario de Múltiples Pasos",
         "ferramentas": "ReactJS / SCSS",
@@ -70,7 +88,7 @@
         "linkHospedagem": "https://projeto-20.vercel.app/"
       },
       {
-        "id": 4,
+        "id": 3,
         "imagem": "assets/imagensCardsProjetos/Calculadora de gorjetas.svg",
         "nome": "Calculadora de Propinas",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
@@ -79,7 +97,7 @@
         "linkHospedagem": "https://projeto-19.vercel.app/"
       },
       {
-        "id": 5,
+        "id": 2,
         "imagem": "assets/imagensCardsProjetos/Componente de preço interativo.svg",
         "nome": "Componente de Precios Interactivo",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
@@ -88,7 +106,7 @@
         "linkHospedagem": "https://projeto-18.vercel.app/"
       },
       {
-        "id": 6,
+        "id": 1,
         "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
         "nome": "Página de Notificaciones",
         "ferramentas": "HTML / SCSS / JavaScript",
@@ -176,6 +194,6 @@
     "mensagemEnvio": "Mensage enviada"
   },
   "rodape": {
-    "conteudoTextual": "2023 Bruno Tenório - Todos los derechos reservados"
+    "conteudoTextual": "Bruno Tenório - Todos los derechos reservados"
   }
 }

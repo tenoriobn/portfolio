@@ -67,6 +67,7 @@ export default function Ferramentas() {
         <LinkDocumentacaoFerramenta
           to={ferramenta.link}
           key={ferramenta.id}
+          title={ferramenta.titulo} 
           target="_blank"
           rel="noopener noreferrer"
         >
