@@ -6,6 +6,8 @@ import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoC
 import { cor } from "../../../common/Tema/cores";
 import { IFerramentas } from "../../../common/interface/IFerramentas";
 import { estadoTrocaTema } from "../../../common/state/atom";
+import Botao from "../../Botao";
+import useControleFerramentasVisiveis from "../../../common/state/hooks/ferramentas/useControleFerramentasVisiveis";
 
 
 const ContainerFerramentas = styled.div`
@@ -56,24 +58,44 @@ const IconeFerramenta = styled.img<IEstilizacaoCustomizada>`
   }
 `;
 
-export default function Ferramentas() {
+const BotaoProjetos = styled(Botao)`
+  font-size: 1rem;
+  align-self: center;
+  max-width: fit-content;
+  margin-top: 2rem;
+`;
+
+export default function Ferramentas({ tituloRef }: { tituloRef: React.RefObject<HTMLDivElement> }) {
   const trocaTema = useRecoilValue(estadoTrocaTema);
   const [t] = useTranslation("global");
-  const listaFerramentas:IFerramentas[] = t('habilidades.listaFerramentas', { returnObjects: true });
+  const listaFerramentas: IFerramentas[] = t("habilidades.listaFerramentas", { returnObjects: true });
+  const qtdInicialFerramentas = 18;
+  const { qtdFerramentasVisiveis, mostrarTodos, alternarVisibilidade } =
+    useControleFerramentasVisiveis(qtdInicialFerramentas);
 
   return (
-    <ContainerFerramentas>
-      {listaFerramentas.map(ferramenta => (
-        <LinkDocumentacaoFerramenta
-          to={ferramenta.link}
-          key={ferramenta.id}
-          title={ferramenta.titulo} 
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ContainerFerramentas>
+        {listaFerramentas.slice(0, qtdFerramentasVisiveis).map((ferramenta) => (
+          <LinkDocumentacaoFerramenta
+            to={ferramenta.link}
+            key={ferramenta.id}
+            title={ferramenta.titulo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <IconeFerramenta src={ferramenta.icone} $trocaTema={trocaTema} />
+          </LinkDocumentacaoFerramenta>
+        ))}
+      </ContainerFerramentas>
+
+      {listaFerramentas.length > qtdInicialFerramentas && (
+        <BotaoProjetos
+          onClick={() => alternarVisibilidade(listaFerramentas.length, tituloRef)}
         >
-          <IconeFerramenta src={ferramenta.icone} $trocaTema={trocaTema} />
-        </LinkDocumentacaoFerramenta>
-      ))}
-    </ContainerFerramentas>
+          {mostrarTodos ? t("projetos.verMenos") : t("projetos.verMais")}
+        </BotaoProjetos>
+      )}
+    </>
   );
 }

@@ -21,9 +21,9 @@ const useAlternarQtdCardsVisiveis = (containerRef: RefObject<HTMLDivElement>) =>
     );
 
     if (limiteCardsVisiveis && containerRef.current) {
-      containerRef.current.scrollIntoView({
+      window.scrollTo({
+        top: containerRef.current.offsetTop - 100,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
