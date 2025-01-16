@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import TituloSecao from "../TituloSecao";
 import Ferramentas from "./Ferramentas";
+import { useRef } from "react";
 
 const ContainerHabilidades = styled.section`
   display: flex;
@@ -24,11 +25,12 @@ const ContainerHabilidades = styled.section`
 
 export default function Habilidades() {
   const [t] = useTranslation("global");
+  const tituloRef = useRef<HTMLDivElement>(null);
 
   return (
-    <ContainerHabilidades id="habilidades">
+    <ContainerHabilidades id="habilidades" ref={tituloRef}>
       <TituloSecao titulo={t('habilidades.tituloSecao')} />
-      <Ferramentas />
+      <Ferramentas tituloRef={tituloRef} />
     </ContainerHabilidades>
   );
 }
