@@ -5,7 +5,15 @@ OK - MODIFICAR TEXTO DE PERFIL DA HERO SECTION
 OK - ADICIONAR NOVOS PROJETOS
 OK - ADICIONAR NOVAS HABILIDADES
 OK - ADICIONAR BOTÃO VER + / - NA SEÇÃO HABILIDADES
-* TESTAR FORMULÁRIO DE CONTATO
+
+
+* TESTAR FORMULÁRIO DE CONTATO ANTERIOR AO FOOTER
+  - Corrigir form de EmailJSResponseStatus
+
+
 * TESTAR VERSÃO MOBILE
 * SALVAR TEMA E IDIOMA ESCOLHIDO NO LOCALSTORAGE
 * Corrigir background
+* Adicionar FAVICON
+* Ver performance
+* Conferir se tem como ajustar imagem dos projetos na versão pequena, pois fica "distorcida"
