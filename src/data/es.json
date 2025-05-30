@@ -43,6 +43,15 @@
     "cardsProjetos":
     [
       {
+        "id": 9,
+        "imagem": "assets/imagensCardsProjetos/eduardo-marketing-digital.webp",
+        "nome": "LP - Marketing Digital",
+        "ferramentas": "Next.js / TypeScript / Dato CMS",
+        "descricao": "Landing page con Next.js 15 y TypeScript, integrada con DatoCMS para gestión dinámica de contenido, priorizando el rendimiento y SEO avanzado.",
+        "linkRepositorio": "https://github.com/tenoriobn/eduardo-marketing-digital",
+        "linkHospedagem": "https://eduardo-marketing-digital.vercel.app/"
+      },
+      {
         "id": 8,
         "imagem": "assets/imagensCardsProjetos/exploradordepaises.jpg",
         "nome": "Explorador de Países",
@@ -59,15 +68,6 @@
       "descricao": "Esta aplicación permite visualizar información geográfica de direcciones IP, implementando funcionalidades de búsqueda y presentación de datos geoespaciales.",
       "linkRepositorio": "https://github.com/tenoriobn/ipaddresstracker",
       "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
-      },
-      {
-        "id": 6,
-        "imagem": "assets/imagensCardsProjetos/medicinaestetica.jpg",
-        "nome": "LP - Medicina Estética",
-        "ferramentas": "HTML / CSS / JavaScript",
-        "descricao": "Landing page para la comercialización de un curso de Medicina Estética, con secciones interactivas, navegación fluida y una experiencia optimizada para conversiones.",
-        "linkRepositorio": "https://github.com/tenoriobn/medicina-estetica",
-        "linkHospedagem": "https://medicina-estetica.vercel.app/"
       },
       {
         "id": 5,
@@ -104,15 +104,6 @@
         "descricao": "Esta aplicación cuenta con funcionalidades de control deslizante para visualizar y alternar entre diferentes paquetes de visualizaciones de página y sus respectivos precios mensuales.",
         "linkRepositorio": "https://github.com/tenoriobn/projeto-18",
         "linkHospedagem": "https://projeto-18.vercel.app/"
-      },
-      {
-        "id": 1,
-        "imagem": "assets/imagensCardsProjetos/Pagina de notificações.svg",
-        "nome": "Página de Notificaciones",
-        "ferramentas": "HTML / SCSS / JavaScript",
-        "descricao": "Esta aplicación busca reproducir fielmente el diseño propuesto. El proyecto tiene como objetivo ofrecer una interfaz que permita distinguir entre notificaciones 'no leídas' y 'leídas'.",
-        "linkRepositorio": "https://github.com/tenoriobn/projeto-17",
-        "linkHospedagem": "https://projeto-17.vercel.app/"
       }
     ],
     "verMais": "Ver más",
