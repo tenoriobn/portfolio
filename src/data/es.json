@@ -44,7 +44,7 @@
     [
       {
         "id": 9,
-        "imagem": "assets/imagensCardsProjetos/eduardo-marketing-digital.webp",
+        "imagem": "public/assets/images/projetos/eduardo-marketing-digital.webp",
         "nome": "LP - Marketing Digital",
         "ferramentas": "Next.js / TypeScript / Dato CMS",
         "descricao": "Landing page con Next.js 15 y TypeScript, integrada con DatoCMS para gestión dinámica de contenido, priorizando el rendimiento y SEO avanzado.",
@@ -53,7 +53,7 @@
       },
       {
         "id": 8,
-        "imagem": "assets/imagensCardsProjetos/exploradordepaises.jpg",
+        "imagem": "public/assets/images/projetos/explorador-paises.webp",
         "nome": "Explorador de Países",
         "ferramentas": "ReactJS / Styled Components / TypeScript / API",
         "descricao": "Aplicación en React y TypeScript para explorar información sobre países, con búsqueda, filtro por región y alternancia de tema, ofreciendo una navegación personalizada.",
@@ -61,17 +61,17 @@
         "linkHospedagem": "https://restcountriesapi-gules.vercel.app/"
       },
       {
-      "id": 7,
-      "imagem": "assets/imagensCardsProjetos/Rastreador de endereço.svg",
-      "nome": "Rastreador de Direcciones IP",
-      "ferramentas": "ReactJS / Styled Components / TypeScript / API",
-      "descricao": "Esta aplicación permite visualizar información geográfica de direcciones IP, implementando funcionalidades de búsqueda y presentación de datos geoespaciales.",
-      "linkRepositorio": "https://github.com/tenoriobn/ipaddresstracker",
-      "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
+        "id": 7,
+        "imagem": "public/assets/images/projetos/rastreador-endereco.webp",
+        "nome": "Rastreador de Direcciones IP",
+        "ferramentas": "ReactJS / Styled Components / TypeScript / API",
+        "descricao": "Esta aplicación permite visualizar información geográfica de direcciones IP, implementando funcionalidades de búsqueda y presentación de datos geoespaciales.",
+        "linkRepositorio": "https://github.com/tenoriobn/ipaddresstracker",
+        "linkHospedagem": "https://ipaddresstracker-eta.vercel.app/"
       },
       {
         "id": 5,
-        "imagem": "assets/imagensCardsProjetos/Comércio Eletrônico.svg",
+        "imagem": "public/assets/images/projetos/comercio-eletronico.webp",
         "nome": "Comercio Electrónico",
         "ferramentas": "ReactJS /  Styled Componets",
         "descricao": "Esta aplicación de comercio electrónico enfatiza la fidelidad al diseño propuesto. Implementa capacidad de respuesta, interactividad y funcionalidades esenciales.",
@@ -80,7 +80,7 @@
       },
       {
         "id": 4,
-        "imagem": "assets/imagensCardsProjetos/Formulario de várias etapas.svg",
+        "imagem": "public/assets/images/projetos/formulario-varias-etapas.webp",
         "nome": "Formulario de Múltiples Pasos",
         "ferramentas": "ReactJS / SCSS",
         "descricao": "Esta aplicación busca reproducir fielmente el diseño propuesto, garantizando la finalización progresiva de cada paso, proporcionando elementos interactivos.",
@@ -89,7 +89,7 @@
       },
       {
         "id": 3,
-        "imagem": "assets/imagensCardsProjetos/Calculadora de gorjetas.svg",
+        "imagem": "public/assets/images/projetos/calculadora-gorjetas.webp",
         "nome": "Calculadora de Propinas",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
         "descricao": "Esta aplicación tiene como objetivo ofrecer funcionalidades para calcular la propina adecuada y el costo total de la cuenta por persona, proporcionando una experiencia funcional e intuitiva para el usuario.",
@@ -98,7 +98,7 @@
       },
       {
         "id": 2,
-        "imagem": "assets/imagensCardsProjetos/Componente de preço interativo.svg",
+        "imagem": "public/assets/images/projetos/componente-preço-interativo.webp",
         "nome": "Componente de Precios Interactivo",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
         "descricao": "Esta aplicación cuenta con funcionalidades de control deslizante para visualizar y alternar entre diferentes paquetes de visualizaciones de página y sus respectivos precios mensuales.",
@@ -115,7 +115,7 @@
     [
       {
         "id": 1,
-        "logo": "assets/imagensCardsFormacoes/Fatec.png",
+        "logo": "public/assets/logos/fatec.webp",
         "graduacao": "Tecnólogo – FATEC",
         "curso": "Gestión Comercial",
         "localidade": "Itaquaquecetuba – SP",
@@ -124,7 +124,7 @@
       },
       {
         "id": 2,
-        "logo": "assets/imagensCardsFormacoes/Alura.png",
+        "logo": "public/assets/logos/alura.webp",
         "graduacao": "Plataforma de Aprendizaje - ALURA",
         "curso": "Full Stack Javascript",
         "localidade": "Virtual",
@@ -133,7 +133,7 @@
       },
       {
         "id": 3,
-        "logo": "assets/imagensCardsFormacoes/Univesp.png",
+        "logo": "public/assets/logos/univesp.webp",
         "graduacao": "Licenciatura - UNIVESP",
         "curso": "Tecnología de la Información",
         "localidade": "Itaquaquecetuba – SP",

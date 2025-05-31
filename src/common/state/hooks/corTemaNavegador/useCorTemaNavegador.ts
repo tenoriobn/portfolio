@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { cor } from "../../../Tema/cores";
+import { cor } from "common/Tema/cores";
 
 const useCorTemaDinamica = (trocaTema: boolean) => {
   useEffect(() => {

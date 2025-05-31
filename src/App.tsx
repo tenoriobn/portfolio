@@ -1,16 +1,16 @@
+import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from "styled-components"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { I18nextProvider } from "react-i18next";
 import PaginaPadrao from "./page"
-import Tema from "./common/Tema"
-import EstilosGlobais from "./common/EstilosGlobais"
-import { RecoilRoot } from 'recoil';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import useConfigurarI18n from "./common/state/hooks/traducao/useConfigurarI18n";
-import SobreMim from "./components/SobreMim";
-import Projetos from "./components/Projetos";
-import Formacoes from "./components/Formacoes";
-import Contatos from "./components/Contatos";
-import Habilidades from "./components/Habilidades";
+import Tema from "common/Tema"
+import EstilosGlobais from "common/EstilosGlobais"
+import useConfigurarI18n from "common/state/hooks/traducao/useConfigurarI18n";
+import SobreMim from "components/SobreMim";
+import Projetos from "components/Projetos";
+import Formacoes from "components/Formacoes";
+import Contatos from "components/Contatos";
+import Habilidades from "components/Habilidades";
 
 function App() {
   const i18n = useConfigurarI18n();

@@ -20,4 +20,4 @@ Sinta-se à vontade para explorar mais sobre meu Portfólio!
 
 # Meu Portfólio
 
-![Imagem/ilustração do projeto para desktop](public/Design/Desktop-dark.png)
+![Imagem/ilustração do projeto para desktop](public/assets/design/desktop-dark.webp)

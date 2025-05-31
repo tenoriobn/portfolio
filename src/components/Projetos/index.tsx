@@ -4,11 +4,10 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import TituloSecao from "../TituloSecao";
 import CardProjetos from "./CardsProjetos";
-import ImagemAmpliada from "./ImagemAmpliada";
 import Botao from "../Botao";
-import { estadoLimiteCardsVisiveis } from "../../common/state/atom";
-import useAlternarQtdCardsVisiveis from "../../common/state/hooks/projetos/useAlternarQtdCardsVisiveis";
-import { ICardsProjetos } from "../../common/interface/IProjetos";
+import { estadoLimiteCardsVisiveis } from "common/state/atom";
+import useAlternarQtdCardsVisiveis from "common/state/hooks/projetos/useAlternarQtdCardsVisiveis";
+import { ICardsProjetos } from "common/interface/IProjetos";
 
 const ContainerProjetos = styled.section`
   display: flex;
@@ -42,7 +41,7 @@ export default function Projetos() {
     <ContainerProjetos id="projetos" ref={containerRef}>
       <TituloSecao titulo={t('projetos.tituloSecao')} />
       <CardProjetos />
-      <ImagemAmpliada /> 
+
       {
         listaProjetos.length > qtdMinimaProjetos ?
           <BotaoProjetos onClick={alterarQtdCardsVisiveis}>

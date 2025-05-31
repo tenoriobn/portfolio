@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ITitulo } from "../../common/interface/ITitulo";
+import { ITitulo } from "common/interface/ITitulo";
 
 const Titulo = styled.h2`
   font-size: 1.75rem;

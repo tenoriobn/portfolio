@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
-import { cor } from "../../../common/Tema/cores";
-import { IFerramentas } from "../../../common/interface/IFerramentas";
-import { estadoTrocaTema } from "../../../common/state/atom";
-import Botao from "../../Botao";
-import useControleFerramentasVisiveis from "../../../common/state/hooks/ferramentas/useControleFerramentasVisiveis";
-
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { cor } from "common/Tema/cores";
+import { IFerramentas } from "common/interface/IFerramentas";
+import { estadoTrocaTema } from "common/state/atom";
+import Botao from "components/Botao";
+import useControleFerramentasVisiveis from "common/state/hooks/ferramentas/useControleFerramentasVisiveis";
 
 const ContainerFerramentas = styled.div`
   display: grid;
