@@ -58,7 +58,7 @@
     [
       {
         "id": 9,
-        "imagem": "public/assets/images/projetos/eduardo-marketing-digital.webp",
+        "imagem": "/assets/images/projetos/eduardo-marketing-digital.webp",
         "nome": "LP - Marketing Digital",
         "ferramentas": "Next.js / TypeScript / Dato CMS",
         "descricao": "Landing page com Next.js 15 e TypeScript, integrada a DatoCMS para gestão dinâmica de conteúdo, priorizando performance e SEO avançado.",
@@ -67,7 +67,7 @@
       },
       {
         "id": 8,
-        "imagem": "public/assets/images/projetos/explorador-paises.webp",
+        "imagem": "/assets/images/projetos/explorador-paises.webp",
         "nome": "Explorador de Países",
         "ferramentas": "ReactJS / Styled Components / TypeScript / API",
         "descricao": "Aplicação em React e TypeScript para explorar informações de países, com busca, filtro por região e alternância de tema, oferecendo uma navegação personalizada.",
@@ -76,7 +76,7 @@
       },
       {
         "id": 7,
-        "imagem": "public/assets/images/projetos/rastreador-endereco.webp",
+        "imagem": "/assets/images/projetos/rastreador-endereco.webp",
         "nome": "Rastreador de endereço IP",
         "ferramentas": "ReactJS / Styled Components / TypeScript / API",
         "descricao": "Esta aplicação permite visualizar informações geográficas de endereços IP, implementando funcionalidades de pesquisa e apresentação de dados geoespaciais.",
@@ -85,7 +85,7 @@
       },
       {
         "id": 5,
-        "imagem": "public/assets/images/projetos/comercio-eletronico.webp",
+        "imagem": "/assets/images/projetos/comercio-eletronico.webp",
         "nome": "Comércio eletrônico",
         "ferramentas": "ReactJS /  Styled Componets",
         "descricao": "Essa aplicação de comércio eletrônico, enfatizando a fidelidade ao design proposto. Implementação de responsividade, interatividade e funcionalidades essenciais.",
@@ -94,7 +94,7 @@
       },
       {
         "id": 4,
-        "imagem": "public/assets/images/projetos/formulario-varias-etapas.webp",
+        "imagem": "/assets/images/projetos/formulario-varias-etapas.webp",
         "nome": "Formulário de várias etapas",
         "ferramentas": "ReactJS / SCSS",
         "descricao": "Essa aplicação busca reproduzir fielmente o design proposto, garantindo a conclusão progressiva de cada etapa, proporcionando elementos interativos.",
@@ -103,7 +103,7 @@
       },
       {
         "id": 3,
-        "imagem": "public/assets/images/projetos/calculadora-gorjetas.webp",
+        "imagem": "/assets/images/projetos/calculadora-gorjetas.webp",
         "nome": "Calculadora de gorjetas",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
         "descricao": "Essa aplicação visa oferece funcionalidades para calcular a gorjeta adequada e o custo total da conta por pessoa, proporcionando uma experiência funcional e intuitiva para o usuário.",
@@ -112,7 +112,7 @@
       },
       {
         "id": 2,
-        "imagem": "public/assets/images/projetos/componente-preço-interativo.webp",
+        "imagem": "/assets/images/projetos/componente-preço-interativo.webp",
         "nome": "Componente de preços interativo",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
         "descricao": "Essa aplicação tem funcionalidades de controle deslizante para visualizar e alternar entre diferentes pacotes de visualizações de página e seus respectivos preços mensais.",
@@ -129,7 +129,7 @@
     [
       {
         "id": 1,
-        "logo": "public/assets/logos/fatec.webp",
+        "logo": "/assets/logos/fatec.webp",
         "graduacao": "Tecnólogo – FATEC",
         "curso": "Gestão Comercial",
         "localidade": "Itaquaquecetuba – SP",
@@ -138,7 +138,7 @@
       },
       {
         "id": 2,
-        "logo": "public/assets/logos/alura.webp",
+        "logo": "/assets/logos/alura.webp",
         "graduacao": "Plataforma de aprendizado – ALURA",
         "curso": "Full Stack Javascript",
         "localidade": "Virtual",
@@ -147,7 +147,7 @@
       },
       {
         "id": 3,
-        "logo": "public/assets/logos/univesp.webp",
+        "logo": "/assets/logos/univesp.webp",
         "graduacao": "Bacharelado – UNIVESP",
         "curso": "Tecnologia da Informação",
         "localidade": "Itaquaquecetuba – SP",
@@ -162,194 +162,194 @@
     "listaFerramentas": [
       {
         "id": 1,
-        "icone": "public/assets/logos/ferramentas/html.svg?react",
+        "icone": "/assets/logos/ferramentas/html.svg?react",
         "link": "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
         "titulo": "HTML"
       },
       {
         "id": 2,
-        "icone": "public/assets/logos/ferramentas/css.svg?react",
+        "icone": "/assets/logos/ferramentas/css.svg?react",
         "link": "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
         "titulo": "CSS"
       },
       {
         "id": 3,
-        "icone": "public/assets/logos/ferramentas/sass.svg?react",
+        "icone": "/assets/logos/ferramentas/sass.svg?react",
         "link": "https://sass-lang.com/documentation/",
         "titulo": "Sass"
       },
       {
         "id": 17,
-        "icone": "public/assets/logos/ferramentas/bootstrap.svg?react",
+        "icone": "/assets/logos/ferramentas/bootstrap.svg?react",
         "link": "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
         "titulo": "Bootstrap"
       },
       {
         "id": 18,
-        "icone": "public/assets/logos/ferramentas/tailwind.svg?react",
+        "icone": "/assets/logos/ferramentas/tailwind.svg?react",
         "link": "https://tailwindcss.com/docs/installation",
         "titulo": "Tailwind CSS"
       },
 
       {
         "id": 19,
-        "icone": "public/assets/logos/ferramentas/material-ui.svg?react",
+        "icone": "/assets/logos/ferramentas/material-ui.svg?react",
         "link": "https://mui.com/material-ui/getting-started/",
         "titulo": "Material-UI"
       },
       {
         "id": 20,
-        "icone": "public/assets/logos/ferramentas/styled-components.svg?react",
+        "icone": "/assets/logos/ferramentas/styled-components.svg?react",
         "link": "https://styled-components.com/docs",
         "titulo": "Styled Components"
       },
       {
         "id": 21,
-        "icone": "public/assets/logos/ferramentas/bulma.svg?react",
+        "icone": "/assets/logos/ferramentas/bulma.svg?react",
         "link": "https://bulma.io/documentation/",
         "titulo": "Bulma"
       },
       {
         "id": 24,
-        "icone": "public/assets/logos/ferramentas/figma.svg?react",
+        "icone": "/assets/logos/ferramentas/figma.svg?react",
         "link": "https://help.figma.com/hc/en-us/articles/14563969806359-What-is-Figma-",
         "titulo": "Figma"
       },
       {
         "id": 4,
-        "icone": "public/assets/logos/ferramentas/js.svg?react",
+        "icone": "/assets/logos/ferramentas/js.svg?react",
         "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
         "titulo": "JavaScript"
       },
       {
         "id": 5,
-        "icone": "public/assets/logos/ferramentas/ts.svg?react",
+        "icone": "/assets/logos/ferramentas/ts.svg?react",
         "link": "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html",
         "titulo": "TypeScript"
       },
       {
         "id": 6,
-        "icone": "public/assets/logos/ferramentas/react.svg?react",
+        "icone": "/assets/logos/ferramentas/react.svg?react",
         "link": "https://react.dev/learn",
         "titulo": "React"
       },
       {
         "id": 7,
-        "icone": "public/assets/logos/ferramentas/nextJS.svg?react",
+        "icone": "/assets/logos/ferramentas/nextJS.svg?react",
         "link": "https://nextjs.org/",
         "titulo": "Next.js"
       },
       {
         "id": 8,
-        "icone": "public/assets/logos/ferramentas/vueJS.svg?react",
+        "icone": "/assets/logos/ferramentas/vueJS.svg?react",
         "link": "https://vuejs.org/",
         "titulo": "Vue.js"
       },
       {
         "id": 9,
-        "icone": "public/assets/logos/ferramentas/react-query.svg?react",
+        "icone": "/assets/logos/ferramentas/react-query.svg?react",
         "link": "https://tanstack.com/query/v5/docs/framework/react/overview",
         "titulo": "React Query"
       },
       {
         "id": 10,
-        "icone": "public/assets/logos/ferramentas/nodejs.svg?react",
+        "icone": "/assets/logos/ferramentas/nodejs.svg?react",
         "link": "https://nodejs.org/en/about",
         "titulo": "Node.js"
       },
       {
         "id": 11,
-        "icone": "public/assets/logos/ferramentas/expressJS.svg?react",
+        "icone": "/assets/logos/ferramentas/expressJS.svg?react",
         "link": "https://expressjs.com/pt-br/",
         "titulo": "Express Js"
       },
       {
         "id": 12,
-        "icone": "public/assets/logos/ferramentas/sequelize.svg?react",
+        "icone": "/assets/logos/ferramentas/sequelize.svg?react",
         "link": "https://sequelize.org/",
         "titulo": "Sequelize"
       },
       {
         "id": 13,
-        "icone": "public/assets/logos/ferramentas/mySQL.svg?react",
+        "icone": "/assets/logos/ferramentas/mySQL.svg?react",
         "link": "https://www.mysql.com/why-mysql/",
         "titulo": "MySQL"
       },
       {
         "id": 14,
-        "icone": "public/assets/logos/ferramentas/mongoDB.svg?react",
+        "icone": "/assets/logos/ferramentas/mongoDB.svg?react",
         "link": "https://www.mongodb.com/pt-br",
         "titulo": "MongoDB"
       },
       {
         "id": 15,
-        "icone": "public/assets/logos/ferramentas/SQLite.svg?react",
+        "icone": "/assets/logos/ferramentas/SQLite.svg?react",
         "link": "https://www.sqlite.org/",
         "titulo": "SQLITE"
       },
       {
         "id": 16,
-        "icone": "public/assets/logos/ferramentas/postgreSQL.svg?react",
+        "icone": "/assets/logos/ferramentas/postgreSQL.svg?react",
         "link": "https://www.postgresql.org/",
         "titulo": "PostgreSQL"
       },
       {
         "id": 22,
-        "icone": "public/assets/logos/ferramentas/cypress.svg?react",
+        "icone": "/assets/logos/ferramentas/cypress.svg?react",
         "link": "https://docs.cypress.io/app/get-started/why-cypress",
         "titulo": "Cypress"
       },
       {
         "id": 23,
-        "icone": "public/assets/logos/ferramentas/jest.svg?react",
+        "icone": "/assets/logos/ferramentas/jest.svg?react",
         "link": "https://jestjs.io/pt-BR/docs/getting-started",
         "titulo": "Jest"
       },
       {
         "id": 25,
-        "icone": "public/assets/logos/ferramentas/github.svg?react",
+        "icone": "/assets/logos/ferramentas/github.svg?react",
         "link": "https://github.com/about",
         "titulo": "GitHub"
       },
       {
         "id": 26,
-        "icone": "public/assets/logos/ferramentas/git.svg?react",
+        "icone": "/assets/logos/ferramentas/git.svg?react",
         "link": "https://git-scm.com/about",
         "titulo": "Git"
       },
       {
         "id": 27,
-        "icone": "public/assets/logos/ferramentas/vercel.svg?react",
+        "icone": "/assets/logos/ferramentas/vercel.svg?react",
         "link": "https://vercel.com/docs",
         "titulo": "Vercel"
       },
       {
         "id": 28,
-        "icone": "public/assets/logos/ferramentas/netlify.svg?react",
+        "icone": "/assets/logos/ferramentas/netlify.svg?react",
         "link": "https://docs.netlify.com/",
         "titulo": "NetLify"
       },
       {
         "id": 29,
-        "icone": "public/assets/logos/ferramentas/heroku.svg?react",
+        "icone": "/assets/logos/ferramentas/heroku.svg?react",
         "link": "https://devcenter.heroku.com/",
         "titulo": "Heroku"
       },
       {
         "id": 30,
-        "icone": "public/assets/logos/ferramentas/postman.svg?react",
+        "icone": "/assets/logos/ferramentas/postman.svg?react",
         "link": "https://www.postman.com/home",
         "titulo": "Postman"
       },
       {
         "id": 31,
-        "icone": "public/assets/logos/ferramentas/insomnia.svg?react",
+        "icone": "/assets/logos/ferramentas/insomnia.svg?react",
         "link": "https://docs.insomnia.rest/",
         "titulo": "Insomnia"
       },
       {
         "id": 32,
-        "icone": "public/assets/logos/ferramentas/wordpress.svg?react",
+        "icone": "/assets/logos/ferramentas/wordpress.svg?react",
         "link": "https://wordpress.com/pt-br/about/",
         "titulo": "WordPress"
       }

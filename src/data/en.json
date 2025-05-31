@@ -44,7 +44,7 @@
     [
       {
         "id": 9,
-        "imagem": "public/assets/images/projetos/eduardo-marketing-digital.webp",
+        "imagem": "/assets/images/projetos/eduardo-marketing-digital.webp",
         "nome": "LP - Digital Marketing",
         "ferramentas": "Next.js / TypeScript / Dato CMS",
         "descricao": "Landing page built with Next.js 15 and TypeScript, integrated with DatoCMS for dynamic content management, prioritizing performance and advanced SEO.",
@@ -53,7 +53,7 @@
       },
       {
         "id": 8,
-        "imagem": "public/assets/images/projetos/explorador-paises.webp",
+        "imagem": "/assets/images/projetos/explorador-paises.webp",
         "nome": "Country Explorer",
         "ferramentas": "ReactJS / Styled Components / TypeScript / API",
         "descricao": "React and TypeScript app to explore country information, with search, region filter, and theme toggle, offering a personalized navigation experience.",
@@ -62,7 +62,7 @@
       },
       {
         "id": 7,
-        "imagem": "public/assets/images/projetos/rastreador-endereco.webp",
+        "imagem": "/assets/images/projetos/rastreador-endereco.webp",
         "nome": "IP Address Tracker",
         "ferramentas": "ReactJS / Styled Components / TypeScript / API",
         "descricao": "This application allows you to visualize geographical information of IP addresses, implementing search functionality and presentation of geospatial data.",
@@ -71,7 +71,7 @@
       },
       {
         "id": 5,
-        "imagem": "public/assets/images/projetos/comercio-eletronico.webp",
+        "imagem": "/assets/images/projetos/comercio-eletronico.webp",
         "nome": "E-commerce",
         "ferramentas": "ReactJS /  Styled Componets",
         "descricao": "This e-commerce application emphasizes fidelity to the proposed design. It implements responsiveness, interactivity, and essential functionalities.",
@@ -80,7 +80,7 @@
       },
       {
         "id": 4,
-        "imagem": "public/assets/images/projetos/formulario-varias-etapas.webp",
+        "imagem": "/assets/images/projetos/formulario-varias-etapas.webp",
         "nome": "Multi-step Form",
         "ferramentas": "ReactJS / SCSS",
         "descricao": "This application aims to faithfully reproduce the proposed design, ensuring the progressive completion of each step, providing interactive elements.",
@@ -89,7 +89,7 @@
       },
       {
         "id": 3,
-        "imagem": "public/assets/images/projetos/calculadora-gorjetas.webp",
+        "imagem": "/assets/images/projetos/calculadora-gorjetas.webp",
         "nome": "Tip Calculator",
         "ferramentas": "HTML / CSS / Tailwind / JavaScript",
         "descricao": "This application aims to provide functionalities to calculate the appropriate tip and total cost of the bill per person, offering a functional and intuitive user experience.",
@@ -98,7 +98,7 @@
       },
       {
         "id": 2,
-        "imagem": "public/assets/images/projetos/componente-preço-interativo.webp",
+        "imagem": "/assets/images/projetos/componente-preço-interativo.webp",
         "nome": "Interactive Pricing Component",
         "ferramentas": "HTML / SCSS / Tailwind / JavaScript",
         "descricao": "This application features slider functionalities to view and switch between different page view packages and their respective monthly prices.",
@@ -115,7 +115,7 @@
     [
       {
         "id": 1,
-        "logo": "public/assets/logos/fatec.webp",
+        "logo": "/assets/logos/fatec.webp",
         "graduacao": "Technologist - FATEC",
         "curso": "Commercial Management",
         "localidade": "Itaquaquecetuba – SP",
@@ -124,7 +124,7 @@
       },
       {
         "id": 2,
-        "logo": "public/assets/logos/alura.webp",
+        "logo": "/assets/logos/alura.webp",
         "graduacao": "Learning Platform - ALURA",
         "curso": "Full Stack Javascript",
         "localidade": "Virtual",
@@ -133,7 +133,7 @@
       },
       {
         "id": 3,
-        "logo": "public/assets/logos/univesp.webp",
+        "logo": "/assets/logos/univesp.webp",
         "graduacao": "Bachelor's Degree - UNIVESP",
         "curso": "Information Technology",
         "localidade": "Itaquaquecetuba – SP",
