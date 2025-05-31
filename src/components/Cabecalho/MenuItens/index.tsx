@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
-import fundoMenuEscuro from "../assets/fundoMenuEscuro.png";
-import fundoMenuClaro from "../assets/fundoMenuClaro.png";
-import { cor } from "../../../common/Tema/cores";
-import { estadoMenuAtivo, estadoTrocaTema } from "../../../common/state/atom";
-import { IMenuItens } from "../../../common/interface/ICabecalho";
-import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
 import { Link } from "react-scroll";
+import { cor } from "common/Tema/cores";
+import { estadoMenuAtivo, estadoTrocaTema } from "common/state/atom";
+import { IMenuItens } from "common/interface/ICabecalho";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import fundoEscuro from "public/assets/images/fundoEscuro.webp";
+import fundoClaro from "public/assets/images/fundoClaro.webp";
 
 const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
   display: flex;
@@ -17,7 +17,10 @@ const ContainerMenuItens = styled.nav<IEstilizacaoCustomizada>`
   transition: left 0.3s ease-out 0s;
 
   @media (max-width: 1199px) {
-    background: url(${(props) => (props.$trocaTema ? fundoMenuEscuro : fundoMenuClaro)});
+    background:
+      url(${(props) => (props.$trocaTema ? fundoEscuro : fundoClaro)}),
+      ${(props) => (props.$trocaTema ? cor.azulEscuro : cor.azulClaro)}
+    ;
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
@@ -77,7 +80,7 @@ const Item = styled.li<IEstilizacaoCustomizada>`
 `;
 
 export default function MenuItens() {
-  const [menuAtivo, useMenuAtivo] = useRecoilState(estadoMenuAtivo);
+  const [menuAtivo, setMenuAtivo] = useRecoilState(estadoMenuAtivo);
   const trocaTema = useRecoilValue(estadoTrocaTema);
   const [t] = useTranslation("global");
   const listaMenuItens: IMenuItens[] = t('cabecalho.menuItens', { returnObjects: true });
@@ -94,7 +97,7 @@ export default function MenuItens() {
               smooth={true}
               offset={item.offset}
               duration={600}
-              onClick={() => useMenuAtivo(false)}
+              onClick={() => setMenuAtivo(false)}
             >
               {item.nome}
             </Link>

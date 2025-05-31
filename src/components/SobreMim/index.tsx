@@ -2,14 +2,14 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import fotoPerfil from "./assets/Perfil.svg";
-import Github from "../../assets/icons/github.svg?react";
-import Linkedin from "../../assets/icons/linkedin.svg?react";
-import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
-import { cor } from "../../common/Tema/cores";
-import { estadoTrocaTema } from "../../common/state/atom";
-import { estilosBordaCard } from "../../common/EstilosElementosPadrao/estilosBorda";
-import { estiloIconeSocial } from "../../common/EstilosElementosPadrao/estilosIcones";
+import fotoPerfil from "public/assets/images/perfil.webp";
+import GithubIcon from "public/assets/icons/github.svg?react";
+import LinkedinIcon from "public/assets/icons/linkedin.svg?react";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { cor } from "common/Tema/cores";
+import { estadoTrocaTema } from "common/state/atom";
+import { estilosBordaCard } from "common/estilosElementosPadrao/estilosBorda";
+import { estiloIconeSocial } from "common/estilosElementosPadrao/estilosIcones";
 
 const ContainerSobreMim = styled.section`
   display: flex;
@@ -123,7 +123,7 @@ export default function SobreMim() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone as={Linkedin} $trocaTema={trocaTema} />
+          <Icone as={LinkedinIcon} $trocaTema={trocaTema} />
         </Link>
 
         <Link 
@@ -131,7 +131,7 @@ export default function SobreMim() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Icone as={Github} $trocaTema={trocaTema} />
+          <Icone as={GithubIcon} $trocaTema={trocaTema} />
         </Link>
       </ContainerCanaisComunicacao>
     </ContainerSobreMim>

@@ -1,14 +1,46 @@
 import { useRecoilValue } from "recoil";
 import { createGlobalStyle } from "styled-components";
-
 import { IEstilizacaoCustomizada } from "../interface/IEstilizacaoCustomizada";
 import { cor } from "../Tema/cores";
 import Tema from "../Tema";
 import { estadoDesativaRolagem, estadoTrocaTema } from "../state/atom";
 
 const EstiloGlobalPadrao = createGlobalStyle<IEstilizacaoCustomizada>`
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+  a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,
+  strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,
+  legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,
+  embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,
+  summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+  }
+
+  article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block
+  }
+
+  html, body, #root {
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: ${cor.cinzaEscuro};
+
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: ${cor.cinzaEscuro};
+      border-radius: .125rem;
+    }
+  }
+
   body {
-    background: ${(props) => (props.$trocaTema ? cor.azulEscuro : cor.azulClaro)};
     color: ${cor.branco};
     font-family: ${Tema.fonte.nunito};
     font-size: .875rem;
@@ -16,29 +48,57 @@ const EstiloGlobalPadrao = createGlobalStyle<IEstilizacaoCustomizada>`
     line-height: normal;
     letter-spacing: .0175rem;
     overflow: ${(props) => (props.$desativaRolagem ? 'hidden' : 'inherit')};
-    transition: all .3s ease-in-out;
+  }
 
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
+  ol,ul {
+      list-style: none
+  }
 
-    &::-webkit-scrollbar-track {
-      background: ${cor.cinzaClaro};
-    }
+  blockquote,q {
+    quotes: none
+  }
 
-    &::-webkit-scrollbar-thumb {
-      background: ${cor.cinzaClaro};
-      border-radius: .375rem;
-    }
+  blockquote:before,blockquote:after,q:before,q:after {
+    content: '';
+    content: none
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+  }
+
+
+  input, textarea, select, button {
+    font: inherit;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: ${cor.branco}!important;
+    caret-color: ${cor.branco}!important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
     
-    a {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    button {
-      background-color: transparent;
-      outline: none;
-    }
+  button {
+    background-color: transparent;
+    outline: none;
   }
 `;
 
