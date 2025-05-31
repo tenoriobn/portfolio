@@ -1,8 +1,8 @@
+import { useRef } from "react";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import TituloSecao from "../TituloSecao";
 import Ferramentas from "./Ferramentas";
-import { useRef } from "react";
 
 const ContainerHabilidades = styled.section`
   display: flex;

@@ -1,15 +1,13 @@
 import styled, { css } from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
-
-
-import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
-import { estilosBordaBotaoEInputs, estilosBordaCard } from "../../../common/EstilosElementosPadrao/estilosBorda";
-import { cor } from "../../../common/Tema/cores";
-import Botao from "../../Botao";
-import { estadoDadosFormularioEnviado, estadoTrocaTema } from "../../../common/state/atom";
-import { IDadosFormulario } from "../../../common/interface/IFormulario";
-import { useValidarCamposFormulario } from "../../../common/state/hooks/formulario/useValidarCamposFormulario";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/EstilosElementosPadrao/estilosBorda";
+import { cor } from "common/Tema/cores";
+import Botao from "components/Botao";
+import { estadoDadosFormularioEnviado, estadoTrocaTema } from "common/state/atom";
+import { IDadosFormulario } from "common/interface/IFormulario";
+import { useValidarCamposFormulario } from "common/state/hooks/formulario/useValidarCamposFormulario";
 
 
 const ContainerFormulario = styled.form<IEstilizacaoCustomizada>`

@@ -2,14 +2,13 @@ import styled from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import Github from "../../../assets/icons/github.svg?react";
-import Vercel from "../../../assets/icons/vercel.svg?react";
-import { estadoQtdCardsVisiveis, estadoTrocaTema } from "../../../common/state/atom";
-import { IEstilizacaoCustomizada } from "../../../common/interface/IEstilizacaoCustomizada";
-import { estiloIconeSocial } from "../../../common/EstilosElementosPadrao/estilosIcones";
-import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "../../../common/interface/IProjetos";
-import { estilosCard } from "../../../common/EstilosElementosPadrao/estilosCard";
-import useAmpliarImagem from "../../../common/state/hooks/projetos/useAmpliarImagem";
+import Github from "public/assets/icons/github.svg?react";
+import Vercel from "public/assets/icons/vercel.svg?react";
+import { estadoQtdCardsVisiveis, estadoTrocaTema } from "common/state/atom";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { estiloIconeSocial } from "src/common/EstilosElementosPadrao/estilosIcones";
+import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "common/interface/IProjetos";
+import { estilosCard } from "src/common/EstilosElementosPadrao/estilosCard";
 
 const ContainerCardsProjetos = styled.div`
   display: grid;
@@ -47,7 +46,7 @@ const ImagemProjeto = styled.img`
   border-radius: 1rem;
   cursor: pointer;
   margin-bottom: 1rem;
-  max-height: 184px;
+  height: 184px;
   width: 100%;
   object-fit: cover;
 
@@ -114,7 +113,7 @@ const Icone = styled.svg<IEstilizacaoCustomizada>`
 
 export default function CardProjetos() {
   const qtdCardsVisiveis = useRecoilValue(estadoQtdCardsVisiveis);
-  const ampliarImagem = useAmpliarImagem();
+  // const ampliarImagem = useAmpliarImagem();
   const trocaTema = useRecoilValue(estadoTrocaTema);
   const [t] = useTranslation("global");
   const cardsProjetos:ICardsProjetos[] = t('projetos.cardsProjetos', { returnObjects: true });
@@ -123,7 +122,9 @@ export default function CardProjetos() {
     <ContainerCardsProjetos>
       {cardsProjetos.map(projeto => (
         <CardProjeto key={projeto.id} $estilizacaoCardsVisiveis={qtdCardsVisiveis} $trocaTema={trocaTema}>
-          <ImagemProjeto src={projeto.imagem} onClick={() => ampliarImagem(projeto.imagem)} />
+          <Link to={projeto.linkHospedagem} target="_blank" rel="noopener noreferrer">
+            <ImagemProjeto src={projeto.imagem} />
+          </Link>
 
           <ContainerDetalhesProjeto>
             <Nome>{projeto.nome}</Nome>

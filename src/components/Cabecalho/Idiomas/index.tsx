@@ -1,18 +1,16 @@
-import styled, { css } from 'styled-components';
+import { useRef } from 'react';
 import { useRecoilState, useRecoilValue } from 'recoil';
+import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-
-
-import Global from "../assets/global.svg?react";
-import { useRef } from 'react';
-import { cor } from '../../../common/Tema/cores';
-import { estadoListaIdiomasAtivo, estadoTrocaTema } from '../../../common/state/atom';
-import { estiloIconeCabecalho } from '../../../common/EstilosElementosPadrao/estilosIcones';
-import { IEstilizacaoCustomizada } from '../../../common/interface/IEstilizacaoCustomizada';
-import useTrocarIdioma from '../../../common/state/hooks/cabecalho/useTrocarIdioma';
-import useFecharAoClicarFora from '../../../common/state/hooks/hooksGlobais/useFecharAoClicarFora';
-import { IIdioma } from '../../../common/interface/ICabecalho';
+import GlobalIcon from "public/assets/icons/global.svg?react";
+import { cor } from 'common/Tema/cores';
+import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'common/state/atom';
+import { estiloIconeCabecalho } from 'src/common/EstilosElementosPadrao/estilosIcones';
+import { IEstilizacaoCustomizada } from 'common/interface/IEstilizacaoCustomizada';
+import useTrocarIdioma from 'common/state/hooks/cabecalho/useTrocarIdioma';
+import useFecharAoClicarFora from 'common/state/hooks/hooksGlobais/useFecharAoClicarFora';
+import { IIdioma } from 'common/interface/ICabecalho';
 
 const estiloFundoListaIdiomas = css<IEstilizacaoCustomizada>`
   background-color: ${(props) => (
@@ -98,7 +96,7 @@ export default function Idiomas() {
       $listaIdiomasAtivo={listaIdiomasAtivo}
     >
       <Link to="#" role="button" onClick={() => setListaIdiomasAtivo(!listaIdiomasAtivo)}>
-        <IconeListaIdiomas as={Global} $trocaTema={trocaTema} $listaIdiomasAtivo={listaIdiomasAtivo} />
+        <IconeListaIdiomas as={GlobalIcon} $trocaTema={trocaTema} $listaIdiomasAtivo={listaIdiomasAtivo} />
       </Link>
 
       <ContainerListaIdiomas $trocaTema={trocaTema} $listaIdiomasAtivo={listaIdiomasAtivo}>

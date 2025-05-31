@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { useRecoilState } from "recoil";
 import MenuItens from "./MenuItens";
 import Idiomas from "./Idiomas";
-import Lua from "./assets/lua.svg?react";
-import { cor } from "../../common/Tema/cores";
-import { estadoTrocaTema } from "../../common/state/atom";
-import useAtivarMenu from "../../common/state/hooks/cabecalho/useAtivarMenu";
-import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
-import { estiloIconeCabecalho } from "../../common/EstilosElementosPadrao/estilosIcones";
+import LuaIcon from "public/assets/icons/lua.svg?react";
+import { cor } from "common/Tema/cores";
+import { estadoTrocaTema } from "common/state/atom";
+import useAtivarMenu from "common/state/hooks/cabecalho/useAtivarMenu";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { estiloIconeCabecalho } from "src/common/EstilosElementosPadrao/estilosIcones";
 
 const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   position:sticky;
@@ -44,6 +44,15 @@ const ContainerMenu = styled.header`
   }
 `;
 
+const BotaoMenuContainer = styled.div`
+  width: 64px;
+  z-index: 99;
+
+  @media (min-width: 768px) {
+    width: 96px;
+  }
+`;
+
 const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   border: .125rem solid ${(props) => (props.$trocaTema ? cor.azul : cor.cinzaClaro)};
   border-radius: 31.25rem;
@@ -53,7 +62,6 @@ const BotaoMenu = styled.button<IEstilizacaoCustomizada>`
   width: 48px;
   height: 48px;
   transition: border-color 0.3s ease-out 0s;
-  z-index: 2;
 
   h1 {
     color: ${cor.branco};
@@ -125,13 +133,16 @@ export default function Cabecalho() {
   return (
     <FundoMenu $trocaTema={trocaTema}>
       <ContainerMenu>
-        <BotaoMenu $trocaTema={trocaTema} onClick={ativarMenu}>
-          <h1>BT</h1>
-        </BotaoMenu>
+        <BotaoMenuContainer>
+          <BotaoMenu $trocaTema={trocaTema} onClick={ativarMenu}>
+            <h1>BT</h1>
+          </BotaoMenu>
+        </BotaoMenuContainer>
+
         <MenuItens />
         <ContainerPreferenciasUsuario>
           <Idiomas  />
-          <Tema $trocaTema={trocaTema} as={Lua} onClick={() => setTrocaTema(!trocaTema)} />
+          <Tema $trocaTema={trocaTema} as={LuaIcon} onClick={() => setTrocaTema(!trocaTema)} />
         </ContainerPreferenciasUsuario>
       </ContainerMenu>
     </FundoMenu>

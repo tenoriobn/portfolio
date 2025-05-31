@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { useRecoilValue } from "recoil";
-import { IBotao } from "../../common/interface/IBotao";
-import { estilosBotao } from "../../common/EstilosElementosPadrao/estilosBotao";
-import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
-import { estadoTrocaTema } from "../../common/state/atom";
+import { IBotao } from "common/interface/IBotao";
+import { estilosBotao } from "src/common/EstilosElementosPadrao/estilosBotao";
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { estadoTrocaTema } from "common/state/atom";
 
 const BotaoEstlizado = styled.button<IEstilizacaoCustomizada>`
   ${estilosBotao}

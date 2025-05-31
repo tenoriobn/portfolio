@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { useRecoilValue } from "recoil";
-
 import TituloSecao from "../TituloSecao";
 import Formulario from "./Formulario";
-import { IEstilizacaoCustomizada } from "../../common/interface/IEstilizacaoCustomizada";
-import { estilosBordaCard } from "../../common/EstilosElementosPadrao/estilosBorda";
-import { estadoTrocaTema } from "../../common/state/atom";
-import InformacoesContatos from "./InformacoesContatos/indes";
-
+import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
+import { estilosBordaCard } from "src/common/EstilosElementosPadrao/estilosBorda";
+import { estadoTrocaTema } from "common/state/atom";
+import InformacoesContatos from "./InformacoesContatos";
 
 const ContainerContatos = styled.section`
   padding: 3.25rem 0;
@@ -31,7 +29,6 @@ const ContainerOpcoesContatos = styled.div<IEstilizacaoCustomizada>`
     align-items: center;
   }
 `;
-
 
 export default function Contatos() {
   const trocaTema = useRecoilValue(estadoTrocaTema);
