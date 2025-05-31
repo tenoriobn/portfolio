@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import GlobalIcon from "public/assets/icons/global.svg?react";
 import { cor } from 'common/Tema/cores';
 import { estadoListaIdiomasAtivo, estadoTrocaTema } from 'common/state/atom';
-import { estiloIconeCabecalho } from 'common/estilosElementosPadrao/estilosIcones';
+import { estiloIconeCabecalho } from 'src/common/EstilosElementosPadrao/estilosIcones';
 import { IEstilizacaoCustomizada } from 'common/interface/IEstilizacaoCustomizada';
 import useTrocarIdioma from 'common/state/hooks/cabecalho/useTrocarIdioma';
 import useFecharAoClicarFora from 'common/state/hooks/hooksGlobais/useFecharAoClicarFora';

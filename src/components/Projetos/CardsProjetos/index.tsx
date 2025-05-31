@@ -6,9 +6,9 @@ import Github from "public/assets/icons/github.svg?react";
 import Vercel from "public/assets/icons/vercel.svg?react";
 import { estadoQtdCardsVisiveis, estadoTrocaTema } from "common/state/atom";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estiloIconeSocial } from "common/estilosElementosPadrao/estilosIcones";
+import { estiloIconeSocial } from "src/common/EstilosElementosPadrao/estilosIcones";
 import { ICardsProjetos, IEstilizacaoCardsVisiveis } from "common/interface/IProjetos";
-import { estilosCard } from "common/estilosElementosPadrao/estilosCard";
+import { estilosCard } from "src/common/EstilosElementosPadrao/estilosCard";
 
 const ContainerCardsProjetos = styled.div`
   display: grid;

@@ -7,7 +7,7 @@ import Github from "public/assets/icons/github.svg?react";
 import Gmail from "public/assets/icons/gmail.svg?react";
 import Whatsapp from "public/assets/icons/whatsapp.svg?react";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estiloIconeSocial } from "src/common/estilosElementosPadrao/estilosIcones";
+import { estiloIconeSocial } from "src/common/EstilosElementosPadrao/estilosIcones";
 import { estadoTrocaTema } from "common/state/atom";
 
 const ContainerInformacoesContatos = styled.div`

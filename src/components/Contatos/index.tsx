@@ -4,7 +4,7 @@ import { useRecoilValue } from "recoil";
 import TituloSecao from "../TituloSecao";
 import Formulario from "./Formulario";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estilosBordaCard } from "common/estilosElementosPadrao/estilosBorda";
+import { estilosBordaCard } from "src/common/EstilosElementosPadrao/estilosBorda";
 import { estadoTrocaTema } from "common/state/atom";
 import InformacoesContatos from "./InformacoesContatos";
 

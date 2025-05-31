@@ -7,7 +7,7 @@ import { cor } from "common/Tema/cores";
 import { estadoTrocaTema } from "common/state/atom";
 import useAtivarMenu from "common/state/hooks/cabecalho/useAtivarMenu";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estiloIconeCabecalho } from "common/estilosElementosPadrao/estilosIcones";
+import { estiloIconeCabecalho } from "src/common/EstilosElementosPadrao/estilosIcones";
 
 const FundoMenu = styled.div<IEstilizacaoCustomizada>`
   position:sticky;

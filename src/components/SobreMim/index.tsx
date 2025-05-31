@@ -8,8 +8,8 @@ import LinkedinIcon from "public/assets/icons/linkedin.svg?react";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
 import { cor } from "common/Tema/cores";
 import { estadoTrocaTema } from "common/state/atom";
-import { estilosBordaCard } from "common/estilosElementosPadrao/estilosBorda";
-import { estiloIconeSocial } from "common/estilosElementosPadrao/estilosIcones";
+import { estilosBordaCard } from "src/common/EstilosElementosPadrao/estilosBorda";
+import { estiloIconeSocial } from "src/common/EstilosElementosPadrao/estilosIcones";
 
 const ContainerSobreMim = styled.section`
   display: flex;

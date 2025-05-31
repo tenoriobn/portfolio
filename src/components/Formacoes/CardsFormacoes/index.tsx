@@ -3,8 +3,8 @@ import { useRecoilValue } from "recoil";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estilosCard } from "common/estilosElementosPadrao/estilosCard";
-import { estilosBotao } from "common/estilosElementosPadrao/estilosBotao";
+import { estilosCard } from "src/common/EstilosElementosPadrao/estilosCard";
+import { estilosBotao } from "src/common/EstilosElementosPadrao/estilosBotao";
 import { estadoTrocaTema } from "common/state/atom";
 import { ICardsFormacoes } from "common/interface/IFormacoes";
 

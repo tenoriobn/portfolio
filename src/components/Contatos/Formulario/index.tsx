@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { useRecoilValue } from "recoil";
 import { useTranslation } from "react-i18next";
 import { IEstilizacaoCustomizada } from "common/interface/IEstilizacaoCustomizada";
-import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/estilosElementosPadrao/estilosBorda";
+import { estilosBordaBotaoEInputs, estilosBordaCard } from "src/common/EstilosElementosPadrao/estilosBorda";
 import { cor } from "common/Tema/cores";
 import Botao from "components/Botao";
 import { estadoDadosFormularioEnviado, estadoTrocaTema } from "common/state/atom";
